@@ -1,0 +1,28 @@
+{
+  "started_at_utc": "2026-10-16T02:48:01.949555+00:00",
+  "finished_at_utc": "2026-10-16T02:48:06.608722+00:00",
+  "duration_seconds": 4.659,
+  "dataset_sha256": "cfb78ab7045df3718e870acaa4d3db853a1683dfad65e81c4f7e9a9efb4e86df",
+  "mode": "baseline",
+  "model": null,
+  "candidate_generator": "tfidf_word_bigram_char_ngram_v1",
+  "top_k_candidates": 12,
+  "publish_threshold": 0.95,
+  "verify_threshold": 0.9,
+  "max_workers": 0,
+  "python_version": "3.13.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "total_questions": 359,
+  "decision_counts": {
+    "publicar": 0,
+    "revisar": 359,
+    "fora": 0
+  },
+  "semantic_validation_performed": false,
+  "primary_calls_completed": 0,
+  "verification_calls_completed": 0,
+  "estimated_api_cost": null,
+  "cost_note": "Não estimado automaticamente; o modo atual usa Ollama local. Hardware, energia e custo de implantação não são medidos.",
+  "precision_measured_against_gold_labels": false,
+  "database_run_id": null
+}

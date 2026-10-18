@@ -1,0 +1,72 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-vicio_case}
+      POSTGRES_USER: ${POSTGRES_USER:-vicio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_local_only}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [case_net]
+
+  app:
+    build: .
+    profiles: ["run"]
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    environment:
+      DATA_DIR: /app/data/input
+      ARTIFACTS_DIR: /app/artifacts
+      DATABASE_URL: ${DATABASE_URL:-postgresql://vicio:change_me_local_only@db:5432/vicio_case}
+      CLASSIFICATION_MODE: ${CLASSIFICATION_MODE:-baseline}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-180}
+      OLLAMA_NUM_THREADS: ${OLLAMA_NUM_THREADS:-2}
+      TOP_K_CANDIDATES: ${TOP_K_CANDIDATES:-12}
+      PUBLISH_THRESHOLD: ${PUBLISH_THRESHOLD:-0.95}
+      VERIFY_THRESHOLD: ${VERIFY_THRESHOLD:-0.90}
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./data/input:/app/data/input:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [case_net]
+    command: ["classify", "--mode", "${CLASSIFICATION_MODE:-baseline}"]
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["local-llm"]
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks: [case_net]
+
+  adminer:
+    image: adminer:4
+    profiles: ["ops"]
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [case_net]
+
+volumes:
+  postgres_data:
+  ollama_data:
+
+networks:
+  case_net:
+    driver: bridge

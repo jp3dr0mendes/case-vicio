@@ -1,0 +1,8 @@
+precisao_prevista: 0.00
+precisao_intervalo: 0.00-0.00
+cobertura_prevista: 0.00
+cobertura_intervalo: 0.00-0.00
+
+RASCUNHO TÉCNICO: não houve questões publicadas; portanto, a precisão nas publicadas é indefinida. Os zeros acima existem apenas para preservar o formato do arquivo e NÃO devem ser apresentados como previsão final.
+Modo: baseline. Modelo: nenhum (baseline lexical). Gerado em UTC: 2026-10-16T02:48:06.562857+00:00.
+Regra operacional: só publicar quando classificação primária e verificador concordam no mesmo ramo, com os limiares configurados; divergência, falha ou incerteza vai para revisão.

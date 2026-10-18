@@ -1,0 +1,8 @@
+beautifulsoup4>=4.12,<5
+numpy>=1.26,<3
+pandas>=2.2,<3
+psycopg[binary]>=3.2,<4
+requests>=2.32,<3
+scikit-learn>=1.5,<2
+pytest>=8.0,<9
+PyYAML>=6,<7
