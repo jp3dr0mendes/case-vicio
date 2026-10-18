@@ -30,7 +30,7 @@ class CandidateRetriever:
         self.taxonomy = taxonomy
         self.top_k = max(2, int(top_k))
         self.topics: list[Topic] = [
-            taxonomy.by_id[i] for i in sorted(taxonomy.selectable_ids)
+            taxonomy.by_id[i] for i in sorted(taxonomy.selectable_ids - set(taxonomy.clones))
         ]
         self.topic_docs = [
             " ".join([topic.caminho, topic.titulo, topic.descricao, topic.disciplina])

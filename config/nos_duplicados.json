@@ -1,0 +1,10 @@
+{
+  "_descricao": "Decisão manual (ver docs/diagnostico_dados.md): nós nível 1 ativos, SEM descrição e SEM subtemas, que duplicam um nó original com conteúdo. A política nunca publica nesses nós; questões cujo tema escolhido seja um clone vão para revisão.",
+  "clones": {
+    "6716": 4684, "6717": 4688, "6722": 4696, "6723": 4702, "6724": 4704,
+    "6725": 4705, "6728": 4708, "6734": 4703,
+    "6718": 5087, "6719": 5087, "6720": 5157, "6721": 5157,
+    "6726": 5199, "6727": 5199, "6732": 5480, "6733": 5480,
+    "6735": 5543, "6736": 5560, "6737": 5572, "6738": 5572
+  }
+}

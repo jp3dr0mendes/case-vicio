@@ -1,0 +1,88 @@
+{
+  "_descricao": "Decisão manual (ver docs/diagnostico_dados.md). Cada grupo reúne nós de RAMOS DIFERENTES da árvore que cobrem o mesmo assunto, de modo que um especialista poderia escolher qualquer um deles e a régua contaria os outros como erro. Publicar dentro de um desses ramos exige evidência reforçada (ver config/politica.json).",
+  "grupos": {
+    "acao_penal_penal_x_processo": [
+      5063,
+      5466,
+      5198,
+      5195,
+      5196
+    ],
+    "juizados_especiais": [
+      4701,
+      5539,
+      5569
+    ],
+    "interceptacao_telefonica": [
+      4700,
+      5555
+    ],
+    "regime_e_fixacao_da_pena": [
+      5201,
+      5576
+    ],
+    "efeitos_da_condenacao": [
+      5209,
+      5577
+    ],
+    "sentenca_procedimento_x_sentenca_penal": [
+      5537,
+      5572
+    ],
+    "absolvicao_sumaria_ordinario_x_juri": [
+      5534,
+      5527
+    ],
+    "execucao_penal_x_teoria_da_pena": [
+      4703,
+      5208,
+      5193,
+      5566,
+      5184
+    ],
+    "colaboracao_e_meios_especiais_x_organizacoes": [
+      4705,
+      5557,
+      5558,
+      5559
+    ],
+    "finalidade_da_pena_criminologia_x_penal": [
+      4384,
+      5200
+    ],
+    "labelling_teorias_x_criminalizacao": [
+      4385,
+      4377
+    ],
+    "prisoes_teoria_geral_x_especies": [
+      5584,
+      5517
+    ],
+    "prova_testemunhal_x_audiencia": [
+      5550,
+      5535
+    ],
+    "violencia_contra_mulher": [
+      4704,
+      5131,
+      5151
+    ],
+    "drogas_x_saude_publica": [
+      4708,
+      5145
+    ],
+    "transito_x_crimes_contra_a_vida": [
+      4691,
+      5150
+    ],
+    "abuso_de_autoridade_x_administracao": [
+      4684,
+      5098,
+      5085
+    ],
+    "lei_processual_x_lei_penal_no_tempo": [
+      5505,
+      5180
+    ]
+  }
+}

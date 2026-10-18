@@ -1,0 +1,5 @@
+{
+  "_descricao": "Ajustes declarados da previsão (ver docs/estimativa_precisao.md). risco_divergencia_de_criterio = [mínimo, central, máximo] da fração de publicadas em que o especialista pode ter escolhido outro nó defensável.",
+  "risco_divergencia_de_criterio": [0.02, 0.04, 0.07],
+  "margem_cobertura": 0.02
+}

@@ -1,0 +1,360 @@
+id|tema_central_id|extras_ids|confianca|fora|justificativa
+Q0001|5524||0.85|0|Júri: desaforamento, impronúncia, absolvição sumária e desclassificação (vários subtemas)
+Q0002|4378||0.55|0|Seletividade do sistema penal (criminalização secundária), Vera Andrade
+Q0003|5562|5534;5475|0.6|0|Recurso cabível contra absolvição sumária e efeito no cível
+Q0004|5484|5483|0.75|0|Foro por prerrogativa de função de prefeito; uma assertiva sobre competência territorial
+Q0005|5199||0.8|0|Reincidência/período depurador e regime inicial (dosimetria e regime)
+Q0006|5157||0.9|0|Furto e roubo: consumação e distinção
+Q0007|5063||0.5|0|Espécie de ação penal de ameaça, injúria e perseguição (ramo Penal x Processo Penal ambíguo)
+Q0008|5201||0.65|0|Progressão de regime condicionada à reparação do dano (art. 33 §4º CP)
+Q0009|5158||0.85|0|Imunidade/escusa absolutória nos crimes patrimoniais (arts. 181-183 CP)
+Q0010|4688||0.9|0|Crimes ambientais (Lei 9.605/98)
+Q0011|4702||0.85|0|Lavagem de capitais e competência federal
+Q0012|5569||0.8|0|Recurso contra rejeição de denúncia no JECrim (art. 82 Lei 9.099)
+Q0013|5503||0.95|0|Competência do juiz das garantias
+Q0014|5477||0.45|0|Cabimento de habeas corpus contra internação (ECA); tema infracional não existe na árvore
+Q0015|5498||0.85|0|Inquérito policial no CPP (vários aspectos)
+Q0016|5584||0.45|0|Prisão: preventiva de ofício, prisão especial, audiência de custódia (mistura)
+Q0017|5533||0.55|0|Defesa preliminar nos crimes funcionais (arts. 513-518 CPP)
+Q0018|5540||0.6|0|Causas de exclusão da competência do JECrim
+Q0019|5475||0.95|0|Ação civil ex delicto
+Q0020|5199||0.2|0|Mistura de jurisprudência (ECA, dosimetria, falsa identidade, furto, sursis processual)
+Q0021|5503||0.95|0|Juiz das garantias (prazo fixado pelo STF)
+Q0022|5087||0.75|0|Modalidade culposa entre crimes contra a administração (peculato culposo)
+Q0023|5524||0.9|0|Tribunal do Júri (várias regras)
+Q0024|4385||0.8|0|Teorias criminológicas: Escola de Chicago, associação diferencial, colarinho branco
+Q0025|5101|5093|0.7|0|Tráfico de influência x corrupção ativa
+Q0026|4704||0.9|0|Âmbito de proteção da Lei Maria da Penha
+Q0027|5487||0.8|0|Revelia: citação/intimação e ausência do acusado (art. 367 CPP)
+Q0028|5524||0.8|0|Procedimento do júri (arts. 406, 409, 421 CPP)
+Q0029|4684||0.95|0|Lei 13.869/2019 abuso de autoridade
+Q0030|5135||0.9|0|Atentado contra a liberdade de trabalho (art. 197 CP)
+Q0031|4385||0.85|0|Teoria da anomia (teorias sociológicas da criminalidade)
+Q0032|5497||0.75|0|Incidente de insanidade mental na fase de inquérito (art. 149 §1º CPP)
+Q0033|5519||0.9|0|Prisão preventiva
+Q0034|5477||0.9|0|Cabimento de habeas corpus
+Q0035|4706||0.95|0|Lei Antiterrorismo 13.260/2016
+Q0036|4704||0.85|0|Audiência do art. 16 da Lei Maria da Penha
+Q0037|5118|5132;5081|0.3|0|Mistura: redução a condição análoga à de escravo, falso testemunho e falsidade documental
+Q0038|5583||0.6|0|Ofendido e assistente de acusação (sujeitos do processo)
+Q0039|4687||0.4|0|Cartel de preços (ordem econômica); 'Direito penal econômico' está inativo
+Q0040|5562|5529|0.6|0|Efeito suspensivo da apelação contra condenação no júri
+Q0041|5184||0.95|0|Medidas de segurança
+Q0042|5222||0.95|0|Dolo direto
+Q0043|5199||0.85|0|Fixação da pena (atenuantes, critério trifásico, multa, regime)
+Q0044|5487||0.7|0|Revelia após citação pessoal válida
+Q0045|5091||0.95|0|Excesso de exação qualificado
+Q0046|5509||0.9|0|Nulidades processuais
+Q0047|5164||0.9|0|Dano qualificado e ação penal
+Q0048|5193||0.75|0|Indulto e comutação de pena
+Q0049|5152||0.95|0|Induzimento, instigação ou auxílio ao suicídio
+Q0050|4708|5557|0.7|0|Delação premiada na Lei de Drogas
+Q0051|5182||0.95|0|Extraterritorialidade da lei penal
+Q0052|4703||0.9|0|Remição de pena (LEP)
+Q0053|5541||0.9|0|Transação penal e coisa julgada
+Q0054|5174||0.95|0|Classificação doutrinária dos crimes
+Q0055|5550|5535|0.65|0|Ordem de inquirição de testemunhas (art. 212 CPP)
+Q0056|5066||0.9|0|Sistemas de aplicação da pena no concurso de crimes
+Q0057|5176||0.85|0|Conceito de iter criminis
+Q0058|4377||0.4|0|Seletividade do sistema penal e pobreza (criminologia crítica)
+Q0059|4384||0.45|0|Baratta: cárcere e reinserção (crítica à função da pena)
+Q0060|5087||0.9|0|Crimes contra a administração pública (vários tipos)
+Q0061|4703||0.9|0|Falta grave na execução penal
+Q0062|5182||0.9|0|Extraterritorialidade incondicionada
+Q0063|4704||0.9|0|Medidas protetivas de urgência
+Q0064|5165|4695|0.5|0|Apropriação indébita previdenciária (art. 168-A), pagamento e insignificância
+Q0065|5161||0.9|0|Extorsão mediante sequestro
+Q0066|4373||0.85|0|Positivismo criminológico
+Q0067|5091||0.95|0|Concussão
+Q0068|5116||0.15|0|Mistura de tipos (estupro, condescendência, incêndio, supressão de documento, falsa identidade)
+Q0069|5173||0.95|0|Interpretação analógica
+Q0070|4703|5193|0.45|0|Comutação de pena e cômputo da prisão provisória (execução)
+Q0071|4688||0.9|0|Crimes contra a flora (Lei 9.605/98)
+Q0072|5590|5499|0.55|0|Valor probatório dos elementos do inquérito (art. 155 CPP)
+Q0073|5087||0.6|0|Crimes contra a administração pública (peculato, corrupção, favorecimento, finanças)
+Q0074|5181||0.55|0|Lei penal mais benéfica após trânsito em julgado (competência do juízo da execução)
+Q0075|5191||0.85|0|Comunicabilidade da extinção da punibilidade (art. 108 CP)
+Q0076|4373||0.85|0|Fundadores da escola positivista
+Q0077|5170||0.5|0|Norma penal em branco, abolitio criminis, crime de atentado (mistura introdutória)
+Q0078|4697||0.9|0|Estatuto do Desarmamento
+Q0079|5581||0.9|0|Sistemas processuais penais
+Q0080|4370||0.95|0|Modelos de reação ao delito
+Q0081|4373||0.85|0|Escolas da criminologia
+Q0082|5100||0.95|0|Resistência
+Q0083|5224|5150|0.5|0|Dolo geral/erro sucessivo no homicídio
+Q0084|4704||0.95|0|Assistência à mulher na Lei Maria da Penha
+Q0085|5076|5091|0.75|0|Comunicabilidade da elementar 'funcionário público' na concussão
+Q0086|5092||0.95|0|Corrupção passiva
+Q0087|4703|5521|0.65|0|Prisão domiciliar na execução penal (art. 117 LEP)
+Q0088|4389||0.9|0|Conceito de vitimologia
+Q0089|5172|5227|0.7|0|Princípio da insignificância
+Q0090|5530||0.3|0|Mistura de procedimentos (JECrim, rejeição da denúncia, crimes funcionais)
+Q0091|5201|4703|0.6|0|Progressão de regime sem salto (regime fechado -> semiaberto)
+Q0092|5509||0.9|0|Nulidade por incompetência e ilegitimidade (arts. 567-568 CPP)
+Q0093|5223||0.85|0|Omissão imprópria do garantidor x omissão de socorro
+Q0094|4385||0.6|0|Labelling approach / criminologia crítica
+Q0095|5197||0.9|0|Perdão judicial
+Q0096|5486||0.6|0|Derrogação/modificação da competência territorial
+Q0097|4708|4705;4702|0.45|0|Tráfico, associação, organização criminosa e lavagem (mistura)
+Q0098|5548||0.95|0|Confissão qualificada
+Q0099|5100||0.75|0|Resistência com lesões e excludente dos fiscais
+Q0100|5103|5224|0.7|0|Estupro de vulnerável, erro de tipo e omissão
+Q0101|4704||0.9|0|Competência do Juizado de Violência Doméstica para divórcio
+Q0102|5572||0.8|0|Sentença penal e seus efeitos
+Q0103|5478||0.95|0|Revisão criminal
+Q0104|5498|5477|0.55|0|Inquérito instaurado pelo MP e autoridade coatora no HC
+Q0105|4385||0.6|0|Criminologia cultural e etiquetamento
+Q0106|5166||0.75|0|'Pendura': fraude em refeição (art. 176 CP)
+Q0107|5119||0.9|0|Falsa identidade perante a autoridade
+Q0108|5561||0.85|0|RESE contra decisão que indefere prescrição
+Q0109|4708||0.95|0|Oferecimento eventual de droga (art. 33 §3º Lei 11.343)
+Q0110|5480||0.8|0|Competência (várias hipóteses)
+Q0111|4373||0.85|0|Escola positivista
+Q0112|4705||0.95|0|Majorantes do crime de organização criminosa
+Q0113|5185||0.35|0|Prazo prescricional penal aplicado à infração disciplinar (tema administrativo)
+Q0114|5507|4704|0.35|0|Efeitos temporais da ADI 4424 sobre ação penal na violência doméstica
+Q0115|4385||0.75|0|Teoria da anomia aplicada a caso
+Q0116|4708||0.95|0|Lei de Drogas
+Q0117|4384|5200|0.6|0|Teoria agnóstica/negativa da pena
+Q0118|5507||0.85|0|Lei processual penal no tempo (normas mistas)
+Q0119|5194|5181|0.8|0|Abolitio criminis e retroatividade
+Q0120|5530|5533|0.55|0|Momento de especificação de provas pelo réu (resposta à acusação)
+Q0121|5472|5469|0.55|0|Indivisibilidade da ação penal privada (renúncia tácita)
+Q0122|4703||0.9|0|Remição (LEP)
+Q0123|4377||0.4|0|Labeling, seletividade racial e racismo no sistema penal
+Q0124|4384|5200|0.5|0|Teorias da pena (Kant, Hegel, Roxin, Binding)
+Q0125|5181|4703|0.45|0|Aplicação da lei mais benéfica (tráfico privilegiado) na execução
+Q0126|5170||0.15|0|Mistura de parte geral (causalidade, comunicabilidade, embriaguez, extraterritorialidade)
+Q0127|5581|5578|0.35|0|Condenação com pedido de absolvição do MP (sistema acusatório) e tráfico
+Q0128|5468||0.6|0|Ação penal de prevenção (classificação da ação)
+Q0129|5550||0.85|0|Testemunho de parentes do acusado
+Q0130|5160|5205|0.75|0|Roubo com simulacro e substituição da pena
+Q0131|5072||0.7|0|Teoria do domínio do fato (autoria x participação)
+Q0132|5550|5549|0.35|0|Proteção de dados de vítimas e testemunhas (Resolução CNJ 427/2021)
+Q0133|5524||0.85|0|Desaforamento no júri
+Q0134|5092||0.95|0|Corrupção passiva
+Q0135|5169||0.95|0|Receptação
+Q0136|4704||0.85|0|Violência psicológica/moral pós-divórcio (Lei Maria da Penha)
+Q0137|5498||0.6|0|Investigação conduzida pelo delegado (Lei 12.830/2013)
+Q0138|5199||0.85|0|Substituição por restritivas de direitos e sursis
+Q0139|5211||0.85|0|Coculpabilidade
+Q0140|5157||0.9|0|Furto e roubo (jurisprudência)
+Q0141|4385||0.85|0|Teoria ecológica (Escola de Chicago)
+Q0142|||0.95|1|Direito Tributário (ITCD): nenhum tema penal se aplica
+Q0143|5507||0.9|0|Lei processual penal no tempo (tempus regit actum)
+Q0144|5562|5529|0.85|0|Apelação contra sentença do juiz-presidente do júri
+Q0145|4702||0.9|0|Lavagem de capitais
+Q0146|5594||0.85|0|Provas ilícitas e exceções
+Q0147|5498||0.45|0|Investigação preliminar e meios de obtenção de prova (mistura)
+Q0148|5203||0.9|0|Compensação entre reincidência e confissão (2ª fase)
+Q0149|5498||0.7|0|Diligências no inquérito policial
+Q0150|4708||0.95|0|Majorantes da Lei de Drogas (súmulas)
+Q0151|5517|5584|0.55|0|Prisões e medidas cautelares (domiciliar, fiança, temporária, flagrante)
+Q0152|5472|5474|0.7|0|Ordem de preferência para o direito de queixa (art. 31 CPP)
+Q0153|5222||0.75|0|Dolo geral
+Q0154|||0.55|1|Lei 9.029/95 (discriminação trabalhista): sem tema correspondente na árvore
+Q0155|4703||0.9|0|Regime disciplinar diferenciado
+Q0156|4688||0.9|0|Lei de Crimes Ambientais
+Q0157|5520||0.9|0|Prazo da prisão temporária em crime hediondo
+Q0158|4707||0.95|0|Lei de Tortura: efeitos da condenação
+Q0159|5160|5150|0.5|0|Homicídio tentado e latrocínio (concausas)
+Q0160|5205||0.9|0|Substituição por restritivas de direitos ao reincidente
+Q0161|5588|5554|0.6|0|Relaxamento de flagrante após busca domiciliar ilegal
+Q0162|4380||0.7|0|Controle social formal e informal (objeto da criminologia)
+Q0163|5133|4684|0.4|0|Violação de correspondência de preso por diretor de presídio
+Q0164|4703||0.95|0|LEP: assistência ao preso e ao egresso
+Q0165|4705||0.95|0|Lei de Organizações Criminosas
+Q0166|4703|5193|0.55|0|Benefícios na execução (indulto, comutação, livramento) de idoso
+Q0167|5524||0.85|0|Desaforamento
+Q0168|||0.55|1|Crimes da Lei Geral do Esporte: sem tema correspondente na árvore
+Q0169|5492||0.95|0|Impedimento e suspeição do juiz
+Q0170|5203||0.85|0|Reincidência
+Q0171|5199||0.2|0|Mistura de alterações do Pacote Anticrime
+Q0172|5466||0.15|0|Mistura processual (prelibação, aditamento, prescrição, exceção da verdade)
+Q0173|4703||0.9|0|Regressão de regime e faltas disciplinares
+Q0174|5133|5166|0.35|0|Crimes cibernéticos (ECA, invasão de dispositivo, fraude eletrônica)
+Q0175|5092||0.9|0|Corrupção passiva
+Q0176|5081||0.95|0|Falso testemunho
+Q0177|5547||0.85|0|Interrogatório e direito ao silêncio
+Q0178|4697||0.85|0|Porte de arma de servidores do Judiciário (Estatuto do Desarmamento)
+Q0179|4369||0.95|0|Prevenção secundária
+Q0180|5554|5594|0.85|0|Busca domiciliar noturna sem mandado
+Q0181|4695||0.65|0|Crimes contra a ordem tributária/econômica (Leis 8.137 e 8.176)
+Q0182|5149|5120|0.15|0|Mistura de crimes contra a pessoa (aborto, contágio, rixa, calúnia)
+Q0183|5561||0.6|0|RESE contra decisão que extingue a punibilidade (art. 366 CPP)
+Q0184|4708||0.85|0|Procedimento da Lei de Drogas: comunicação do flagrante
+Q0185|4703||0.9|0|Falta grave e regressão de regime
+Q0186|5202||0.95|0|Antecedentes na primeira fase da dosimetria
+Q0187|5209||0.8|0|Efeitos da condenação (perda de bens, cargo, progressão)
+Q0188|5228||0.85|0|Ofendículos como excludente de ilicitude
+Q0189|5472|5196|0.55|0|Desistência/perdão na ação penal privada
+Q0190|5539|4701|0.6|0|Juizados Especiais Criminais (menor potencial, sursis processual, transação)
+Q0191|5560||0.85|0|Carta testemunhável e recurso em sentido estrito
+Q0192|5087||0.6|0|Crimes contra a administração (concussão, progressão, peculato culposo, falsa perícia)
+Q0193|5557|4705|0.7|0|Colaboração premiada
+Q0194|5089|5076|0.75|0|Peculato com participação de particular
+Q0195|4371||0.8|0|Correntes do pensamento criminológico (escolas)
+Q0196|4385||0.6|0|Labelling approach
+Q0197|5498|5482|0.5|0|Atribuição da Polícia Federal para instaurar inquérito
+Q0198|5073||0.85|0|Autoria mediata por domínio de aparato organizado
+Q0199|5218|5228|0.3|0|Mistura de teoria do crime (conduta, bem jurídico, elementos subjetivos, estado de necessidade)
+Q0200|4705||0.95|0|Organizações criminosas
+Q0201|5103||0.95|0|Estupro de vulnerável e consentimento
+Q0202|5102||0.85|0|Favorecimento da prostituição de vulnerável (art. 218-B CP)
+Q0203|4702||0.9|0|Lavagem: indisponibilidade de bens de interpostas pessoas
+Q0204|5507||0.95|0|Tempus regit actum
+Q0205|5512|5560|0.4|0|Recursos (carta testemunhável, desistência, interesse recursal)
+Q0206|5583||0.8|0|Assistente de acusação
+Q0207|4703||0.9|0|Falta grave por posse de celular no presídio
+Q0208|5071|5231|0.55|0|Participação do irmão no homicídio (concurso de pessoas)
+Q0209|5498||0.75|0|Anotação de inquérito em atestado de antecedentes (art. 20 CPP)
+Q0210|4697||0.95|0|Estatuto do Desarmamento (jurisprudência)
+Q0211|5583|5580|0.4|0|Polícia e publicidade das audiências (poderes do juiz)
+Q0212|5488||0.9|0|Citação por hora certa
+Q0213|4708||0.8|0|Procedimento especial da Lei de Drogas (defesa prévia)
+Q0214|5494||0.95|0|Exceção de litispendência
+Q0215|5201|5576|0.6|0|Regime inicial de cumprimento (gravidade abstrata)
+Q0216|5539|4701|0.6|0|Juizados Especiais Criminais (composição civil, transação)
+Q0217|4384|4371|0.4|0|Foucault: economia do poder de punir na reforma penal
+Q0218|5518||0.9|0|Flagrante esperado x provocado
+Q0219|5071||0.6|0|Participação necessária imprópria (enunciado sem a situação hipotética referida)
+Q0220|5501||0.95|0|Arquivamento do inquérito (ADI sobre art. 28 CPP)
+Q0221|5199||0.6|0|Penas e medidas de segurança (vários aspectos)
+Q0222|4374|4376|0.75|0|Velocidades do direito penal e direito penal do inimigo
+Q0223|5086||0.75|0|Ingresso de aparelho de comunicação em presídio (art. 349-A CP)
+Q0224|5203|5207|0.55|0|Reincidência e cabimento do sursis
+Q0225|5478||0.9|0|Competência para revisão criminal
+Q0226|5544||0.95|0|Cadeia de custódia
+Q0227|5102||0.8|0|Crimes contra a dignidade sexual (casos)
+Q0228|4703|5208|0.5|0|Pedido de livramento condicional ao juízo da execução
+Q0229|5584|5517|0.4|0|Prisão (recaptura, mandado noturno, preventiva, especial, temporária)
+Q0230|5211||0.15|0|Mistura de parte geral (culpabilidade, concurso de pessoas, pena, medida de segurança)
+Q0231|5224||0.9|0|Erro de tipo essencial
+Q0232|5079||0.9|0|Crimes contra a administração da justiça
+Q0233|5178||0.95|0|Desistência voluntária e arrependimento eficaz
+Q0234|4380||0.8|0|Interdisciplinaridade da criminologia
+Q0235|5561||0.85|0|RESE contra decisão que conclui pela competência
+Q0236|5490||0.35|0|Mistura (questão prejudicial, restituição, prova do inquérito, presença do réu)
+Q0237|5178||0.95|0|Diferença entre desistência voluntária e arrependimento eficaz
+Q0238|5523||0.8|0|Reforço da fiança
+Q0239|5199||0.3|0|Mistura (atenuantes, aberratio ictus, sursis)
+Q0240|5500||0.6|0|Prazos do inquérito com indiciado preso e da denúncia
+Q0241|5224||0.85|0|Teoria do erro (erro de tipo, sobre objeto, aberratio)
+Q0242|5512||0.75|0|Teoria geral dos recursos (unirrecorribilidade, prazos, reexame necessário)
+Q0243|5178||0.95|0|Arrependimento posterior
+Q0244|5091||0.95|0|Concussão
+Q0245|5185||0.85|0|Prescrição (várias hipóteses)
+Q0246|5527||0.9|0|Pronúncia do semi-imputável
+Q0247|5502||0.9|0|Acordo de não persecução penal
+Q0248|5087||0.9|0|Correlação de tipos contra a administração pública
+Q0249|5492||0.9|0|Impedimento do juiz
+Q0250|5201|5576|0.65|0|Regime inicial de cumprimento de pena
+Q0251|5191||0.9|0|Causas de extinção da punibilidade
+Q0252|5199|5206|0.3|0|Mistura (graça, parcelamento da multa, livramento do idoso)
+Q0253|4373||0.75|0|Escolas penais clássica e positiva
+Q0254|4704||0.95|0|Medidas protetivas de urgência
+Q0255|5213||0.95|0|Imputabilidade penal
+Q0256|5224|5214|0.7|0|Erro de tipo invencível e descriminante putativa
+Q0257|5218|5219|0.6|0|Tipicidade, sujeito ativo e ilicitude (teoria do fato típico)
+Q0258|5545||0.95|0|Exame de corpo de delito
+Q0259|5183||0.95|0|Conflito aparente de normas: consunção
+Q0260|4374|4370|0.35|0|Direito penal do inimigo, justiça restaurativa e movimentos sociais
+Q0261|5136||0.55|0|Violação de direito de autor de software (Lei 9.609/98)
+Q0262|5184|4703|0.5|0|Superveniência de doença mental na execução
+Q0263|5492||0.95|0|Suspeição do juiz
+Q0264|5102||0.8|0|Exploração sexual de vulnerável e favorecimento da prostituição
+Q0265|5185||0.85|0|Prescrição no concurso de crimes (art. 119 CP)
+Q0266|5482||0.75|0|Competência: crime doloso contra a vida de civil por militares
+Q0267|4708||0.85|0|Laudo de constatação e destruição de drogas (Lei 11.343)
+Q0268|5120|5116|0.2|0|Mistura (falsidade, uso de documento falso, abuso, crimes contra a honra)
+Q0269|5172|4375|0.5|0|Garantismo penal
+Q0270|5091||0.95|0|Concussão
+Q0271|5562|5513|0.5|0|Efeito devolutivo da apelação contra decisões do júri (Súmula 713)
+Q0272|4703||0.9|0|Falta grave na execução (jurisprudência do STJ)
+Q0273|5087||0.6|0|Crimes contra a administração com modalidade culposa (peculato)
+Q0274|5160||0.9|0|Latrocínio consumado com subtração tentada (Súmula 610)
+Q0275|5539|5488|0.55|0|Réu não encontrado no JECrim: remessa ao juízo comum
+Q0276|5543||0.55|0|Provas em espécie (interrogatório, confissão, acareação, corpo de delito, busca)
+Q0277|4696||0.9|0|Crimes contra a pessoa idosa
+Q0278|5542||0.9|0|Suspensão condicional do processo
+Q0279|5185|5178|0.4|0|Furto com devolução e prescrição da pretensão punitiva
+Q0280|5120|5466|0.55|0|Crime contra a honra de funcionário público: ação penal e exceção da verdade
+Q0281|5555|4700|0.45|0|Interceptação telefônica, sigilo bancário e sigilo dos autos
+Q0282|4704|4690;4697|0.15|0|Mistura de legislação especial (Maria da Penha, racismo, desarmamento)
+Q0283|5496||0.95|0|Hipoteca legal (medida assecuratória)
+Q0284|5224|5231|0.5|0|Legítima defesa putativa por erro sobre pressuposto fático
+Q0285|4376||0.9|0|Direito penal do inimigo
+Q0286|5199||0.8|0|Ordem das operações no cálculo da pena
+Q0287|5228||0.9|0|Excludentes de ilicitude
+Q0288|5066||0.1|0|Mistura (estupro, sonegação, crime ambiental, concurso formal, crime de responsabilidade)
+Q0289|4704||0.9|0|Aspectos processuais da Lei Maria da Penha (temas repetitivos)
+Q0290|5539|4701|0.6|0|Lei 9.099/95: procedimento dos Juizados Especiais Criminais
+Q0291|4708||0.8|0|Prazos do inquérito na Lei de Drogas
+Q0292|4374||0.85|0|Política criminal e encarceramento em massa
+Q0293|5189||0.8|0|Prescrição da pretensão executória
+Q0294|5211||0.85|0|Teorias da culpabilidade
+Q0295|5487||0.8|0|Contagem de prazos processuais
+Q0296|5472||0.65|0|Sucessão no direito de queixa após a morte da vítima
+Q0297|4695|4689|0.5|0|Crimes contra a ordem tributária e o sistema financeiro ('Direito penal econômico' está inativo)
+Q0298|4694|4687|0.45|0|Crimes contra as relações de consumo (Lei 8.137/90)
+Q0299|4371|4385|0.4|0|Mistura de escolas e teorias criminológicas
+Q0300|5084||0.95|0|Favorecimento real
+Q0301|5197||0.85|0|Hipóteses de perdão judicial
+Q0302|5224||0.9|0|Erro de tipo essencial invencível
+Q0303|5180||0.85|0|Aplicação da lei penal no tempo e no espaço
+Q0304|5540|4701|0.55|0|Competência dos Juizados Especiais Criminais (jurisprudência do STF)
+Q0305|5466||0.8|0|Ação penal pública (prazos, representação, requisição)
+Q0306|5146||0.9|0|Associação criminosa (crime contra a paz pública)
+Q0307|4707||0.95|0|Tortura por omissão
+Q0308|5501||0.85|0|Arquivamento do inquérito por falta de elementos
+Q0309|4688||0.9|0|Crime ambiental (art. 61 Lei 9.605)
+Q0310|5505||0.9|0|Aplicação da lei processual penal
+Q0311|5488||0.9|0|Citação por edital
+Q0312|4384|5200|0.55|0|Finalidades da pena segundo Liszt
+Q0313|5209|5577|0.6|0|Efeito genérico da condenação: obrigação de reparar o dano
+Q0314|5477||0.95|0|Natureza do habeas corpus
+Q0315|5185||0.85|0|Cálculo da prescrição
+Q0316|5224|5153|0.55|0|Erro sobre a pessoa no infanticídio
+Q0317|5198||0.8|0|Decadência do direito de representação
+Q0318|5178||0.9|0|Arrependimento eficaz sem êxito (homicídio consumado)
+Q0319|5071||0.85|0|Coautoria em crimes de mão própria
+Q0320|5550||0.95|0|Testemunha fedatária
+Q0321|5071||0.75|0|Concurso de pessoas (autoria colateral, requisitos, teoria monista)
+Q0322|5561|4684|0.6|0|Recurso contra rejeição de denúncia por abuso de autoridade
+Q0323|5590||0.45|0|Provas (emprestada, interrogatório, não autoincriminação, antecipada)
+Q0324|5199||0.3|0|Mistura (prisão simples, penas acessórias, semi-imputabilidade, trabalho do preso)
+Q0325|5466||0.2|0|Mistura processual (transação ambiental, inépcia, litispendência, justa causa)
+Q0326|4708||0.95|0|Crimes da Lei de Drogas
+Q0327|5203||0.9|0|Reincidência e confissão na segunda fase
+Q0328|4380||0.8|0|Relação entre criminologia, política criminal e direito penal
+Q0329|5557|4705|0.5|0|Colaboração premiada em esquema de manipulação esportiva
+Q0330|5498|5501|0.6|0|Pacote anticrime: arquivamento e estrutura acusatória
+Q0331|5477||0.95|0|Habeas corpus (legitimidade, cabimento)
+Q0332|5541||0.9|0|Transação penal e impedimento de novo benefício
+Q0333|5170||0.1|0|Mistura (sujeito ativo/passivo, iter criminis, regime, criminologia, prazos)
+Q0334|4381||0.9|0|Objeto da criminologia
+Q0335|5218||0.3|0|Mistura de teoria do delito (finalismo, omissão, dolo, lei penal em branco)
+Q0336|5159||0.9|0|Momento consumativo do furto
+Q0337|4684||0.95|0|Lei de Abuso de Autoridade
+Q0338|5543|5590|0.45|0|Regras de prova (indícios, confissão, sigilo profissional, corpo de delito)
+Q0339|5572|5579|0.45|0|Sentença (embargos de declaração, agravantes, correlação)
+Q0340|5071||0.9|0|Concurso de pessoas
+Q0341|5157||0.85|0|Crimes contra o patrimônio (vários tipos)
+Q0342|5546|5545|0.8|0|Exame de corpo de delito e perícias em geral
+Q0343|5196|5472|0.5|0|Perdão do ofendido na ação penal privada
+Q0344|4688||0.9|0|Lei de Crimes Ambientais: destinação de produtos e ação penal
+Q0345|5103||0.85|0|Estupro de vulnerável e majorante por autoridade sobre a vítima
+Q0346|5583||0.85|0|Assistente de acusação
+Q0347|5199||0.15|0|Mistura de parte geral (estado de necessidade, sursis, continuidade, unificação)
+Q0348|5087||0.6|0|Corrupção ativa em transação comercial internacional
+Q0349|5178||0.9|0|Arrependimento posterior em crime com grave ameaça
+Q0350|4702||0.95|0|Lavagem de dinheiro
+Q0351|5118||0.9|0|Falsificação de cartão de crédito (documento particular)
+Q0352|5512||0.8|0|Teoria geral dos recursos (efeito extensivo, desistência, interesse)
+Q0353|5185||0.4|0|Prescrição iminente e prescrição em perspectiva
+Q0354|5218|5226|0.4|0|Teoria do crime (causalidade, imputação objetiva, domínio do fato, finalismo)
+Q0355|4708||0.9|0|Art. 28 da Lei de Drogas (decisão do STF)
+Q0356|5066||0.95|0|Concurso de crimes
+Q0357|5135||0.9|0|Boicotagem violenta
+Q0358|5133||0.75|0|Invasão de dispositivo informático
+Q0359|4696|5539|0.75|0|Procedimento dos crimes do Estatuto do Idoso (Lei 9.099)

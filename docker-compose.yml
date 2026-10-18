@@ -7,6 +7,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-vicio}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_local_only}
     ports:
+      # só na interface local, para inspeção com psql/adminer; a app usa a rede interna
       - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -22,34 +23,41 @@ services:
     profiles: ["run"]
     user: "${APP_UID:-1000}:${APP_GID:-1000}"
     environment:
-      DATA_DIR: /app/data/input
-      ARTIFACTS_DIR: /app/artifacts
-      DATABASE_URL: ${DATABASE_URL:-postgresql://vicio:change_me_local_only@db:5432/vicio_case}
-      CLASSIFICATION_MODE: ${CLASSIFICATION_MODE:-baseline}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-vicio}:${POSTGRES_PASSWORD:-change_me_local_only}@db:5432/${POSTGRES_DB:-vicio_case}
+      CLASSIFICATION_MODE: ${CLASSIFICATION_MODE:-ensemble}
+      LOCAL_MODELS: ${LOCAL_MODELS:-qwen2.5:7b,llama3.1:8b}
+      # Ollama do compose (perfil local-llm) por padrão; no macOS use o Ollama nativo
+      # (GPU/Metal) com OLLAMA_BASE_URL=http://host.docker.internal:11434
       OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://ollama:11434}
       OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
       OLLAMA_TIMEOUT_SECONDS: ${OLLAMA_TIMEOUT_SECONDS:-180}
-      OLLAMA_NUM_THREADS: ${OLLAMA_NUM_THREADS:-2}
-      TOP_K_CANDIDATES: ${TOP_K_CANDIDATES:-12}
-      PUBLISH_THRESHOLD: ${PUBLISH_THRESHOLD:-0.95}
-      VERIFY_THRESHOLD: ${VERIFY_THRESHOLD:-0.90}
+      OLLAMA_WORKERS: ${OLLAMA_WORKERS:-2}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./artifacts:/app/artifacts
       - ./data/input:/app/data/input:ro
+      - ./data/anotacoes:/app/data/anotacoes:ro
+      - ./config:/app/config:ro
     depends_on:
       db:
         condition: service_healthy
     networks: [case_net]
-    command: ["classify", "--mode", "${CLASSIFICATION_MODE:-baseline}"]
+    command: ["classify", "--mode", "${CLASSIFICATION_MODE:-ensemble}"]
 
   ollama:
-    image: ollama/ollama:latest
+    image: ollama/ollama:${OLLAMA_IMAGE_TAG:-latest}
     profiles: ["local-llm"]
     restart: unless-stopped
     ports:
-      - "127.0.0.1:11434:11434"
+      - "127.0.0.1:${OLLAMA_PORT:-11435}:11434"
     volumes:
       - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
     networks: [case_net]
 
   adminer:
