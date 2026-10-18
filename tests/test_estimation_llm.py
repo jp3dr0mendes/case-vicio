@@ -50,3 +50,19 @@ def test_posterior_increases_with_agreement_and_decreases_with_disagreement():
     assert posterior_correct(prior, [(False, 0.5)], 0.15) < prior
     assert posterior_correct(prior, [(None, 0.5)], 0.15) == prior
     assert precision_given_agreement(0.9, 0.5, 0.1) > 0.98
+
+
+def test_match_option_tolerates_only_small_typos():
+    options = ["Processo Penal > Inquérito Policial > Conceito, Finalidade e Caractéristas do Inquérito Policial",
+               "Processo Penal > Inquérito Policial > Juiz das Garantias"]
+    assert match_option("Processo Penal > Inquérito Policial > Conceito, Finalidade e Características do Inquérito Policial",
+                        options) == options[0]
+    assert match_option("Processo Penal > Inquérito", options) is None
+
+
+def test_match_option_handles_copied_suffix_and_theme_alias():
+    options = ["Penal > Prescrição", "Penal > Punibilidade"]
+    assert match_option("Penal > Prescrição  (subtemas: Outras Prescrições; Decadência)", options) == "Penal > Prescrição"
+    sub = ["Furto", "Roubo", "(geral)"]
+    assert match_option("Penal > Dos Crimes Contra o Patrimônio", sub,
+                        {"Penal > Dos Crimes Contra o Patrimônio": "(geral)"}) == "(geral)"

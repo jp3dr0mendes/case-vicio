@@ -1,28 +1,71 @@
 {
-  "started_at_utc": "2026-10-16T02:48:01.949555+00:00",
-  "finished_at_utc": "2026-10-16T02:48:06.608722+00:00",
-  "duration_seconds": 4.659,
-  "dataset_sha256": "cfb78ab7045df3718e870acaa4d3db853a1683dfad65e81c4f7e9a9efb4e86df",
-  "mode": "baseline",
-  "model": null,
-  "candidate_generator": "tfidf_word_bigram_char_ngram_v1",
-  "top_k_candidates": 12,
-  "publish_threshold": 0.95,
-  "verify_threshold": 0.9,
-  "max_workers": 0,
-  "python_version": "3.13.5",
-  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "started_at_utc": "2026-10-18T20:54:58.747218+00:00",
+  "mode": "ensemble",
+  "classificadores": [
+    "claude-opus-5-5",
+    "qwen2.5:7b",
+    "llama3.1:8b"
+  ],
+  "classificador_forte": {
+    "nome": "claude-opus-5-5",
+    "como": "Claude Opus 5.5 via Claude Code (anotação em lote, mesmo protocolo de prompts/classificacao.md)"
+  },
+  "prompt_version": "classificacao-v3-hierarquica",
+  "policy": {
+    "versao": "politica-v3-calibrada-portao-0.95",
+    "limiar_confianca_anotador_forte": 0.75,
+    "limiar_publicacao_sem_concordancia": 0.9,
+    "veto_por_consenso_local": true,
+    "limiar_posterior_publicacao": 0.95,
+    "limiar_confianca_zona_de_risco": 0.9,
+    "exigir_concordancia_de_todos_os_locais_na_zona_de_risco": true,
+    "limiar_confianca_fora": 0.9
+  },
+  "input_sha256": {
+    "questoes.jsonl": "6815aad02f1577fb7f3c68bb76cd56b3b23df5a0bf951d3422a5ce7d5e492573",
+    "temas.csv": "9c6e98a6cd568816671c0fa14e2449b152cee10e20cb1327b3b097c1c5ce4cbc",
+    "config/nos_duplicados.json": "646dff45ad1a4ef0c283899d7c034dccb0dfa5c391399f93e1644caade4c1387",
+    "config/grupos_ambiguos.json": "82efa85cc508c0a3b81e6b4d3ea4e571d2eba3def878072147797753aab1b947",
+    "config/politica.json": "c112e85db850bdb3c075eb7da0d080120c475c6fccffb19237b6a8914f956a32",
+    "anotacoes/claude_opus_5_5.psv": "7b8b97be3eb2686cc6dd1e574d1c4e410486667525fbc264bdad67fca9912062",
+    "llm/qwen2.5_7b.jsonl": "4fd959d3bf1d222564b072fba3e976afeff2a8407a3ea8e242897bf67f7c8f21",
+    "llm/llama3.1_8b.jsonl": "320351d8bdac44661074a786b50aabcf81585076f730a83c341d74e5ae3af49e"
+  },
   "total_questions": 359,
   "decision_counts": {
-    "publicar": 0,
-    "revisar": 359,
-    "fora": 0
+    "revisar": 258,
+    "publicar": 100,
+    "fora": 1
   },
-  "semantic_validation_performed": false,
-  "primary_calls_completed": 0,
-  "verification_calls_completed": 0,
-  "estimated_api_cost": null,
-  "cost_note": "Não estimado automaticamente; o modo atual usa Ollama local. Hardware, energia e custo de implantação não são medidos.",
+  "strata_counts": {
+    "revisar:zona_de_risco": 42,
+    "revisar:baixa_confianca": 123,
+    "revisar:divergencia": 28,
+    "publicar:concordancia_de_ramo": 27,
+    "publicar:concordancia_exata": 73,
+    "revisar:veto_dos_verificadores": 26,
+    "revisar:probabilidade_estimada_baixa": 32,
+    "revisar:falha_ou_invalido": 5,
+    "fora:consenso": 1,
+    "revisar:possivel_fora": 2
+  },
+  "llm_local_stats": {
+    "qwen2.5:7b": {
+      "respostas_validas": 295,
+      "respostas_invalidas_ou_falhas": 64,
+      "sem_resposta": 0
+    },
+    "llama3.1:8b": {
+      "respostas_validas": 335,
+      "respostas_invalidas_ou_falhas": 24,
+      "sem_resposta": 0
+    }
+  },
   "precision_measured_against_gold_labels": false,
-  "database_run_id": null
+  "observacao_precisao": "Não há gabarito no pacote do case; a precisão é estimada, não medida.",
+  "python_version": "3.12.15",
+  "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.41",
+  "publicacao_sha256": "ed9e4fef629fabb098e4383adf206a2cb7357f2aa4a8c6f45c9eeca6424c0026",
+  "database_run_id": "197ace6b-a7ce-49c7-9890-b579fa849271",
+  "duration_seconds": 3.12
 }

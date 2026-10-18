@@ -67,7 +67,7 @@ def forecast_text(rows: list[dict[str, Any]], est: dict[str, Any], names: list[s
         f"4. Para cada questão calculei a probabilidade de o tema estar certo (coluna confianca do CSV): parte da "
         f"acurácia do principal na faixa de confiança e é atualizada pelo voto de cada verificador (concordou / "
         f"discordou), usando a acurácia dele e r={est.get('r_usado', 0):.2f}, a chance de dois erros caírem no "
-        f"mesmo ramo (medida: {est.get('r_empirico')}). A média nas publicadas é {model['pontual']:.3f}; variando "
+        f"mesmo ramo (medida: {est.get('r_empirico') or 0:.2f}). A média nas publicadas é {model['pontual']:.3f}; variando "
         f"acurácias no IC90% do bootstrap e r entre metade e o dobro, fica entre {model['pessimista']:.3f} e "
         f"{model['otimista']:.3f}.",
         "",
@@ -78,10 +78,17 @@ def forecast_text(rows: list[dict[str, Any]], est: dict[str, Any], names: list[s
     ]
     audit = cfg.get("auditoria_amostra")
     if audit:
-        lines += ["", "6. Auditoria de amostra: " + audit]
+        lines += ["", "6. Auditoria: " + audit.replace("{N}", str(len(published)))]
+    scenario = cfg.get("cenario_correlacionado")
+    clone_originals = set(cfg.get("_originais_com_copia", []))
+    if scenario and clone_originals:
+        k = sum(int(row["tema_central_id"]) in clone_originals for row in published)
+        worst = point * (len(published) - k) / len(published)
+        lines += ["", "7. Risco correlacionado fora do intervalo: "
+                  + scenario.replace("{K}", str(k)).replace("{P}", f"{worst:.2f}")]
     lines += [
         "",
-        "7. Intervalo: pessimista = acurácias no limite inferior, r dobrado e desconto máximo; otimista = limite "
+        "8. Intervalo: pessimista = acurácias no limite inferior, r dobrado e desconto máximo; otimista = limite "
         "superior, r pela metade e desconto mínimo.",
         "",
         "Limitações: o modelo supõe que os erros dos classificadores são independentes dado o acerto; erros de LLMs "

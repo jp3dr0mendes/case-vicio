@@ -1,60 +1,76 @@
-# Arquitetura técnica
+# Arquitetura
 
-## Princípios
+```
+data/input/ (anexos oficiais, somente leitura)
+        │
+        ├─► audit ──────────────────────────────► artifacts/data_audit.json
+        │
+        ├─► [classificador principal] Claude Opus 5.5 (sessão Claude Code, protocolo em
+        │        prompts/anotador_forte.md) ─────► data/anotacoes/claude_opus_5_5.psv
+        │
+        ├─► run-llm --model qwen2.5:7b  ┐  Ollama (nativo ou serviço do compose),
+        ├─► run-llm --model llama3.1:8b ┘  hierárquico tema→subtema ─► artifacts/llm/<modelo>.jsonl
+        │
+        └─► classify --mode ensemble
+                 │  annotations.py  normaliza e valida os 3 votos (inválido ≠ descartado)
+                 │  decisions.py    política v3 (config/politica.json + clones + grupos ambíguos)
+                 │  estimation.py   acurácias latentes por faixa de confiança, r, posterior
+                 │  forecast.py     previsao.txt (com ajustes declarados em config/previsao.json)
+                 │  data.py         validação do contrato do CSV (falha = não grava)
+                 │  db.py           PostgreSQL append-only (se DATABASE_URL)
+                 ▼
+          artifacts/: publicacao.csv, previsao.txt, decision_audit.json,
+                      estimativa.json, run_metadata.json
+          raiz do repo (--deliver-dir .): cópias idênticas de publicacao.csv e previsao.txt
+```
 
-- **Segurança por abstenção:** erro de inferência ou divergência resulta em `revisar`, nunca em publicação implícita.
-- **Classificação fechada:** o modelo escolhe somente IDs fornecidos pela taxonomia e candidatos recuperados.
-- **Separação de responsabilidades:** recuperação lexical não decide publicação; decisão e exportação são módulos distintos.
-- **Auditabilidade:** cada questão gera uma trilha JSON, além do resultado CSV; o PostgreSQL registra as execuções.
-- **Reprodutibilidade:** hash dos dois arquivos de entrada, nome do modelo, limiares e decisões são associados ao run.
+## Módulos
 
-## Componentes
+| Módulo | Responsabilidade |
+|---|---|
+| `data.py` | leitura do JSONL/CSV, limpeza de HTML, validação do contrato de saída |
+| `taxonomy.py` | árvore, ancestrais, regra oficial (mesmo nó/pai/filho; irmão = erro), clones |
+| `retrieval.py` | TF-IDF lexical: só sugestão de último recurso e modo `baseline` (não é probabilidade) |
+| `llm.py` | cliente Ollama hierárquico, retries, casamento estrito da resposta |
+| `runner.py` | execução retomável por modelo, uma linha JSON por questão |
+| `annotations.py` | formato único dos votos e validação contra a árvore |
+| `decisions.py` | política publicar/revisar/fora, determinística e testada |
+| `estimation.py` | estimativa de precisão sem gabarito |
+| `forecast.py` | texto do `previsao.txt` |
+| `pipeline.py` | orquestração, artefatos, metadados, hashes |
+| `db.py` | trilha de auditoria no PostgreSQL |
+| `cli.py` | `audit`, `run-llm`, `classify` |
 
-### 1. Ingestão e validação
+## Política de decisão (v3)
 
-`data.py` faz leitura linha a linha do JSONL, garante campos obrigatórios e IDs únicos, carrega a taxonomia e limpa HTML de enunciado/alternativas. O HTML é conteúdo, não código a executar. Ausências de metadados de origem são aceitas, pois o case explicita que os dados têm defeitos.
+1. Voto do principal inválido/ausente → **revisar** (sugestão do primeiro voto válido).
+2. Principal diz "fora": **fora** só se confiança ≥ 0,90 e algum verificador também disser fora;
+   senão **revisar** ("possível fora"). Dúvida nunca vira fora.
+3. Tema escolhido é clone vazio → **revisar** com o nó original sugerido.
+4. **Veto**: os dois verificadores concordam entre si num ramo diferente → **revisar**.
+5. Confiança do principal < 0,75 → **revisar**.
+6. Algum verificador concorda no ramo (mesmo nó, pai ou filho) → candidato a publicar, no nó mais
+   geral dos dois (correto pela régua se o gabarito estiver em qualquer um deles).
+   Sem concordância: publica só se confiança ≥ 0,90 e pelo menos um verificador respondeu
+   validamente; senão **revisar**.
+7. Ramo com nó concorrente (`grupos_ambiguos.json`) → exige confiança ≥ 0,90 e concordância de
+   **todos** os verificadores; senão **revisar**.
+8. **Portão final**: publicada só se a probabilidade estimada de acerto (posterior, coluna
+   `confianca`) ≥ 0,95; abaixo disso → revisar. Na rodada final isso removeu todas as
+   publicações "só por confiança alta", então toda publicada tem concordância de um verificador.
+9. `extras_ids` só com temas do principal que não sejam do mesmo ramo do central nem clones.
 
-### 2. Taxonomia
+Irmãos nunca contam como concordância. A coluna `confianca` é a posterior estimada
+(docs/estimativa_precisao.md), não a confiança declarada pelo LLM.
 
-`taxonomy.py` carrega IDs, pais, níveis e status. Verifica ciclos e pais inexistentes, expõe apenas temas ativos para seleção e implementa a regra de ramo: igualdade ou relação ancestral/descendente. Irmãos são diferentes. Os quatro nós raiz são contexto de disciplina e não são candidatos selecionáveis; candidatos são temas/subtemas ativos.
+## Infraestrutura
 
-### 3. Recuperação de candidatos
+- `db` PostgreSQL 16 (healthcheck, volume, porta só em 127.0.0.1).
+- `app` (perfil `run`): imagem Python 3.12, usuário sem privilégio (UID configurável para
+  escrever em `./artifacts`), dados/config montados somente leitura.
+- `ollama` (perfil `local-llm`): servidor em container (porta 127.0.0.1:11435). No macOS o
+  container não usa a GPU; as rodadas reais usaram o Ollama nativo (Metal) via
+  `OLLAMA_BASE_URL=http://host.docker.internal:11434`. Ambos os caminhos foram testados.
+- `adminer` (perfil `ops`) para inspeção do banco.
 
-`retrieval.py` combina TF-IDF de palavras/bigramas e n-gramas de caracteres. Isso ajuda com variações ortográficas e termos jurídicos recorrentes. `disciplina_origem` e `assunto_origem` dão um reforço pequeno, nunca são tratados como verdade. A lista de candidatos é limitada por `TOP_K_CANDIDATES`. A similaridade é uma medida de recuperação e não é gravada como confiança.
-
-### 4. Classificação e verificação
-
-`llm.py` chama Ollama com resposta JSON estruturada. A primeira inferência sugere decisão, tema central, extras, motivo e confiança. A segunda inferência julga a proposta independentemente, com acesso à questão e à lista de candidatos. O modelo recebe instrução explícita para não usar `fora` só por incerteza e para considerar que subtemas irmãos não são equivalentes.
-
-### 5. Política de decisão
-
-`decisions.py` valida IDs e aplica gates: publicação exige proposta `publicar`, verificador também `publicar`, concordância, temas ativos no conjunto de candidatos, relação do mesmo ramo e limiares de confiança. `fora` exige dois votos concordantes. Qualquer outro caso cai em revisão. Limiares são parâmetros, não promessa de precisão. A confiança autoatribuída precisa de calibração antes de uso real.
-
-### 6. Persistência e artefatos
-
-`pipeline.py` produz:
-
-- `publicacao.csv`: contrato exato solicitado.
-- `previsao.txt`: previsão derivada das confianças das publicadas (ou aviso de não estimável em baseline).
-- `decision_audit.json`: candidatos, saídas dos estágios e erros por questão.
-- `run_metadata.json`: hash da entrada, modelo, limiares, duração, chamadas concluídas e flag de precisão medida.
-- `data_audit.json`: diagnóstico dos dados.
-
-`db.py` grava `classification_runs` e `classification_decisions` em PostgreSQL, incluindo hash do dataset e trilha JSON. O CSV permanece o artefato de entrega; o banco é para acompanhamento e auditoria.
-
-## Docker / serviços
-
-- `app`: imagem Python imutável por build, execução one-shot para audit/classificação.
-- `db`: PostgreSQL 16 com volume persistente e healthcheck.
-- `ollama` (perfil `local-llm`): inferência local, armazenamento do modelo em volume.
-- `adminer` (perfil `ops`): ferramenta opcional de inspeção do banco.
-
-Não há serviço de fila ou API web nesta primeira versão, porque o case é batch/offline. Para produção com 50 mil questões semanais, adicionar fila apenas se latência/volume exigir; primeiro implementar loteamento, cache por hash da questão+taxonomia+modelo, retry com limite, métricas e painel da fila humana.
-
-## Decisões que ainda precisam ser confirmadas
-
-- Modelo/quantização e capacidade do hardware local.
-- Se o verificador deve ser o mesmo modelo com prompt distinto ou um modelo independente menor.
-- Limiar final após amostra humana e matriz de erro.
-- Como o produto armazena extras e como um tema pai é apresentado na interface.
-- SLA e responsável pela fila de revisão.
+Sem Kafka, Airflow ou banco vetorial: o volume (359 questões) não justifica.

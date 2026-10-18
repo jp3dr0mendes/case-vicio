@@ -1,360 +1,360 @@
 id,decisao,tema_central_id,extras_ids,confianca,motivo
-Q0001,revisar,5527,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0002,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0003,revisar,5568,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0004,revisar,5480,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0005,revisar,5576,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0006,revisar,5160,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0007,revisar,5470,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0008,revisar,5087,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0009,revisar,5165,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0010,revisar,6717,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0011,revisar,4702,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0012,revisar,5561,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0013,revisar,5503,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0014,revisar,5477,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0015,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0016,revisar,5571,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0017,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0018,revisar,5540,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0019,revisar,5475,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0020,revisar,5571,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0021,revisar,5503,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0022,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0023,revisar,5528,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0024,revisar,4388,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0025,revisar,5093,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0026,revisar,5131,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0027,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0028,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0029,revisar,4684,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0030,revisar,5130,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0031,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0032,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0033,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0034,revisar,5498,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0035,revisar,4706,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0036,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0037,revisar,5132,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0038,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0039,revisar,4687,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0040,revisar,5562,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0041,revisar,5184,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0042,revisar,5225,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0043,revisar,5204,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0044,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0045,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0046,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0047,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0048,revisar,5209,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0049,revisar,5152,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0050,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0051,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0052,revisar,6726,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0053,revisar,5540,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0054,revisar,5142,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0055,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0056,revisar,5069,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0057,revisar,5176,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0058,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0059,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0060,revisar,5093,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0061,revisar,4703,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0062,revisar,4691,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0063,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0064,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0065,revisar,5161,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0066,revisar,4371,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0067,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0068,revisar,5117,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0069,revisar,5508,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0070,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0071,revisar,5228,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0072,revisar,5498,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0073,revisar,5084,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0074,revisar,6727,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0075,revisar,5185,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0076,revisar,4380,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0077,revisar,5173,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0078,revisar,4691,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0079,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0080,revisar,4370,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0081,revisar,4371,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0082,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0083,revisar,5150,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0084,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0085,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0086,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0087,revisar,6734,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0088,revisar,4389,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0089,revisar,5063,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0090,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0091,revisar,5208,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0092,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0093,revisar,5142,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0094,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0095,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0096,revisar,6732,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0097,revisar,6728,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0098,revisar,5548,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0099,revisar,5077,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0100,revisar,5103,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0101,revisar,6724,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0102,revisar,5575,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0103,revisar,5478,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0104,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0105,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0106,revisar,5166,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0107,revisar,5119,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0108,revisar,5535,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0109,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0110,revisar,5480,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0111,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0112,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0113,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0114,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0115,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0116,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0117,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0118,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0119,revisar,5505,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0120,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0121,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0122,revisar,6727,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0123,revisar,4368,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0124,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0125,revisar,4703,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0126,revisar,5063,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0127,revisar,5537,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0128,revisar,5469,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0129,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0130,revisar,5205,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0131,revisar,5073,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0132,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0133,revisar,5524,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0134,revisar,5087,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0135,revisar,5169,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0136,revisar,6724,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0137,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0138,revisar,5205,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0139,revisar,5212,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0140,revisar,5070,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0141,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0142,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0143,revisar,5507,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0144,revisar,5561,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0145,revisar,4702,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0146,revisar,5548,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0147,revisar,5502,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0148,revisar,5203,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0149,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0150,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0151,revisar,5522,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0152,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0153,revisar,5175,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0154,revisar,5135,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0155,revisar,5184,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0156,revisar,5207,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0157,revisar,5498,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0158,revisar,6727,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0159,revisar,5177,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0160,revisar,6727,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0161,revisar,5518,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0162,revisar,5111,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0163,revisar,4694,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0164,revisar,6727,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0165,revisar,5535,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0166,revisar,5208,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0167,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0168,revisar,5225,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0169,revisar,5492,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0170,revisar,5185,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0171,revisar,5502,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0172,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0173,revisar,5205,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0174,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0175,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0176,revisar,5081,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0177,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0178,revisar,5085,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0179,revisar,4368,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0180,revisar,5554,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0181,revisar,4691,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0182,revisar,5139,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0183,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0184,revisar,4684,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0185,revisar,5576,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0186,revisar,5202,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0187,revisar,5185,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0188,revisar,5228,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0189,revisar,5065,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0190,revisar,5540,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0191,revisar,5561,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0192,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0193,revisar,5557,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0194,revisar,5218,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0195,revisar,4371,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0196,revisar,4385,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0197,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0198,revisar,5073,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0199,revisar,5218,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0200,revisar,6725,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0201,revisar,5103,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0202,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0203,revisar,4702,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0204,revisar,5507,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0205,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0206,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0207,revisar,5185,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0208,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0209,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0210,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0211,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0212,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0213,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0214,revisar,5494,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0215,revisar,5201,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0216,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0217,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0218,revisar,5518,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0219,revisar,5074,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0220,revisar,5501,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0221,revisar,5201,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0222,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0223,revisar,5084,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0224,revisar,5207,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0225,revisar,5571,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0226,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0227,revisar,5103,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0228,revisar,5566,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0229,revisar,5505,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0230,revisar,5071,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0231,revisar,5224,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0232,revisar,5082,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0233,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0234,revisar,4380,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0235,revisar,6733,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0236,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0237,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0238,revisar,5468,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0239,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0240,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0241,revisar,5224,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0242,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0243,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0244,revisar,5091,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0245,revisar,5185,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0246,revisar,5527,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0247,revisar,5502,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0248,revisar,5092,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0249,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0250,revisar,5576,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0251,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0252,revisar,5208,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0253,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0254,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0255,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0256,revisar,5221,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0257,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0258,revisar,5545,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0259,revisar,5228,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0260,revisar,4368,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0261,revisar,5063,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0262,revisar,5184,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0263,revisar,5524,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0264,revisar,5103,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0265,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0266,revisar,5524,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0267,revisar,5518,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0268,revisar,5228,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0269,revisar,5170,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0270,revisar,5092,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0271,revisar,5562,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0272,revisar,6734,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0273,revisar,5096,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0274,revisar,5157,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0275,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0276,revisar,5545,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0277,revisar,4696,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0278,revisar,5542,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0279,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0280,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0281,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0282,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0283,revisar,5565,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0284,revisar,5214,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0285,revisar,4376,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0286,revisar,5069,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0287,revisar,5230,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0288,revisar,6717,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0289,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0290,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0291,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0292,revisar,4375,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0293,revisar,5189,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0294,revisar,5214,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0295,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0296,revisar,5065,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0297,revisar,4689,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0298,revisar,4694,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0299,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0300,revisar,5084,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0301,revisar,5197,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0302,revisar,5214,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0303,revisar,5063,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0304,revisar,5540,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0305,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0306,revisar,5146,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0307,revisar,5548,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0308,revisar,5500,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0309,revisar,5206,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0310,revisar,5508,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0311,revisar,5487,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0312,revisar,4384,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0313,revisar,5475,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0314,revisar,5477,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0315,revisar,5070,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0316,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0317,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0318,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0319,revisar,5071,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0320,revisar,5498,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0321,revisar,5071,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0322,revisar,5561,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0323,revisar,5535,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0324,revisar,5576,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0325,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0326,revisar,4708,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0327,revisar,5203,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0328,revisar,4374,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0329,revisar,5548,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0330,revisar,5501,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0331,revisar,5477,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0332,revisar,5541,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0333,revisar,5178,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0334,revisar,4381,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0335,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0336,revisar,5165,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0337,revisar,4684,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0338,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0339,revisar,5578,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0340,revisar,5074,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0341,revisar,5160,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0342,revisar,5545,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0343,revisar,5472,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0344,revisar,5063,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0345,revisar,5103,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0346,revisar,5580,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0347,revisar,5198,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0348,revisar,5093,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0349,revisar,5066,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0350,revisar,4702,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0351,revisar,5228,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0352,revisar,5466,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0353,revisar,5469,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0354,revisar,5221,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0355,revisar,6716,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0356,revisar,5067,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0357,revisar,5175,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0358,revisar,5133,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
-Q0359,revisar,5530,,0.50,"Sugestão lexical inicial, não validada semanticamente; revisão humana obrigatória."
+Q0001,revisar,5524,,0.99,Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.
+Q0002,revisar,4378,,0.93,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0003,revisar,5562,,0.62,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0004,revisar,5484,,0.31,"Sem concordância de ramo dos verificadores (5484 x qwen2.5:7b=5485, llama3.1:8b=5482); especialista decide."
+Q0005,revisar,5199,,0.31,"Sem concordância de ramo dos verificadores (5199 x qwen2.5:7b=5195, llama3.1:8b=5091); especialista decide."
+Q0006,publicar,5157,,0.97,
+Q0007,revisar,5063,,0.68,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0008,revisar,5201,,0.62,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0009,revisar,5158,,0.31,"Sem concordância de ramo dos verificadores (5158 x qwen2.5:7b=5159, llama3.1:8b=4709); especialista decide."
+Q0010,publicar,4688,,1.00,
+Q0011,publicar,4702,,0.95,
+Q0012,revisar,5569,,0.44,Sem concordância de ramo dos verificadores (5569 x llama3.1:8b=5512); especialista decide.
+Q0013,revisar,5503,,0.32,Os verificadores independentes concordam entre si em outro ramo (5485) e divergem do classificador principal (5503).
+Q0014,revisar,5477,,0.83,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0015,publicar,5498,,0.99,
+Q0016,revisar,5584,,0.62,Os verificadores independentes concordam entre si em outro ramo (5518) e divergem do classificador principal (5584).
+Q0017,revisar,5533,,0.62,Os verificadores independentes concordam entre si em outro ramo (5531) e divergem do classificador principal (5533).
+Q0018,revisar,5540,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0019,revisar,5475,,0.99,Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo); evidência insuficiente para publicar.
+Q0020,revisar,5199,,0.83,Confiança do classificador principal baixa (0.20); revisão humana.
+Q0021,publicar,5503,,0.97,
+Q0022,revisar,5087,,0.95,Tema com nó concorrente em outro ramo da árvore (abuso_de_autoridade_x_administracao); evidência insuficiente para publicar.
+Q0023,publicar,5524,,1.00,
+Q0024,revisar,4385,,0.92,Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.
+Q0025,revisar,5101,,0.68,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0026,publicar,4704,,1.00,
+Q0027,publicar,5487,,0.99,
+Q0028,revisar,5524,,0.31,"Sem concordância de ramo dos verificadores (5524 x qwen2.5:7b=5531, llama3.1:8b=5500); especialista decide."
+Q0029,publicar,4684,,1.00,
+Q0030,revisar,5135,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0031,revisar,4385,,0.77,Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.
+Q0032,revisar,5497,,0.31,"Sem concordância de ramo dos verificadores (5497 x qwen2.5:7b=5545, llama3.1:8b=5500); especialista decide."
+Q0033,publicar,5519,,1.00,
+Q0034,publicar,5477,,1.00,
+Q0035,publicar,4706,,1.00,
+Q0036,revisar,4704,,0.31,"Sem concordância de ramo dos verificadores (4704 x qwen2.5:7b=5535, llama3.1:8b=5524); especialista decide."
+Q0037,revisar,5118,,0.62,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0038,revisar,5583,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0039,revisar,4687,,0.93,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0040,revisar,5562,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0041,publicar,5184,,1.00,
+Q0042,publicar,5222,,0.97,
+Q0043,revisar,5199,,0.99,"Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar."
+Q0044,revisar,5487,,0.62,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0045,publicar,5091,,0.97,
+Q0046,publicar,5509,,1.00,
+Q0047,revisar,5164,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0048,revisar,5193,,0.95,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0049,publicar,5152,,0.97,
+Q0050,revisar,4708,,0.98,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0051,revisar,5182,,0.97,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0052,revisar,4703,,0.32,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0053,revisar,5541,,0.86,Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.
+Q0054,revisar,5174,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0055,revisar,5550,,0.93,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0056,publicar,5066,,1.00,
+Q0057,publicar,5176,,0.99,
+Q0058,revisar,4377,,0.62,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0059,revisar,4384,,0.62,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0060,revisar,5087,,0.99,Tema com nó concorrente em outro ramo da árvore (abuso_de_autoridade_x_administracao); evidência insuficiente para publicar.
+Q0061,revisar,4703,,0.32,Os verificadores independentes concordam entre si em outro ramo (5188) e divergem do classificador principal (4703).
+Q0062,revisar,5182,,0.32,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0063,publicar,4704,,1.00,
+Q0064,revisar,5165,,0.80,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0065,revisar,5161,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0066,revisar,4373,,0.31,"Sem concordância de ramo dos verificadores (4373 x qwen2.5:7b=4387, llama3.1:8b=4382); especialista decide."
+Q0067,publicar,5091,,0.99,
+Q0068,revisar,5116,,0.75,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0069,revisar,5173,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0070,revisar,4703,,0.68,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0071,publicar,4688,,1.00,
+Q0072,revisar,5590,,0.93,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0073,revisar,5087,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0074,revisar,5181,,0.90,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0075,revisar,5191,,0.99,"Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo, execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar."
+Q0076,publicar,4373,,0.97,
+Q0077,revisar,5170,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0078,revisar,4697,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0079,publicar,5581,,0.99,
+Q0080,publicar,4370,,0.97,
+Q0081,publicar,4373,,0.97,
+Q0082,publicar,5100,,0.97,
+Q0083,revisar,5224,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0084,publicar,4704,,1.00,
+Q0085,revisar,5076,,0.92,Probabilidade estimada de acerto 0.92 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0086,revisar,5092,,0.68,Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0087,revisar,4703,,0.68,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0088,publicar,4389,,1.00,
+Q0089,revisar,5172,,0.62,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0090,revisar,5530,,0.68,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0091,revisar,5201,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0092,revisar,5509,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0093,revisar,5223,,0.31,"Sem concordância de ramo dos verificadores (5223 x qwen2.5:7b=5130, llama3.1:8b=5125); especialista decide."
+Q0094,revisar,4385,,0.68,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0095,publicar,5197,,1.00,
+Q0096,revisar,5486,,0.62,Os verificadores independentes concordam entre si em outro ramo (5482) e divergem do classificador principal (5486).
+Q0097,revisar,4708,,0.83,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0098,revisar,5548,,0.68,Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0099,revisar,5100,,0.31,"Sem concordância de ramo dos verificadores (5100 x qwen2.5:7b=5132, llama3.1:8b=4684); especialista decide."
+Q0100,revisar,5103,,0.68,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0101,publicar,4704,,1.00,
+Q0102,revisar,5572,,0.31,Os verificadores independentes concordam entre si em outro ramo (5209) e divergem do classificador principal (5572).
+Q0103,publicar,5478,,0.99,
+Q0104,revisar,5498,,0.98,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0105,revisar,4385,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0106,revisar,5166,,0.62,Sem concordância de ramo dos verificadores (5166 x qwen2.5:7b=4686); especialista decide.
+Q0107,revisar,5119,,0.32,Os verificadores independentes concordam entre si em outro ramo (4699) e divergem do classificador principal (5119).
+Q0108,publicar,5561,,0.95,
+Q0109,publicar,4708,,1.00,
+Q0110,publicar,5480,,0.99,
+Q0111,publicar,4373,,0.97,
+Q0112,publicar,4705,,1.00,
+Q0113,revisar,5185,,0.68,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0114,revisar,5507,,0.62,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0115,revisar,4385,,0.99,Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.
+Q0116,revisar,4708,,0.32,Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.
+Q0117,revisar,4384,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0118,revisar,5507,,0.99,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0119,revisar,5194,,0.31,Os verificadores independentes concordam entre si em outro ramo (5181) e divergem do classificador principal (5194).
+Q0120,revisar,5530,,0.62,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0121,revisar,5472,,0.62,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0122,revisar,4703,,0.32,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0123,revisar,4377,,0.83,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0124,revisar,4384,,0.93,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0125,revisar,5181,,0.68,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0126,revisar,5170,,0.62,Os verificadores independentes concordam entre si em outro ramo (5217) e divergem do classificador principal (5170).
+Q0127,revisar,5581,,0.62,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0128,revisar,5468,,0.62,Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (5468).
+Q0129,revisar,5550,,0.31,"Sem concordância de ramo dos verificadores (5550 x qwen2.5:7b=5549, llama3.1:8b=5530); especialista decide."
+Q0130,revisar,5160,,0.31,"Sem concordância de ramo dos verificadores (5160 x qwen2.5:7b=5130, llama3.1:8b=5212); especialista decide."
+Q0131,revisar,5072,,0.62,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0132,revisar,5550,,0.75,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0133,revisar,5524,,0.99,Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.
+Q0134,revisar,5092,,0.83,Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.
+Q0135,revisar,5169,,0.68,Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0136,revisar,4704,,0.99,Tema com nó concorrente em outro ramo da árvore (violencia_contra_mulher); evidência insuficiente para publicar.
+Q0137,revisar,5498,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0138,revisar,5199,,0.99,"Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar."
+Q0139,publicar,5211,,0.95,
+Q0140,revisar,5157,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0141,revisar,4385,,0.99,Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.
+Q0142,fora,,,0.90,Nenhum tema da árvore cobre a questão: Direito Tributário (ITCD): nenhum tema penal se aplica
+Q0143,revisar,5507,,0.97,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0144,revisar,5562,,0.44,Sem concordância de ramo dos verificadores (5562 x llama3.1:8b=5561); especialista decide.
+Q0145,publicar,4702,,1.00,
+Q0146,publicar,5594,,0.95,
+Q0147,revisar,5498,,0.93,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0148,publicar,5203,,0.97,
+Q0149,revisar,5498,,0.98,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0150,publicar,4708,,1.00,
+Q0151,revisar,5517,,0.98,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0152,revisar,5472,,0.68,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0153,revisar,5222,,0.44,Sem concordância de ramo dos verificadores (5222 x llama3.1:8b=5212); especialista decide.
+Q0154,revisar,4704,,0.19,"Possivelmente fora da árvore, sem consenso entre classificadores; confirmar ou criar tema."
+Q0155,revisar,4703,,0.32,Os verificadores independentes concordam entre si em outro ramo (4705) e divergem do classificador principal (4703).
+Q0156,publicar,4688,,0.97,
+Q0157,publicar,5520,,1.00,
+Q0158,publicar,4707,,0.97,
+Q0159,revisar,5160,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0160,revisar,5205,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0161,revisar,5588,,0.68,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0162,revisar,4380,,0.62,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0163,revisar,5133,,0.62,Os verificadores independentes concordam entre si em outro ramo (4700) e divergem do classificador principal (5133).
+Q0164,revisar,4703,,0.97,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0165,publicar,4705,,1.00,
+Q0166,revisar,4703,,0.68,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0167,revisar,5524,,0.95,Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.
+Q0168,revisar,5075,,0.19,"Possivelmente fora da árvore, sem consenso entre classificadores; confirmar ou criar tema."
+Q0169,revisar,5492,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0170,revisar,5203,,0.31,"Sem concordância de ramo dos verificadores (5203 x qwen2.5:7b=5072, llama3.1:8b=5196); especialista decide."
+Q0171,revisar,5199,,0.62,Confiança do classificador principal baixa (0.20); revisão humana.
+Q0172,revisar,5466,,0.93,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0173,revisar,4703,,0.32,Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (4703).
+Q0174,revisar,5133,,0.68,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0175,revisar,5092,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0176,revisar,5081,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0177,revisar,5547,,0.31,"Sem concordância de ramo dos verificadores (5547 x qwen2.5:7b=5533, llama3.1:8b=5500); especialista decide."
+Q0178,publicar,4697,,0.99,
+Q0179,revisar,4369,,0.32,Os verificadores independentes concordam entre si em outro ramo (4378) e divergem do classificador principal (4369).
+Q0180,publicar,5554,5594,0.95,
+Q0181,revisar,4695,,0.95,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0182,revisar,5149,,0.62,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0183,revisar,5561,,0.62,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0184,revisar,4708,,0.31,Os verificadores independentes concordam entre si em outro ramo (5488) e divergem do classificador principal (4708).
+Q0185,revisar,4703,,0.32,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0186,revisar,5202,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0187,revisar,5209,,0.31,"Sem concordância de ramo dos verificadores (5209 x qwen2.5:7b=5074, llama3.1:8b=4684); especialista decide."
+Q0188,publicar,5228,,0.95,
+Q0189,revisar,5472,,0.93,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0190,revisar,5539,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0191,revisar,5560,,0.31,Os verificadores independentes concordam entre si em outro ramo (5516) e divergem do classificador principal (5560).
+Q0192,revisar,5087,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0193,revisar,5557,,0.75,Confiança do classificador principal baixa (0.70); revisão humana.
+Q0194,revisar,5089,,0.62,Sem concordância de ramo dos verificadores (5089 x qwen2.5:7b=5074); especialista decide.
+Q0195,revisar,4371,,0.31,Os verificadores independentes concordam entre si em outro ramo (4381) e divergem do classificador principal (4371).
+Q0196,revisar,4385,,0.83,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0197,revisar,5498,,0.93,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0198,publicar,5073,,0.95,
+Q0199,revisar,5218,,0.62,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0200,publicar,4705,,1.00,
+Q0201,revisar,5103,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0202,revisar,5102,,0.31,"Sem concordância de ramo dos verificadores (5102 x qwen2.5:7b=4383, llama3.1:8b=4366); especialista decide."
+Q0203,publicar,4702,,1.00,
+Q0204,publicar,5507,,1.00,
+Q0205,revisar,5512,,0.62,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0206,revisar,5583,,0.31,"Sem concordância de ramo dos verificadores (5583 x qwen2.5:7b=5561, llama3.1:8b=5467); especialista decide."
+Q0207,revisar,4703,,0.68,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0208,revisar,5071,,0.83,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0209,revisar,5498,,0.31,Os verificadores independentes concordam entre si em outro ramo (5582) e divergem do classificador principal (5498).
+Q0210,revisar,4697,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0211,revisar,5583,,0.62,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0212,revisar,5488,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0213,revisar,4708,,0.31,Os verificadores independentes concordam entre si em outro ramo (5531) e divergem do classificador principal (4708).
+Q0214,revisar,5494,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0215,revisar,5201,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0216,revisar,5539,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0217,revisar,4384,,0.83,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0218,revisar,5518,,0.99,Tema com nó concorrente em outro ramo da árvore (prisoes_teoria_geral_x_especies); evidência insuficiente para publicar.
+Q0219,revisar,5071,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0220,publicar,5501,,0.97,
+Q0221,revisar,5199,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0222,publicar,4374,,0.99,
+Q0223,revisar,5086,,0.31,"Sem concordância de ramo dos verificadores (5086 x qwen2.5:7b=4689, llama3.1:8b=4699); especialista decide."
+Q0224,revisar,5203,,0.68,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0225,publicar,5478,,0.97,
+Q0226,revisar,5544,,0.68,Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0227,revisar,5102,,0.31,"Sem concordância de ramo dos verificadores (5102 x qwen2.5:7b=5072, llama3.1:8b=4384); especialista decide."
+Q0228,revisar,4703,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0229,revisar,5584,,0.62,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0230,revisar,5211,,0.98,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0231,publicar,5224,,1.00,
+Q0232,publicar,5079,,1.00,
+Q0233,publicar,5175,,0.97,
+Q0234,publicar,4380,,0.95,
+Q0235,publicar,5561,,0.95,
+Q0236,revisar,5490,,0.83,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0237,publicar,5178,,0.97,
+Q0238,revisar,5523,,0.77,Tema com nó concorrente em outro ramo da árvore (prisoes_teoria_geral_x_especies); evidência insuficiente para publicar.
+Q0239,revisar,5199,,0.95,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0240,revisar,5500,,0.62,Os verificadores independentes concordam entre si em outro ramo (5519) e divergem do classificador principal (5500).
+Q0241,revisar,5224,,0.77,Probabilidade estimada de acerto 0.77 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0242,revisar,5512,,0.31,Os verificadores independentes concordam entre si em outro ramo (5560) e divergem do classificador principal (5512).
+Q0243,publicar,5178,,0.99,
+Q0244,revisar,5091,,0.83,Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.
+Q0245,publicar,5185,,0.99,
+Q0246,revisar,5527,,0.51,Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.
+Q0247,revisar,5502,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0248,publicar,5087,,1.00,
+Q0249,revisar,5492,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0250,revisar,5201,,0.93,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0251,publicar,5191,,1.00,
+Q0252,revisar,5199,,0.62,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0253,publicar,4373,,0.95,
+Q0254,revisar,4704,,0.97,Tema com nó concorrente em outro ramo da árvore (violencia_contra_mulher); evidência insuficiente para publicar.
+Q0255,revisar,5213,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0256,revisar,5224,,0.62,Os verificadores independentes concordam entre si em outro ramo (5212) e divergem do classificador principal (5224).
+Q0257,revisar,5218,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0258,publicar,5545,,1.00,
+Q0259,revisar,5183,,0.32,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0260,revisar,4374,,0.93,Confiança do classificador principal baixa (0.35); revisão humana.
+Q0261,revisar,5136,,0.75,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0262,revisar,5184,,0.93,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0263,publicar,5492,,0.97,
+Q0264,revisar,5102,,0.44,Sem concordância de ramo dos verificadores (5102 x llama3.1:8b=4693); especialista decide.
+Q0265,revisar,5185,,0.31,"Sem concordância de ramo dos verificadores (5185 x qwen2.5:7b=5068, llama3.1:8b=5067); especialista decide."
+Q0266,publicar,5480,,0.95,
+Q0267,revisar,4708,,0.97,Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.
+Q0268,revisar,5120,,0.80,Confiança do classificador principal baixa (0.20); revisão humana.
+Q0269,revisar,5172,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0270,revisar,5091,,0.83,Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.
+Q0271,revisar,5562,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0272,revisar,4703,,0.97,Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.
+Q0273,revisar,5087,,0.93,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0274,revisar,5160,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0275,revisar,5539,,0.68,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0276,revisar,5543,,0.98,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0277,publicar,4696,,0.97,
+Q0278,revisar,5542,,0.32,Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.
+Q0279,revisar,5185,,0.68,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0280,revisar,5120,,0.62,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0281,revisar,5555,,0.62,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0282,revisar,4704,,0.98,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0283,revisar,5496,,0.32,Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (5496).
+Q0284,revisar,5224,,0.62,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0285,publicar,4376,,0.99,
+Q0286,revisar,5199,,0.99,"Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar."
+Q0287,publicar,5228,,1.00,
+Q0288,revisar,5066,,0.68,Confiança do classificador principal baixa (0.10); revisão humana.
+Q0289,publicar,4704,,1.00,
+Q0290,revisar,5539,,0.98,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0291,revisar,4708,,0.95,Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.
+Q0292,publicar,4374,,0.99,
+Q0293,publicar,5189,,0.97,
+Q0294,publicar,5211,,0.99,
+Q0295,publicar,5487,,0.99,
+Q0296,revisar,5472,,0.93,Confiança do classificador principal baixa (0.65); revisão humana.
+Q0297,revisar,4695,,0.95,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0298,revisar,4694,,0.93,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0299,revisar,4371,,0.62,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0300,revisar,5084,,0.68,Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0301,publicar,5197,,0.99,
+Q0302,revisar,5224,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0303,revisar,5180,,0.97,Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.
+Q0304,revisar,5540,,0.93,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0305,revisar,5466,,0.97,Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo); evidência insuficiente para publicar.
+Q0306,revisar,5146,,0.32,Os verificadores independentes concordam entre si em outro ramo (4705) e divergem do classificador principal (5146).
+Q0307,publicar,4707,,0.99,
+Q0308,publicar,5501,,0.99,
+Q0309,publicar,4688,,1.00,
+Q0310,publicar,5505,,1.00,
+Q0311,publicar,5488,,1.00,
+Q0312,revisar,4384,,0.68,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0313,revisar,5209,,0.95,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0314,publicar,5477,,1.00,
+Q0315,publicar,5185,,0.99,
+Q0316,revisar,5224,,0.62,Confiança do classificador principal baixa (0.55); revisão humana.
+Q0317,revisar,5198,,0.31,"Sem concordância de ramo dos verificadores (5198 x qwen2.5:7b=5188, llama3.1:8b=4704); especialista decide."
+Q0318,publicar,5178,,0.99,
+Q0319,publicar,5071,,0.99,
+Q0320,revisar,5550,,0.99,Tema com nó concorrente em outro ramo da árvore (prova_testemunhal_x_audiencia); evidência insuficiente para publicar.
+Q0321,publicar,5071,,0.99,
+Q0322,revisar,5561,,0.62,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0323,revisar,5590,,0.62,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0324,revisar,5199,,0.83,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0325,revisar,5466,,0.95,Confiança do classificador principal baixa (0.20); revisão humana.
+Q0326,revisar,4708,,0.97,Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.
+Q0327,publicar,5203,,1.00,
+Q0328,publicar,4380,,0.99,
+Q0329,revisar,5557,,0.83,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0330,revisar,5498,,0.83,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0331,publicar,5477,,1.00,
+Q0332,revisar,5541,,0.97,Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.
+Q0333,revisar,5170,,0.62,Confiança do classificador principal baixa (0.10); revisão humana.
+Q0334,revisar,4381,,0.86,Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0335,revisar,5218,,0.95,Confiança do classificador principal baixa (0.30); revisão humana.
+Q0336,publicar,5159,,1.00,
+Q0337,publicar,4684,,1.00,
+Q0338,revisar,5543,,0.83,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0339,revisar,5572,,0.62,Confiança do classificador principal baixa (0.45); revisão humana.
+Q0340,publicar,5071,,1.00,
+Q0341,publicar,5157,,0.97,
+Q0342,revisar,5546,,0.44,Sem concordância de ramo dos verificadores (5546 x llama3.1:8b=5550); especialista decide.
+Q0343,revisar,5196,,0.68,Confiança do classificador principal baixa (0.50); revisão humana.
+Q0344,publicar,4688,,0.97,
+Q0345,revisar,5103,,0.74,Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.
+Q0346,revisar,5583,,0.31,"Sem concordância de ramo dos verificadores (5583 x qwen2.5:7b=5477, llama3.1:8b=5468); especialista decide."
+Q0347,revisar,5199,,0.62,Confiança do classificador principal baixa (0.15); revisão humana.
+Q0348,revisar,5087,,0.80,Confiança do classificador principal baixa (0.60); revisão humana.
+Q0349,revisar,5178,,0.51,Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0350,publicar,4702,,0.97,
+Q0351,revisar,5118,,0.32,Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.
+Q0352,revisar,5512,,0.31,Os verificadores independentes concordam entre si em outro ramo (5561) e divergem do classificador principal (5512).
+Q0353,revisar,5185,,0.98,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0354,revisar,5218,,0.93,Confiança do classificador principal baixa (0.40); revisão humana.
+Q0355,revisar,4708,,0.32,Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.
+Q0356,publicar,5066,,1.00,
+Q0357,revisar,5135,,0.83,Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.
+Q0358,revisar,5133,,0.31,Os verificadores independentes concordam entre si em outro ramo (4689) e divergem do classificador principal (5133).
+Q0359,publicar,4696,5539,0.95,

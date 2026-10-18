@@ -2,12 +2,74 @@
   "questions": 359,
   "topics": 377,
   "active_topics": 375,
-  "inactive_topics": 2,
+  "inactive_topic_ids": [
+    5078,
+    5234
+  ],
   "root_nodes": 4,
   "selectable_active_topics": 371,
+  "topics_without_description": [
+    6716,
+    6717,
+    6718,
+    6719,
+    6720,
+    6721,
+    6722,
+    6723,
+    6724,
+    6725,
+    6726,
+    6727,
+    6728,
+    6732,
+    6733,
+    6734,
+    6735,
+    6736,
+    6737,
+    6738
+  ],
+  "clone_nodes": {
+    "6716": 4684,
+    "6717": 4688,
+    "6718": 5087,
+    "6719": 5087,
+    "6720": 5157,
+    "6721": 5157,
+    "6722": 4696,
+    "6723": 4702,
+    "6724": 4704,
+    "6725": 4705,
+    "6726": 5199,
+    "6727": 5199,
+    "6728": 4708,
+    "6732": 5480,
+    "6733": 5480,
+    "6734": 4703,
+    "6735": 5543,
+    "6736": 5560,
+    "6737": 5572,
+    "6738": 5572
+  },
+  "duplicate_titles_across_branches": [
+    "abuso de autoridade",
+    "ação penal",
+    "crimes contra o meio ambiente",
+    "lavagem de dinheiro",
+    "lei de execução penal",
+    "lei maria da penha",
+    "organizações criminosas",
+    "tráfico de drogas"
+  ],
   "missing_command": 94,
   "missing_subject": 18,
   "missing_discipline": 1,
+  "alternatives_count_distribution": {
+    "5": 255,
+    "2": 58,
+    "4": 46
+  },
   "discipline_origin_counts": {
     "Processo Penal": 131,
     "Criminologia": 31,
@@ -22,10 +84,27 @@
     "Direito Processual Penal": 1,
     "Direito Ambiental": 1
   },
+  "top_subject_origin_counts": {
+    "Concurso de Crimes": 43,
+    "Ação Penal": 20,
+    "Ação Penal (Parte 01)": 19,
+    "Inquérito Policial": 19,
+    "Teoria da Pena (Parte 02)": 18,
+    "[vazio]": 18,
+    "Ação Penal (Parte 02)": 17,
+    "Comunicação dos atos processuais": 13,
+    "Teorias Legitimidoras da Pena": 10,
+    "Sistemas e Princípios Processuais Penais": 10,
+    "Lesão Corporal": 9,
+    "Legislação Penal Especial": 9,
+    "Teoria do Crime (Ilicitude)": 8,
+    "Procedimento do Júri": 7,
+    "Iter Criminis": 7
+  },
   "duplicate_question_ids": 0,
   "notes": [
-    "O assunto e a disciplina de origem são metadados auxiliares, não rótulos verdadeiros.",
-    "Não há rótulos de referência no pacote fornecido; precisão real não pode ser calculada localmente.",
-    "O status inativo precisa bloquear publicação, mas os pais/filhos ativos continuam na árvore."
+    "Disciplina e assunto de origem são pistas ruidosas, não rótulos.",
+    "Não há rótulos de referência no pacote: a precisão real não pode ser medida localmente.",
+    "Temas inativos e nós-clone vazios nunca são publicados."
   ]
 }

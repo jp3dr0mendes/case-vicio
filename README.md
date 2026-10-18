@@ -1,138 +1,169 @@
-# Case Vício — Classificação de tópicos
+# Case Vício — classificação de questões por tópico
 
-Implementação inicial, reproduzível e auditável para o case de classificação de 359 questões. O repositório separa **geração de candidatos**, **decisão semântica**, **verificação independente**, **política de publicação**, **trilha de auditoria** e **exportação**.
+Classificação de 359 questões de concurso (Penal, Processo Penal, Legislação Penal Especial e
+Criminologia) na árvore de temas da plataforma, decidindo para cada uma entre **publicar**,
+**revisar** ou **fora**, com a meta de ≥ 95% de precisão nas publicadas e a maior cobertura
+possível. Enunciado original: [`docs/enunciado_case_vicio.pdf`](docs/enunciado_case_vicio.pdf).
 
-> **Importante — status honesto da entrega:** o modo `baseline` é uma triagem lexical e encaminha as 359 questões para `revisar`. Ele comprova o contrato de dados e gera sugestões de tópico, mas **não é uma publicação final para o aluno** e não afirma ter atingido precisão de 95%. Para gerar decisões semânticas, é necessário subir/configurar um modelo no Ollama e executar o modo `ollama`; mesmo assim, a precisão real precisa ser validada contra uma amostra rotulada/revisada por especialista, que não veio no ZIP.
+## Entregáveis (raiz do repositório)
 
-## 1. O que o case pede
+| Arquivo | Conteúdo |
+|---|---|
+| [`publicacao.csv`](publicacao.csv) | decisão para as 359 questões no formato do `entrega_modelo.csv` |
+| [`previsao.txt`](previsao.txt) | precisão e cobertura previstas, com intervalo e metodologia |
+| [`relatorio_case.md`](relatorio_case.md) | relatório (raciocínio, diagnóstico, produção) |
+| [`memo_professor.md`](memo_professor.md) | memo de 1 página para o professor |
 
-Para cada ID Q0001–Q0359, gerar `publicacao.csv` com exatamente uma linha e as colunas `id`, `decisao`, `tema_central_id`, `extras_ids`, `confianca`, `motivo`. As decisões permitidas são `publicar`, `revisar` e `fora`. Tema central é obrigatório nas duas primeiras, vazio em `fora`, e o motivo é obrigatório para `revisar`/`fora`. O objetivo é maximizar a cobertura publicada sem ficar abaixo de 95% de precisão. A regra de avaliação aceita nós pai/filho do mesmo ramo, mas não subtemas irmãos.
+`publicacao.csv` e `previsao.txt` da raiz são cópias byte a byte de `artifacts/` (o teste
+`tests/test_entrega.py` garante isso).
 
-## 2. Stack
+## Resultado
 
-- Python 3.12, pandas e scikit-learn para carga, limpeza e recuperação lexical dos candidatos.
-- Ollama opcional para inferência local com saída JSON estruturada, sem dependência de API paga.
-- PostgreSQL 16 para histórico de execução, resultados e rastreabilidade.
-- Docker Compose para subir os serviços; Adminer é opcional e fica atrás do perfil `ops`.
-- pytest para testes unitários, integração local e contrato dos arquivos.
+| | |
+|---|---|
+| publicar | **100** (28%) |
+| revisar | 258 (todas com tema sugerido e motivo) |
+| fora | 1 |
+| precisão prevista | **0,95** (intervalo 0,85–0,98) — prevista, não medida: não há gabarito |
+| cobertura prevista | 0,28 (0,26–0,30) |
 
-A infraestrutura é deliberadamente pequena. Não há necessidade de Kafka, Airflow, vector database ou arquitetura de agentes para uma taxonomia de 377 nós e um lote de 359 questões. Para 50 mil questões semanais, ampliar primeiro loteamento, cache e monitoramento antes de adicionar componentes distribuídos.
+Modelos: Claude Opus 5.5 (classificador principal), qwen2.5:7b e llama3.1:8b (verificadores,
+Ollama 0.40.6 local). Custo marginal: zero além da assinatura do Claude Code; tempo: ~20 min de
+anotação + ~75 min de inferência local (Apple M2 Pro, 16 GB) + segundos para a política.
 
-## 3. Pré-requisitos
+## Como a classificação é feita
 
-- Docker Engine e Docker Compose v2 instalados.
-- Para classificação semântica local, memória/CPU compatíveis com o modelo escolhido; GPU é opcional e não é pressuposta.
+1. **Classificador principal** — Claude Opus 5.5, rodando numa sessão do Claude Code, anotou as
+   359 questões com a árvore completa (protocolo em
+   [`prompts/anotador_forte.md`](prompts/anotador_forte.md); saída versionada em
+   `data/anotacoes/claude_opus_5_5.psv`, sem edição manual).
+2. **Verificadores independentes** — qwen2.5:7b e llama3.1:8b via Ollama, em dois passos
+   (tema → subtema), prompts em [`prompts/classificacao.md`](prompts/classificacao.md)
+   (inclui as versões descartadas e por quê).
+3. **Política** determinística ([`docs/arquitetura.md`](docs/arquitetura.md),
+   `config/politica.json`): concordância de ramo (mesmo nó, pai ou filho; irmão não conta),
+   veto, nós-clone nunca publicados, evidência reforçada em ramos com nó concorrente; falha ou
+   dúvida → revisar com sugestão.
+4. **Estimativa sem gabarito** ([`docs/estimativa_precisao.md`](docs/estimativa_precisao.md)):
+   acurácias latentes com três classificadores, posterior por questão (coluna `confianca`),
+   desconto declarado por divergência de critério.
 
-Crie seu `.env` a partir do exemplo:
+Diagnóstico dos dados: [`docs/diagnostico_dados.md`](docs/diagnostico_dados.md).
+Validação executada: [`docs/validacao.md`](docs/validacao.md). Próximos passos:
+[`docs/roadmap.md`](docs/roadmap.md).
+
+## Estrutura
+
+```
+src/vicio_case/   data, taxonomy, retrieval, llm, runner, annotations, decisions,
+                  estimation, forecast, pipeline, db, cli
+tests/            contratos de dados, regra da árvore, política, estimador, entrega
+config/           politica.json, nos_duplicados.json, grupos_ambiguos.json, previsao.json
+prompts/          prompts dos classificadores
+data/input/       anexos oficiais (idênticos ao ZIP do case)
+data/anotacoes/   votos do classificador principal
+artifacts/        saídas: llm/*.jsonl, publicacao.csv, previsao.txt, decision_audit.json,
+                  estimativa.json, run_metadata.json, data_audit.json, experimentos/
+```
+
+## Como rodar
+
+### Local (Python 3.12+)
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+```
+
+```bash
+PYTHONPATH=src .venv/bin/pytest -q
+```
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli audit
+```
+
+Classificadores locais (precisa do [Ollama](https://ollama.com) com os modelos baixados; a
+execução é retomável e grava `artifacts/llm/<modelo>.jsonl`):
+
+```bash
+ollama pull qwen2.5:7b && ollama pull llama3.1:8b
+```
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli run-llm --model qwen2.5:7b
+```
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli run-llm --model llama3.1:8b
+```
+
+Política + estimativa + entrega (gera `artifacts/*` e copia `publicacao.csv`/`previsao.txt`
+para a raiz):
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli classify --mode ensemble --deliver-dir .
+```
+
+`--mode baseline` gera uma versão só lexical (tudo em revisar) para testar o contrato.
+
+### Docker
 
 ```bash
 cp .env.example .env
 ```
 
-No Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Em Linux/macOS, ajuste `APP_UID` e `APP_GID` para os IDs do usuário que deve gravar a pasta `artifacts` (por exemplo, `id -u` e `id -g`). Altere `POSTGRES_PASSWORD` e mantenha `DATABASE_URL` coerente com as mesmas credenciais. Não comite `.env`.
-
-## 4. Subir infraestrutura e executar a baseline
-
 ```bash
 docker compose up -d db
-docker compose --profile run run --rm app audit
-docker compose --profile run run --rm app classify --mode baseline
 ```
 
-A baseline deve gerar:
+```bash
+docker compose --profile run run --rm app audit
+```
 
-- `artifacts/publicacao.csv`: 359 sugestões; todas em `revisar` por segurança.
-- `artifacts/previsao.txt`: aviso explícito de que a precisão não é estimável sem questões publicadas.
-- `artifacts/decision_audit.json`: candidatos lexicais e dados de auditoria por questão.
-- `artifacts/run_metadata.json`: hash de entrada, versão Python, modelo, limiares, duração, contagem de chamadas e status da medição de precisão.
-- `artifacts/data_audit.json`: estatísticas de qualidade do lote.
+```bash
+docker compose --profile run run --rm app classify --mode ensemble
+```
 
-## 5. Executar com LLM local (Ollama)
+Testes dentro do container:
 
-Primeiro, suba o servidor local e baixe o modelo configurado em `.env`:
+```bash
+docker compose --profile run run --rm --entrypoint python app -m pytest -q
+```
+
+Ollama em container (perfil `local-llm`; no macOS roda só em CPU — para usar a GPU, rode o
+Ollama nativo e defina `OLLAMA_BASE_URL=http://host.docker.internal:11434` no `.env`):
 
 ```bash
 docker compose --profile local-llm up -d ollama
+```
+
+```bash
 docker compose exec ollama ollama pull qwen2.5:7b
 ```
 
-Depois, execute a classificação com o segundo estágio de verificação:
-
 ```bash
-docker compose --profile run run --rm app classify --mode ollama
+docker compose --profile run --profile local-llm run --rm app run-llm --model qwen2.5:7b
 ```
 
-Para inspecionar o PostgreSQL pela interface opcional, suba `docker compose --profile ops up -d adminer` e abra `http://localhost:8080`; use `db` como servidor, a base/usuário/senha configurados em `.env`.
+No Linux, defina `APP_UID`/`APP_GID` no `.env` com o seu `id -u`/`id -g` para o container
+escrever em `./artifacts`. O banco recebe uma linha por execução (append-only) em
+`classification_runs` e uma por questão em `classification_decisions`; o perfil `ops` sobe o
+Adminer em `127.0.0.1:8080`.
 
-O pipeline tenta duas chamadas por questão: (1) classificar dentro da lista fechada de candidatos e (2) verificar a proposta. Só pode publicar quando ambos os estágios recomendam publicação, concordam no mesmo ramo hierárquico e ultrapassam os limiares configurados (`PUBLISH_THRESHOLD=0.95`, `VERIFY_THRESHOLD=0.90`). Divergências, erros de rede/modelo, temas inativos ou IDs inválidos viram revisão. `fora` também exige concordância dos dois estágios.
+## Reprodutibilidade
 
-A confiança produzida pelo LLM ainda é autoavaliada e não equivale a uma probabilidade calibrada. Ajuste o limiar apenas após análise de erros e validação humana; não trate os valores padrão como garantia de 95%.
+`artifacts/run_metadata.json` registra: SHA-256 de cada entrada (questões, temas, configs,
+anotações, saídas dos LLMs), versão do prompt e da política, limiares, contagens por decisão e
+estrato, falhas dos LLMs, `publicacao_sha256`, duração e o `run_id` no banco. A etapa
+`classify` é determinística dadas as mesmas entradas. As chamadas aos LLMs locais usam
+temperatura 0 e seed fixa (retentativas a 0,3), mas o Ollama não garante bit a bit entre
+versões/hardware; por isso as respostas usadas estão versionadas em `artifacts/llm/`.
 
-## 6. Rodar e testar sem Docker
+## Limitações
 
-```bash
-python -m venv .venv
-# ative o ambiente virtual e instale as dependências:
-pip install -r requirements.txt
-PYTHONPATH=src python -m vicio_case.cli audit --data-dir data/input --artifacts-dir artifacts
-PYTHONPATH=src python -m vicio_case.cli classify --mode baseline --data-dir data/input --artifacts-dir artifacts
-PYTHONPATH=src pytest -q
-```
-
-Para execução local com Ollama, defina `OLLAMA_BASE_URL` e `OLLAMA_MODEL` no ambiente e use `--mode ollama`.
-
-## 7. Arquitetura e limites
-
-```text
-questoes.jsonl + temas.csv
-          |
-          v
- validação e limpeza HTML
-          |
-          v
- recuperação de candidatos (TF-IDF palavra + caracteres)
-          |
-          +---- baseline: todos em revisão
-          |
-          v
- LLM classificador (Ollama, JSON fechado)
-          |
-          v
- verificador independente
-          |
-          v
- política conservadora + validação da árvore
-          |
-          +---- publicacao.csv / previsao.txt
-          +---- trilha JSON de decisão
-          +---- PostgreSQL: execução e decisões
-```
-
-A similaridade lexical serve para busca de candidatos, não como confiança final. O LLM só vê uma lista limitada de temas ativos. A política final faz validação adicional de IDs e da hierarquia. A interface com especialista ainda é uma etapa futura, não está implementada nesta versão.
-
-## 8. Arquivos de documentação
-
-- `docs/entendimento_case.md`: requisitos e interpretação da régua.
-- `docs/arquitetura.md`: componentes, fluxo e decisões técnicas.
-- `docs/plano_controle.md`: gates de qualidade, critérios e respostas a falhas.
-- `docs/diagnostico_dados.md`: análise do material recebido.
-- `docs/relatorio_case.md`: relatório técnico em formato Markdown.
-- `docs/memo_professor.md`: memo não técnico de uma página.
-- `docs/roadmap.md`: próximos passos priorizados.
-- `docs/validacao.md`: testes executados e limitações do ambiente.
-
-## 9. O que falta antes de entregar o case
-
-1. Executar o modo Ollama com um modelo definido e registrar exatamente a versão, tempo e configuração.
-2. Revisar manualmente amostra estratificada de publicações sugeridas; conferir especialidade, subtema e árvore pai/filho.
-3. Rever falsos positivos/falsos negativos e ajustar política/recuperação.
-4. Definir previsão de precisão e cobertura em `previsao.txt` após a rodada final; confirmar que a política tem cobertura maior que zero e evidência suficiente para sustentar a previsão.
-5. Publicar o repositório GitHub com os artefatos finais e registrar qualquer ajuste manual.
-
-**Não publique o artefato `baseline` como resposta final do case.** Ele é o fallback seguro, não a solução semântica final.
+- **Não há gabarito** no pacote: a precisão é prevista, não medida.
+- O classificador principal é um LLM numa sessão interativa: para refazer exatamente a anotação é
+  preciso o mesmo modelo; o arquivo versionado é a entrada oficial da política.
+- Os verificadores locais são modelos pequenos (7–8B); com hardware maior, a cobertura subiria.
+- Os parâmetros manuais (clones, grupos ambíguos, desconto) estão declarados em `config/` e
+  justificados no relatório.

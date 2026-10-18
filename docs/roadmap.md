@@ -1,32 +1,31 @@
-# Próximos passos priorizados
+# Roadmap
 
-## P0 — antes de qualquer entrega final
+## Implementado e testado (neste repositório)
+- Leitura/validação dos anexos, limpeza de HTML, auditoria (`audit`) — testes automáticos.
+- Árvore com regra oficial (mesmo nó/pai/filho; irmão = erro), inativos, raízes e clones — testes.
+- Classificador principal (Claude Opus 5.5) para as 359 questões — arquivo versionado.
+- Verificadores locais qwen2.5:7b e llama3.1:8b (Ollama nativo, Metal) — rodadas completas,
+  retomáveis, com retentativas; falhas registradas.
+- Política v3 determinística e testada; estimativa sem gabarito; previsão; entrega na raiz.
+- PostgreSQL append-only via Docker; perfis `run`, `local-llm`, `ops` do Compose testados.
 
-1. Construir imagem e subir serviços com `docker compose`; executar audit e testes em ambiente com Docker.
-2. Configurar/baixar versão do modelo Ollama; registrar tag e digest, parâmetros e tempo de cada rodada.
-3. Rodar inferência semântica de ponta a ponta; verificar se as 359 questões aparecem exatamente uma vez e se nenhuma saída usa tema inativo.
-4. Auditar manualmente amostra estratificada, com ênfase em publicações de confiança alta, disciplina de origem divergente e temas com nomes semelhantes.
-5. Ajustar threshold pela curva precisão-cobertura; gerar `previsao.txt` final sem rótulo conhecido e guardar versão do pipeline.
+## Implementado, mas só parcialmente verificado
+- Ollama **em container**: testado com um modelo pequeno (qwen2.5:0.5b) e o app conectado; as
+  rodadas de 7–8B usaram o Ollama nativo, porque no macOS o container não tem GPU e a máquina
+  (16 GB) não comporta o modelo em CPU dentro da VM com folga.
+- Reprodutibilidade dos LLMs locais: temperatura 0 e seed fixa, mas sem garantia bit a bit
+  entre versões do Ollama; as respostas usadas estão versionadas.
 
-## P1 — melhorar recuperação e avaliação
+## Depende do especialista / da Vício
+- **Gabarito**: só com rótulos da equipe a precisão passa de prevista a medida. Pedido: 100
+  questões rotuladas às cegas para recalibrar as faixas de confiança e o desconto de critério.
+- Regras da árvore: consolidar os 20 clones, escolher o ramo "oficial" dos assuntos repetidos,
+  reativar ou substituir "Direito penal econômico", decidir o destino das questões "colcha de
+  retalhos".
+- Revisão da fila `revisar` (cada item já traz sugestão e motivo).
 
-- Comparar TF-IDF atual com embeddings locais via Ollama ou modelo multilíngue específico; avaliar recall@k de candidatos com rótulos da amostra.
-- Criar suíte de casos difíceis/regressão: pai vs filho, irmãos, legislação especial, questão multitema, metadado errado, tema inativo e questão fora da árvore.
-- Calibrar confiança (por faixa ou modelo de calibração) somente com rótulos e separação treino/validação; não calibrar usando a previsão autoatribuída do próprio LLM.
-- Medir precisão e cobertura por disciplina, nível e família de temas, além da métrica geral.
-
-## P2 — prontidão para produção
-
-- Interface de fila humana: questão, alternativas, candidatos, justificativas, diff entre classificadores, aprovar/corrigir e registrar rótulo.
-- Painel de métricas: precisão auditada, cobertura, taxa de revisão, taxa `fora`, acordo dos estágios, drift, latência e custo.
-- Cache por hash normalizado da questão + hash da taxonomia + versão do modelo/prompt.
-- Retry com backoff e dead-letter para erros persistentes; idempotência para reprocessar lote sem duplicar histórico.
-- Versionar taxonomia, prompt, limiares e modelo; rollback para último conjunto aprovado.
-- Integrar com importação de questões e reportes de alunos, mantendo o humano como controle final em casos de risco.
-
-## P3 — escala semanal de 50 mil questões
-
-- Fazer piloto de volume para medir tokens, latência e memória antes de dimensionar hardware.
-- Executar classificação em lotes controlados e limitar concorrência; não criar microserviços adicionais até que métricas indiquem gargalo.
-- Adicionar fila (por exemplo, Redis/Celery ou equivalente) somente se for necessário desacoplar a importação e a revisão.
-- Fazer reavaliação periódica com amostra rotulada e gatilho para reduzir publicação automática quando o limite de precisão cair.
+## Depende de modelo/infraestrutura
+- Verificador mais forte (30B+ local ou API) → mais concordâncias, mais cobertura com a mesma
+  precisão. A política e a estimativa não mudam; só entra mais um `--model`.
+- Classificador treinado sobre embeddings com os rótulos revisados (camada barata para produção).
+- Pipeline semanal de 50 mil questões descrito no relatório (seção c).

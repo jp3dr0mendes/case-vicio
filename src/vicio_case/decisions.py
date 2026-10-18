@@ -24,6 +24,7 @@ PUB_EXATO = "publicar:concordancia_exata"
 PUB_RAMO = "publicar:concordancia_de_ramo"
 PUB_ALTA_CONF = "publicar:alta_confianca_sem_veto"
 REV_VETO = "revisar:veto_dos_verificadores"
+REV_POSTERIOR = "revisar:probabilidade_estimada_baixa"
 REV_DIVERGENCIA = "revisar:divergencia"
 REV_BAIXA_CONF = "revisar:baixa_confianca"
 REV_RISCO = "revisar:zona_de_risco"
@@ -39,6 +40,7 @@ class PolicyConfig:
     limiar_confianca_anotador_forte: float = 0.75
     limiar_publicacao_sem_concordancia: float = 0.9
     veto_por_consenso_local: bool = True
+    limiar_posterior_publicacao: float = 0.0
     limiar_confianca_zona_de_risco: float = 0.9
     exigir_concordancia_de_todos_os_locais_na_zona_de_risco: bool = True
     limiar_confianca_fora: float = 0.9

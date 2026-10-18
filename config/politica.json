@@ -1,10 +1,11 @@
 {
   "_descricao": "Parâmetros da política de decisão. Versionados para que cada execução registre exatamente quais regras produziram o publicacao.csv.",
-  "versao": "politica-v3-calibrada",
+  "versao": "politica-v3-calibrada-portao-0.95",
   "limiar_confianca_anotador_forte": 0.75,
   "limiar_confianca_zona_de_risco": 0.9,
   "exigir_concordancia_de_todos_os_locais_na_zona_de_risco": true,
   "limiar_confianca_fora": 0.9,
   "limiar_publicacao_sem_concordancia": 0.9,
-  "veto_por_consenso_local": true
+  "veto_por_consenso_local": true,
+  "limiar_posterior_publicacao": 0.95
 }

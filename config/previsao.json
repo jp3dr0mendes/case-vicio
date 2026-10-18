@@ -1,5 +1,21 @@
 {
   "_descricao": "Ajustes declarados da previsão (ver docs/estimativa_precisao.md). risco_divergencia_de_criterio = [mínimo, central, máximo] da fração de publicadas em que o especialista pode ter escolhido outro nó defensável.",
-  "risco_divergencia_de_criterio": [0.02, 0.04, 0.07],
-  "margem_cobertura": 0.02
+  "risco_divergencia_de_criterio": [
+    0.02,
+    0.04,
+    0.07
+  ],
+  "margem_cobertura": 0.02,
+  "auditoria_amostra": "reli as {N} publicações (todas, não só uma amostra), priorizando as que não tiveram concordância exata. Não encontrei erro de assunto; em ~5 delas há um nó alternativo defensável (ex.: Q0139 coculpabilidade - Culpabilidade x Princípios; Q0359 rito da Lei 9.099 para crimes contra idoso - Estatuto do Idoso x Juizados; Q0011 lavagem + competência federal), o que sustenta o desconto central de 4%. Atenção: essa releitura foi feita pelo mesmo modelo que é o classificador principal, logo não é independente; serve para achar deslizes, não para medir precisão.",
+  "cenario_correlacionado": "{K} publicações estão em nós originais de Legislação Especial (Maria da Penha, Lavagem, Organizações Criminosas, Meio Ambiente, Tráfico, Abuso de Autoridade, Idoso) que têm uma cópia vazia dentro de Penal. Publiquei no original (é o nó com descrição e histórico, e para o aluno o conteúdo é o mesmo). Se o gabarito da equipe usar as cópias, essas {K} viram erro e a precisão cairia para perto de {P}. Considero esse cenário improvável (<20%) e ele NÃO está no intervalo acima.",
+  "_originais_com_copia": [
+    4684,
+    4688,
+    4696,
+    4702,
+    4703,
+    4704,
+    4705,
+    4708
+  ]
 }

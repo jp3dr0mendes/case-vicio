@@ -16,7 +16,7 @@ from .annotations import load_local_votes, load_strong_annotations
 from .data import PUBLICATION_COLUMNS, load_questions, load_topics, validate_publication_rows
 from .db import persist_run
 from .decisions import (
-    FORA, PUB_ALTA_CONF, PUB_EXATO, PUB_RAMO, REV_VETO, REV_BAIXA_CONF, REV_CLONE, REV_DIVERGENCIA, REV_FALHA,
+    FORA, REV_POSTERIOR, PUB_ALTA_CONF, PUB_EXATO, PUB_RAMO, REV_VETO, REV_BAIXA_CONF, REV_CLONE, REV_DIVERGENCIA, REV_FALHA,
     REV_FORA_SEM_CONSENSO, REV_RISCO, PolicyConfig, decide, load_ambiguity_groups,
 )
 from .estimation import (
@@ -127,6 +127,17 @@ def _precision_interval(est: dict[str, Any], names: list[str], rows: list[dict[s
             "n_publicadas": len(published)}
 
 
+def _threshold_curve(decisions: list[tuple[str, float]], current: float) -> list[dict[str, Any]]:
+    """Cobertura e precisão média estimada (posterior) para limiares alternativos — evidência da escolha."""
+    curve = []
+    for gate in [0.0, 0.8, 0.85, 0.9, 0.92, 0.94, 0.95, 0.96, 0.97, 0.98]:
+        kept = [c for d, c in decisions if d == "publicar" and c >= gate]
+        curve.append({"limiar": gate, "publicadas": len(kept),
+                      "precisao_media_estimada": round(sum(kept) / len(kept), 4) if kept else None,
+                      "atual": abs(gate - current) < 1e-9})
+    return curve
+
+
 def run_pipeline(
     data_dir: Path,
     artifacts_dir: Path,
@@ -189,7 +200,18 @@ def run_pipeline(
         for row in rows:
             row["_tax"] = taxonomy
             row["confianca"] = _posterior(est, names, row, strong.get(row["id"], {}).get("confianca", 0.0))
+        rows_before_gate = [(r["decisao"], r["confianca"]) for r in rows]
+        # Portão final: publicada só se a probabilidade estimada de acerto alcança o limiar declarado.
+        gate = policy.limiar_posterior_publicacao
+        for row in rows:
+            if row["decisao"] == "publicar" and row["confianca"] < gate:
+                row["decisao"], row["estrato"] = "revisar", REV_POSTERIOR
+                row["tema_central_id"] = int(strong[row["id"]]["tema_central_id"])
+                row["extras_ids"] = ""
+                row["motivo"] = (f"Probabilidade estimada de acerto {row['confianca']:.2f} abaixo do limiar "
+                                 f"de publicação ({gate:.2f}); confirmar a sugestão.")
         est["precisao_modelo_publicadas"] = _precision_interval(est, names, rows, strong)
+        est["curva_limiar_posterior"] = _threshold_curve(rows_before_gate, gate)
         for row in rows:
             row.pop("_tax", None)
     else:

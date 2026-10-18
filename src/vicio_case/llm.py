@@ -4,6 +4,7 @@ Ver prompts/classificacao.md para o texto dos prompts e o histórico de versões
 """
 from __future__ import annotations
 
+import difflib
 import json
 import os
 import time
@@ -33,16 +34,32 @@ def _norm(text: str) -> str:
     return " ".join(text.split())
 
 
-def match_option(answer: str, options: list[str]) -> str | None:
-    """Casamento estrito: igual, ou mesmo último segmento do caminho (se único). Sem palpite."""
+def match_option(answer: str, options: list[str], aliases: dict[str, str] | None = None) -> str | None:
+    """Casamento estrito: igual, ou mesmo último segmento do caminho (se único). Sem palpite.
+
+    aliases: textos equivalentes a uma opção (ex.: no passo 2, repetir o nome do tema = tema geral)."""
+    answer = str(answer).split("  (subtemas:")[0].split(" (subtemas:")[0]  # modelo copiou a linha inteira
     target = _norm(answer)
+    for alias, option in (aliases or {}).items():
+        if _norm(alias) == target or _norm(alias).split(" > ")[-1] == target.split(" > ")[-1]:
+            return option
     if not target:
         return None
     exact = [o for o in options if _norm(o) == target]
     if exact:
         return exact[0]
     suffix = [o for o in options if _norm(o).split(" > ")[-1] == target.split(" > ")[-1]]
-    return suffix[0] if len(suffix) == 1 else None
+    if len(suffix) == 1:
+        return suffix[0]
+    if suffix:
+        return None  # nome repetido em ramos diferentes (ex.: "Ação Penal"): não chuta
+    # Só erro de digitação (inclusive os da própria árvore): similaridade alta e vencedor isolado.
+    scored = sorted(
+        ((difflib.SequenceMatcher(None, target, _norm(o)).ratio(), o) for o in options), reverse=True
+    )
+    if scored and scored[0][0] >= 0.92 and (len(scored) == 1 or scored[0][0] - scored[1][0] >= 0.05):
+        return scored[0][1]
+    return None
 
 
 class HierarchicalPrompts:
@@ -102,7 +119,8 @@ class OllamaClient:
         version = requests.get(f"{self.base_url}/api/version", timeout=10).json().get("version")
         return {"ollama_version": version, "model": self.model}
 
-    def _ask(self, system: str, user: str, options: list[str]) -> tuple[str, dict[str, Any], int]:
+    def _ask(self, system: str, user: str, options: list[str],
+             aliases: dict[str, str] | None = None) -> tuple[str, dict[str, Any], int]:
         last_error: Exception | None = None
         for attempt in range(1, self.max_attempts + 1):
             payload = {
@@ -120,7 +138,7 @@ class OllamaClient:
                     raw = json.loads(content)
                 except json.JSONDecodeError as exc:
                     raise LLMResponseError(f"JSON inválido: {content[:150]}") from exc
-                choice = match_option(str(raw.get("tema", "")), options)
+                choice = match_option(str(raw.get("tema", "")), options, aliases)
                 if choice is None:
                     raise LLMResponseError(f"tema fora das opções: {str(raw.get('tema'))[:120]}")
                 return choice, raw, attempt
@@ -143,7 +161,7 @@ class OllamaClient:
             options = prompts.children_options(central)
             if options:
                 sub, raw2, attempts2 = self._ask(prompts.step2(theme, sorted(options)), user,
-                                                 sorted(options) + [GENERAL_OPTION])
+                                                 sorted(options) + [GENERAL_OPTION], {theme: GENERAL_OPTION})
                 trace["passo2"] = raw2
                 central = options.get(sub, central)
         return {

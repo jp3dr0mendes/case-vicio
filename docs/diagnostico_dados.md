@@ -1,58 +1,90 @@
-# Diagnóstico dos dados fornecidos
+# Diagnóstico dos dados e da árvore de temas
 
-Auditoria dos arquivos `questoes.jsonl` e `temas.csv` do ZIP original.
+Números conferidos na cópia real dos anexos (`artifacts/data_audit.json`, gerado por
+`python -m vicio_case.cli audit`). Os anexos em `data/input/` são idênticos byte a byte aos do
+ZIP oficial (`anexos-case-ia.zip`, sha1 `d627c8f8…`).
 
-## Contagens verificadas
+## Contagens
 
-| Item | Resultado |
-|---|---:|
-| Questões | 359 |
-| IDs duplicados de questão | 0 |
-| Nós da taxonomia | 377 |
-| Nós ativos | 375 |
-| Nós inativos | 2 |
-| Nós raiz (nível 0) | 4 |
-| Temas/subtemas ativos selecionáveis pelo pipeline | 371 |
-| Questões sem `comando` | 94 (26,2%) |
-| Questões sem `assunto_origem` | 18 (5,0%) |
-| Questões sem `disciplina_origem` preenchida | 1 |
+| Item | Valor |
+|---|---|
+| Questões | 359 (IDs Q0001–Q0359, únicos) |
+| Nós na árvore | 377 (4 raízes/disciplinas) |
+| Ativos | 375 · inativos: **5078** "Direito penal econômico" e **5234** "Tratados e convenções" |
+| Temas selecionáveis (ativos, não-raiz) | 371 |
+| Nós sem descrição | 20 — exatamente os 20 "clones" abaixo |
+| Questões sem `comando` | 94 |
+| Questões sem `assunto_origem` | 18 · sem `disciplina_origem`: 1 |
+| Questões Certo/Errado (2 alternativas) | 58 · 4 alternativas: 46 · 5: 255 |
 
-Temas inativos identificados: `5078` (“Direito penal econômico”) e `5234` (“Tratados e convenções em matéria criminal”). O pipeline os exclui dos candidatos, mesmo que apareçam por semelhança lexical.
+Todos os números do diagnóstico anterior foram confirmados; nenhuma divergência.
 
-## Disciplinas de origem
+## O que atrapalha uma máquina (ou um humano)
 
-| Disciplina de origem | Questões |
-|---|---:|
-| Processo Penal | 131 |
-| Direito Penal | 129 |
-| Direito Penal - Legislação Especial | 32 |
-| Criminologia | 31 |
-| Penal | 27 |
-| Outras disciplinas, vazio ou variantes | 9 |
+### 1. Nós-clone vazios (20) — decisão manual em `config/nos_duplicados.json`
+IDs 6716–6738: nós de nível 1, ativos, **sem descrição e sem subtemas**, que duplicam um nó
+original com conteúdo:
+- "(Parte 1)", "(Parte 2)": Teoria da Pena (6726/6727 → 5199), Competência (6732/6733 → 5480),
+  Sentença Penal (6737/6738 → 5572), Crimes contra o Patrimônio (6720/6721 → 5157),
+  Administração Pública (6718/6719 → 5087), "Provas em Espécie" (6735 → 5543),
+  "Recursos (Parte 03)" (6736 → 5560);
+- cópias em *Penal* de leis especiais: Abuso de Autoridade, Meio Ambiente, Idoso, Lavagem,
+  Maria da Penha, Organizações Criminosas, Tráfico (e LEP copiada em Processo Penal).
 
-A origem não é uma classificação confiável; há variantes (`Direito Processual Penal`) e registros fora das quatro áreas-alvo, como Constitucional, Civil - Legislação Especial, Tributário e Ambiental. Essas linhas precisam de interpretação do conteúdo, não devem ser descartadas automaticamente só pelo campo de origem.
+Como a régua pune "irmão" como erro, publicar no clone quando o especialista escolheu o original
+(ou vice-versa) é erro. **A política nunca publica em clone**; se o classificador escolhe um, a
+questão vai para revisão com o nó original sugerido.
 
-## Problemas semânticos da árvore
+### 2. Mesmo assunto em ramos diferentes — `config/grupos_ambiguos.json`
+Exemplos: "Ação Penal" existe em Penal (5063) e Processo Penal (5466) e conversa com
+Punibilidade (decadência, perempção, renúncia); Juizado Especial Criminal (4701) × Procedimento
+Sumaríssimo (5539); Interceptação Telefônica (4700) × (5555); regime de pena em Penal (5201) ×
+fixação do regime na Sentença (5576); efeitos da condenação (5209 × 5577); finalidade da pena em
+Criminologia (4384) × Penal (5200); LEP (4703) × livramento/indulto/medida de segurança. Uma
+questão desses assuntos tem duas respostas defensáveis e a régua só aceita uma. Publicar nesses
+ramos exige confiança ≥ 0,90 **e** concordância de todos os verificadores.
 
-- Há nomes muito próximos ou redundantes, como `Provas em Espécie`/`Provas em Espécies`, `Recursos em Espécies` e temas de sentença/competência partidos por “Parte 1/2”.
-- Alguns rótulos/títulos têm ruído de grafia, por exemplo `Estaturo de Idoso - Crimes` e `Escolas Crimonológicas`.
-- Descrições incluem contagens históricas (“X questões no source”), que ajudam pouco a distinguir conceitos e podem contaminar busca textual.
-- A árvore combina temas substantivos de Direito Penal, temas processuais e legislação especial; termos como Lei de Execução Penal aparecem em ramos diferentes. O contexto do enunciado precisa resolver ambiguidades.
-- HTML cru contém quebras de linha e tags simples (`br`, `i`, `b`, `u`, `span`, `sup`). Limpar visualmente o HTML antes da inferência reduz ruído sem eliminar palavras.
+### 3. Temas inativos deixam assuntos sem casa
+Com "Direito penal econômico" inativo, questões sobre cartel, ordem tributária/econômica e
+sistema financeiro (ex.: Q0039, Q0181, Q0297, Q0298) caem em temas vizinhos imperfeitos
+(Crimes Tributários, Economia Popular, CDC). Vão para revisão.
 
-## Questões difíceis
+### 4. "Lixeiras" visíveis nos metadados de origem
+O `assunto_origem` concorda pouco com o conteúdo (comparação com a classificação do
+classificador principal):
 
-1. Enunciados com diversas assertivas podem cobrir mais de um instituto; `extras_ids` deve ser conservador.
-2. Questões sobre leis especiais podem aparecer com metadado da disciplina `Direito Penal`, `Direito Penal - Legislação Especial` ou disciplina externa.
-3. Assuntos de origem vazios ou errados não podem controlar a classificação.
-4. Rótulos genéricos/introdutórios competem com subtemas específicos; o modelo deve escolher o tópico central mais específico realmente sustentado, mas não descer para um subtema irmão só por uma palavra parecida.
-5. O pacote não inclui rótulos de referência nem gabarito da classificação. A precisão não pode ser calculada a partir apenas dos próprios outputs.
+| assunto_origem | questões | no mesmo ramo do tema atribuído |
+|---|---|---|
+| Concurso de Crimes | 43 | **2** |
+| Ação Penal (Parte 02) | 17 | **0** |
+| Ação Penal (Parte 01) | 19 | 4 |
+| Comunicação dos atos processuais | 13 | 1 |
+| Lesão Corporal | 9 | 0 |
+| Teoria da Pena (Parte 02) | 18 | 8 (o resto é LEP, execução) |
 
-## Tratamentos implementados
+As descrições dos nós antigos mostram o mesmo padrão ("Teoria da Pena: 453 questões no source",
+"Administração Pública: 368", "Patrimônio: 325"). A disciplina de origem é melhor (302 de 349
+comparáveis caem na mesma disciplina), mas 7 questões vêm de fora do recorte (Constitucional,
+Civil, Tributário, Ambiental, "Disciplina Unificada").
 
-- Checagem de cardinalidade, IDs únicos, campos obrigatórios e integridade da taxonomia.
-- Limpeza de HTML e concatenação de enunciado, comando e alternativas.
-- Metadados de origem com peso fraco e apenas como contexto.
-- Exclusão de tema inativo da seleção.
-- Validador de relação pai/filho e teste explícito de que temas irmãos não equivalem.
-- Falha fechada para revisão em erros de modelo e respostas malformadas.
+### 5. Defeitos de texto
+- **Comandos gerados/inconsistentes**: 11 questões Certo/Errado com comando "Explique…"
+  (ex.: Q0008, Q0028, Q0088) — o comando não corresponde às alternativas.
+- Enunciado que cita contexto ausente: Q0219 ("na situação descrita", sem situação), Q0329
+  ("situação hipotética 1A12-I").
+- Texto corrompido por OCR: Q0078 ("EM oossstomnioconcunsos come…").
+- Erros de digitação nos títulos: "Comeptência Territorial", "Estaturo de Idoso",
+  "Escolas Crimonológicas", "Caractéristas", "Dos Crimescontra", prefixos numéricos
+  ("12 Disposições Gerais…", "2 Oferecimento…").
+
+### 6. Questões "colcha de retalhos"
+~20 questões têm 4–5 assertivas de capítulos diferentes (ex.: Q0020, Q0068, Q0126, Q0288,
+Q0333). Não existe "o" tema central; publicar qualquer um é aposta. Recebem confiança baixa e
+vão para revisão — e são o principal pedido ao professor: aceitar tema geral ou criar regra.
+
+## Tratamento no pipeline
+- HTML removido com BeautifulSoup preservando o texto; `\n` literais das alternativas mantidos
+  como espaço.
+- Campos de origem ausentes são tratados como string vazia; nenhuma questão é descartada.
+- Validações automáticas (`data.py`, `tests/`): esquema, unicidade, pais existentes, ciclos,
+  inativos/raízes/clones nunca publicados, contrato do CSV.

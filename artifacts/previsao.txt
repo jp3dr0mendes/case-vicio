@@ -1,8 +1,25 @@
-precisao_prevista: 0.00
-precisao_intervalo: 0.00-0.00
-cobertura_prevista: 0.00
-cobertura_intervalo: 0.00-0.00
+precisao_prevista: 0.95
+precisao_intervalo: 0.85-0.98
+cobertura_prevista: 0.28
+cobertura_intervalo: 0.26-0.30
 
-RASCUNHO TÉCNICO: não houve questões publicadas; portanto, a precisão nas publicadas é indefinida. Os zeros acima existem apenas para preservar o formato do arquivo e NÃO devem ser apresentados como previsão final.
-Modo: baseline. Modelo: nenhum (baseline lexical). Gerado em UTC: 2026-10-16T02:48:06.562857+00:00.
-Regra operacional: só publicar quando classificação primária e verificador concordam no mesmo ramo, com os limiares configurados; divergência, falha ou incerteza vai para revisão.
+COMO CHEGUEI NESSES NÚMEROS
+(previsão feita antes de qualquer gabarito; o pacote do case não tem rótulos, então nada aqui é precisão medida)
+
+1. Cobertura é conta direta: publiquei 100 de 359 questões. Por estrato: publicar:concordancia_de_ramo=27; publicar:concordancia_exata=73. A margem de ±0.02 só cobre a hipótese de a avaliação usar um subconjunto das questões.
+
+2. Três classificadores independentes votaram em todas as questões: claude-opus-5-5, qwen2.5:7b, llama3.1:8b. O primeiro (Claude Opus 5.5, rodando nesta sessão do Claude Code) é o classificador principal; os dois modelos locais (Ollama) são verificadores mais fracos e de outras famílias.
+
+3. Sem gabarito, estimei a acurácia de cada um pela concordância entre pares (modelo de acurácias latentes com três anotadores: concordância_ij ~ p_i * p_j; 'concordar' = mesmo nó, pai ou filho). Por faixa de confiança declarada pelo classificador principal: alta (n=132): claude-opus-5-5=0.83, qwen2.5:7b=0.60, llama3.1:8b=0.79 | media (n=94): claude-opus-5-5=0.74, qwen2.5:7b=0.51, llama3.1:8b=0.74 | baixa (n=133): claude-opus-5-5=0.80, qwen2.5:7b=0.37, llama3.1:8b=0.52.
+
+4. Para cada questão calculei a probabilidade de o tema estar certo (coluna confianca do CSV): parte da acurácia do principal na faixa de confiança e é atualizada pelo voto de cada verificador (concordou / discordou), usando a acurácia dele e r=0.25, a chance de dois erros caírem no mesmo ramo (medida: 0.25). A média nas publicadas é 0.985; variando acurácias no IC90% do bootstrap e r entre metade e o dobro, fica entre 0.918 e 0.997.
+
+5. O modelo estatístico não enxerga a divergência de CRITÉRIO: o especialista pode ter escolhido outro nó defensável (a árvore tem 20 nós-clone vazios e assuntos repetidos em ramos diferentes, ex.: 'Ação Penal' em Penal e em Processo Penal; a política já manda esses casos para revisão, mas não todos). Descontei 4% (faixa 2%-7%) por isso.
+
+6. Auditoria: reli as 100 publicações (todas, não só uma amostra), priorizando as que não tiveram concordância exata. Não encontrei erro de assunto; em ~5 delas há um nó alternativo defensável (ex.: Q0139 coculpabilidade - Culpabilidade x Princípios; Q0359 rito da Lei 9.099 para crimes contra idoso - Estatuto do Idoso x Juizados; Q0011 lavagem + competência federal), o que sustenta o desconto central de 4%. Atenção: essa releitura foi feita pelo mesmo modelo que é o classificador principal, logo não é independente; serve para achar deslizes, não para medir precisão.
+
+7. Risco correlacionado fora do intervalo: 23 publicações estão em nós originais de Legislação Especial (Maria da Penha, Lavagem, Organizações Criminosas, Meio Ambiente, Tráfico, Abuso de Autoridade, Idoso) que têm uma cópia vazia dentro de Penal. Publiquei no original (é o nó com descrição e histórico, e para o aluno o conteúdo é o mesmo). Se o gabarito da equipe usar as cópias, essas 23 viram erro e a precisão cairia para perto de 0.73. Considero esse cenário improvável (<20%) e ele NÃO está no intervalo acima.
+
+8. Intervalo: pessimista = acurácias no limite inferior, r dobrado e desconto máximo; otimista = limite superior, r pela metade e desconto mínimo.
+
+Limitações: o modelo supõe que os erros dos classificadores são independentes dado o acerto; erros de LLMs são correlacionados (mesmas armadilhas da árvore), o que deixa a estimativa otimista. Por isso r foi medido, o desconto do item 5 existe e o intervalo é largo. O classificador principal é um LLM, não um especialista: suas escolhas não são gabarito e não foram usadas como tal.
