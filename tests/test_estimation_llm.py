@@ -2,7 +2,11 @@ from pathlib import Path
 
 from vicio_case.annotations import normalize_vote
 from vicio_case.data import load_topics
-from vicio_case.estimation import posterior_correct, precision_given_agreement, triplet_accuracies
+from vicio_case.estimation import (
+    posterior_correct,
+    precision_given_agreement,
+    triplet_accuracies,
+)
 from vicio_case.llm import match_option
 from vicio_case.taxonomy import Taxonomy
 
@@ -31,7 +35,6 @@ def test_triplet_recovers_known_accuracies_on_synthetic_votes():
     import random
     rng = random.Random(1)
     truth = {f"Q{i}": rng.choice([5092, 5150, 5159, 5160, 5103]) for i in range(3000)}
-    wrong = {5092: 5226, 5150: 5227, 5159: 5225, 5160: 5224, 5103: 5223}
     acc = {"a": 0.9, "b": 0.6, "c": 0.5}
     votes = {}
     for name, p in acc.items():

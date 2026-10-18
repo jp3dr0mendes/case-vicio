@@ -29,7 +29,7 @@ possível. Enunciado original: [`docs/enunciado_case_vicio.pdf`](docs/enunciado_
 
 Modelos: Claude Opus 5.5 (classificador principal), qwen2.5:7b e llama3.1:8b (verificadores,
 Ollama 0.40.6 local). Custo marginal: zero além da assinatura do Claude Code; tempo: ~20 min de
-anotação + ~75 min de inferência local (Apple M2 Pro, 16 GB) + segundos para a política.
+anotação + ~75 min de inferência local na 1ª passada dos dois modelos e ~1 h de retentativas (Apple M2 Pro, 16 GB) + segundos para a política.
 
 ## Como a classificação é feita
 
@@ -45,8 +45,8 @@ anotação + ~75 min de inferência local (Apple M2 Pro, 16 GB) + segundos para 
    veto, nós-clone nunca publicados, evidência reforçada em ramos com nó concorrente; falha ou
    dúvida → revisar com sugestão.
 4. **Estimativa sem gabarito** ([`docs/estimativa_precisao.md`](docs/estimativa_precisao.md)):
-   acurácias latentes com três classificadores, posterior por questão (coluna `confianca`),
-   desconto declarado por divergência de critério.
+   acurácias latentes com três classificadores, posterior por questão (decide a publicação) e
+   desconto declarado por divergência de critério (coluna `confianca` = posterior descontada).
 
 Diagnóstico dos dados: [`docs/diagnostico_dados.md`](docs/diagnostico_dados.md).
 Como checar a precisão real e revalidação contra o enunciado:
@@ -141,7 +141,7 @@ docker compose --profile run run --rm app classify --mode ensemble
 Testes dentro do container:
 
 ```bash
-docker compose --profile run run --rm --entrypoint python app -m pytest -q
+docker compose --profile run run --rm --entrypoint python app -m pytest -q -p no:cacheprovider
 ```
 
 Ollama em container (perfil `local-llm`; no macOS roda só em CPU — para usar a GPU, rode o

@@ -51,30 +51,42 @@ def forecast_text(rows: list[dict[str, Any]], est: dict[str, Any], names: list[s
         "COMO CHEGUEI NESSES NÚMEROS",
         "(previsão feita antes de qualquer gabarito; o pacote do case não tem rótulos, então nada aqui é precisão medida)",
         "",
-        f"1. Cobertura é conta direta: publiquei {len(published)} de {total} questões. Por estrato: "
-        + "; ".join(f"{k}={v}" for k, v in sorted(strata.items()))
-        + f". A margem de ±{cov_margin:.2f} só cobre a hipótese de a avaliação usar um subconjunto das questões.",
+        (
+            f"1. Cobertura é conta direta: publiquei {len(published)} de {total} questões. Por estrato: "
+            + "; ".join(f"{k}={v}" for k, v in sorted(strata.items()))
+            + f". A margem de ±{cov_margin:.2f} só cobre a hipótese de a avaliação usar um subconjunto das questões."
+        ),
         "",
-        "2. Três classificadores independentes votaram em todas as questões: " + ", ".join(names)
-        + ". O primeiro (Claude Opus 5.5, rodando nesta sessão do Claude Code) é o classificador principal; os dois "
-        "modelos locais (Ollama) são verificadores mais fracos e de outras famílias.",
+        (
+            "2. Três classificadores independentes votaram em todas as questões: " + ", ".join(names)
+            + ". O primeiro (Claude Opus 5.5, rodando nesta sessão do Claude Code) é o classificador principal; os "
+            "dois modelos locais (Ollama) são verificadores mais fracos e de outras famílias."
+        ),
         "",
-        "3. Sem gabarito, estimei a acurácia de cada um pela concordância entre pares (modelo de acurácias latentes "
-        "com três anotadores: concordância_ij ~ p_i * p_j; 'concordar' = mesmo nó, pai ou filho). Por faixa de "
-        "confiança declarada pelo classificador principal: "
-        + " | ".join(f"{b} (n={info.get('n')}): {fmt_acc(info)}" for b, info in buckets.items()) + ".",
+        (
+            "3. Sem gabarito, estimei a acurácia de cada um pela concordância entre pares (modelo de acurácias "
+            "latentes com três anotadores: concordância_ij ~ p_i * p_j; 'concordar' = mesmo nó, pai ou filho). Por "
+            "faixa de confiança declarada pelo classificador principal: "
+            + " | ".join(f"{b} (n={info.get('n')}): {fmt_acc(info)}" for b, info in buckets.items()) + "."
+        ),
         "",
-        f"4. Para cada questão calculei a probabilidade de o tema estar certo (coluna confianca do CSV): parte da "
-        f"acurácia do principal na faixa de confiança e é atualizada pelo voto de cada verificador (concordou / "
-        f"discordou), usando a acurácia dele e r={est.get('r_usado', 0):.2f}, a chance de dois erros caírem no "
-        f"mesmo ramo (medida: {est.get('r_empirico') or 0:.2f}). A média nas publicadas é {model['pontual']:.3f}; variando "
-        f"acurácias no IC90% do bootstrap e r entre metade e o dobro, fica entre {model['pessimista']:.3f} e "
-        f"{model['otimista']:.3f}.",
+        (
+            f"4. Para cada questão calculei a probabilidade de o tema estar certo: parte da acurácia do principal na "
+            f"faixa de confiança e é atualizada pelo voto de cada verificador (concordou / discordou), usando a "
+            f"acurácia dele e r={est.get('r_usado', 0):.2f}, a chance de dois erros caírem no mesmo ramo (medida: "
+            f"{est.get('r_empirico') or 0:.2f}). Publiquei só onde essa probabilidade é >= 0,95. A média nas "
+            f"publicadas é {model['pontual']:.3f}; variando acurácias no IC90% do bootstrap e r entre metade e o "
+            f"dobro, fica entre {model['pessimista']:.3f} e {model['otimista']:.3f}. A coluna confianca do CSV é "
+            f"essa probabilidade com o desconto do item 5 (e pela metade nos ramos com nó equivalente em outro "
+            f"lugar da árvore), por isso a média dela nas publicadas coincide com a precisão prevista."
+        ),
         "",
-        f"5. O modelo estatístico não enxerga a divergência de CRITÉRIO: o especialista pode ter escolhido outro nó "
-        f"defensável (a árvore tem 20 nós-clone vazios e assuntos repetidos em ramos diferentes, ex.: 'Ação Penal' "
-        f"em Penal e em Processo Penal; a política já manda esses casos para revisão, mas não todos). Descontei "
-        f"{amb_central:.0%} (faixa {amb_low:.0%}-{amb_high:.0%}) por isso.",
+        (
+            f"5. O modelo estatístico não enxerga a divergência de CRITÉRIO: o especialista pode ter escolhido outro "
+            f"nó defensável (a árvore tem 20 nós-clone vazios e assuntos repetidos em ramos diferentes, ex.: 'Ação "
+            f"Penal' em Penal e em Processo Penal; a política já manda esses casos para revisão, mas não todos). "
+            f"Descontei {amb_central:.0%} (faixa {amb_low:.0%}-{amb_high:.0%}) por isso."
+        ),
     ]
     audit = cfg.get("auditoria_amostra")
     if audit:
@@ -88,12 +100,17 @@ def forecast_text(rows: list[dict[str, Any]], est: dict[str, Any], names: list[s
                   + scenario.replace("{K}", str(k)).replace("{P}", f"{worst:.2f}")]
     lines += [
         "",
-        "8. Intervalo: pessimista = acurácias no limite inferior, r dobrado e desconto máximo; otimista = limite "
-        "superior, r pela metade e desconto mínimo.",
+        (
+            "8. Intervalo: pessimista = acurácias no limite inferior, r dobrado e desconto máximo; otimista = limite "
+            "superior, r pela metade e desconto mínimo. Mesmo acertando a precisão real, a medição com ~100 "
+            "publicadas oscila uns 4 pontos (ver docs/verificacao_precisao.md)."
+        ),
         "",
-        "Limitações: o modelo supõe que os erros dos classificadores são independentes dado o acerto; erros de LLMs "
-        "são correlacionados (mesmas armadilhas da árvore), o que deixa a estimativa otimista. Por isso r foi medido, "
-        "o desconto do item 5 existe e o intervalo é largo. O classificador principal é um LLM, não um especialista: "
-        "suas escolhas não são gabarito e não foram usadas como tal.",
+        (
+            "Limitações: o modelo supõe que os erros dos classificadores são independentes dado o acerto; erros de "
+            "LLMs são correlacionados (mesmas armadilhas da árvore), o que deixa a estimativa otimista. Por isso r "
+            "foi medido, o desconto do item 5 existe e o intervalo é largo. O classificador principal é um LLM, não "
+            "um especialista: suas escolhas não são gabarito e não foram usadas como tal."
+        ),
     ]
     return "\n".join(lines) + "\n"

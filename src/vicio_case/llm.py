@@ -26,7 +26,17 @@ FORMAT_RULES = (
 
 
 class LLMResponseError(ValueError):
-    """Resposta do modelo malformada ou que não corresponde a nenhuma opção."""
+    """Resposta do modelo malformada, fora das opções ou chamada sem sucesso após as retentativas.
+
+    Carrega o necessário para auditar a falha: o passo (1 = tema, 2 = subtema), o resultado parcial
+    já obtido e, por tentativa, o erro e a resposta bruta do modelo."""
+
+    def __init__(self, message: str, raw_content: str | None = None):
+        super().__init__(message)
+        self.raw_content = raw_content
+        self.tentativas: list[dict[str, Any]] = []
+        self.passo: int | None = None
+        self.parcial: dict[str, Any] | None = None
 
 
 def _norm(text: str) -> str:
@@ -122,6 +132,7 @@ class OllamaClient:
     def _ask(self, system: str, user: str, options: list[str],
              aliases: dict[str, str] | None = None) -> tuple[str, dict[str, Any], int]:
         last_error: Exception | None = None
+        attempt_log: list[dict[str, Any]] = []
         for attempt in range(1, self.max_attempts + 1):
             payload = {
                 "model": self.model, "stream": False, "format": "json", "keep_alive": "30m",
@@ -137,21 +148,31 @@ class OllamaClient:
                 try:
                     raw = json.loads(content)
                 except json.JSONDecodeError as exc:
-                    raise LLMResponseError(f"JSON inválido: {content[:150]}") from exc
+                    raise LLMResponseError(f"JSON inválido: {content[:150]}", content) from exc
                 choice = match_option(str(raw.get("tema", "")), options, aliases)
                 if choice is None:
-                    raise LLMResponseError(f"tema fora das opções: {str(raw.get('tema'))[:120]}")
+                    raise LLMResponseError(f"tema fora das opções: {str(raw.get('tema'))[:120]}", content)
                 return choice, raw, attempt
             except (requests.RequestException, LLMResponseError) as exc:
                 last_error = exc
+                attempt_log.append({"tentativa": attempt, "erro": f"{type(exc).__name__}: {exc}",
+                                    "resposta_bruta": getattr(exc, "raw_content", None)})
                 time.sleep(min(2.0 * attempt, 5.0))
         assert last_error is not None
-        raise last_error
+        message = str(last_error) if isinstance(last_error, LLMResponseError) \
+            else f"{type(last_error).__name__}: {last_error}"
+        failure = LLMResponseError(message, getattr(last_error, "raw_content", None))
+        failure.tentativas = attempt_log
+        raise failure from last_error
 
     def classify(self, question: dict[str, Any], prompts: HierarchicalPrompts) -> dict[str, Any]:
         started = time.perf_counter()
         user = user_message(question)
-        theme, raw1, attempts1 = self._ask(prompts.step1, user, sorted(prompts.level1) + ["FORA"])
+        try:
+            theme, raw1, attempts1 = self._ask(prompts.step1, user, sorted(prompts.level1) + ["FORA"])
+        except LLMResponseError as exc:
+            exc.passo = 1
+            raise
         trace: dict[str, Any] = {"passo1": raw1}
         attempts2 = 0
         if theme == "FORA":
@@ -160,8 +181,12 @@ class OllamaClient:
             central = prompts.level1[theme]
             options = prompts.children_options(central)
             if options:
-                sub, raw2, attempts2 = self._ask(prompts.step2(theme, sorted(options)), user,
-                                                 sorted(options) + [GENERAL_OPTION], {theme: GENERAL_OPTION})
+                try:
+                    sub, raw2, attempts2 = self._ask(prompts.step2(theme, sorted(options)), user,
+                                                     sorted(options) + [GENERAL_OPTION], {theme: GENERAL_OPTION})
+                except LLMResponseError as exc:
+                    exc.passo, exc.parcial = 2, {"tema_nivel_1": central, **trace}
+                    raise
                 trace["passo2"] = raw2
                 central = options.get(sub, central)
         return {

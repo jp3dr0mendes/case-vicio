@@ -11,12 +11,12 @@ import json
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from .data import load_questions, load_topics
-from .llm import PROMPT_VERSION, HierarchicalPrompts, OllamaClient
+from .llm import PROMPT_VERSION, HierarchicalPrompts, LLMResponseError, OllamaClient
 from .taxonomy import Taxonomy, load_clone_map
 
 
@@ -72,13 +72,15 @@ def run_llm(
             "model": client.model,
             "prompt_version": PROMPT_VERSION,
             "prompt_sha256_12": prompt_sha,
-            "created_at_utc": datetime.now(timezone.utc).isoformat(),
+            "created_at_utc": datetime.now(UTC).isoformat(),
         }
         try:
             record.update(client.classify(question, prompts))
             record["error"] = None
-        except Exception as exc:  # falha de rede/modelo/contrato -> registrada; a política manda para revisão
+        except Exception as exc:  # noqa: BLE001 - qualquer falha vira registro auditável; a política manda revisar
             record["error"] = f"{type(exc).__name__}: {exc}"
+            if isinstance(exc, LLMResponseError):
+                record["falha"] = {"passo": exc.passo, "parcial": exc.parcial, "tentativas": exc.tentativas}
         return record
 
     with ThreadPoolExecutor(max_workers=max(1, workers)) as pool, out_path.open("a", encoding="utf-8") as handle:

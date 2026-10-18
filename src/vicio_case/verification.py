@@ -10,7 +10,6 @@ O mesmo comando aceita o gabarito da equipe da Vício (mesmo formato id,tema_id)
 from __future__ import annotations
 
 import csv
-import html
 import json
 import random
 from pathlib import Path

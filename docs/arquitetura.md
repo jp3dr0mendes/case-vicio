@@ -32,14 +32,15 @@ data/input/ (anexos oficiais, somente leitura)
 | `taxonomy.py` | árvore, ancestrais, regra oficial (mesmo nó/pai/filho; irmão = erro), clones |
 | `retrieval.py` | TF-IDF lexical: só sugestão de último recurso e modo `baseline` (não é probabilidade) |
 | `llm.py` | cliente Ollama hierárquico, retries, casamento estrito da resposta |
-| `runner.py` | execução retomável por modelo, uma linha JSON por questão |
+| `runner.py` | execução retomável por modelo, uma linha JSON por questão (nas falhas: passo, resultado parcial e resposta bruta de cada tentativa) |
 | `annotations.py` | formato único dos votos e validação contra a árvore |
 | `decisions.py` | política publicar/revisar/fora, determinística e testada |
 | `estimation.py` | estimativa de precisão sem gabarito |
 | `forecast.py` | texto do `previsao.txt` |
 | `pipeline.py` | orquestração, artefatos, metadados, hashes |
+| `verification.py` | folha de auditoria cega e medição da precisão (Clopper-Pearson) contra rótulos humanos ou o gabarito |
 | `db.py` | trilha de auditoria no PostgreSQL |
-| `cli.py` | `audit`, `run-llm`, `classify` |
+| `cli.py` | `audit`, `run-llm`, `classify`, `folha-auditoria`, `medir-precisao` |
 
 ## Política de decisão (v3)
 
@@ -60,8 +61,8 @@ data/input/ (anexos oficiais, somente leitura)
    publicações "só por confiança alta", então toda publicada tem concordância de um verificador.
 9. `extras_ids` só com temas do principal que não sejam do mesmo ramo do central nem clones.
 
-Irmãos nunca contam como concordância. A coluna `confianca` é a posterior estimada
-(docs/estimativa_precisao.md), não a confiança declarada pelo LLM.
+Irmãos nunca contam como concordância. A coluna `confianca` é a posterior estimada com o
+desconto de critério (docs/estimativa_precisao.md, seção 4), nunca a confiança declarada pelo LLM.
 
 ## Infraestrutura
 

@@ -1,5 +1,5 @@
 {
-  "started_at_utc": "2026-10-18T21:25:18.160016+00:00",
+  "started_at_utc": "2026-10-18T21:43:19.079805+00:00",
   "mode": "ensemble",
   "classificadores": [
     "claude-opus-5-5",
@@ -66,6 +66,6 @@
   "python_version": "3.12.15",
   "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.41",
   "publicacao_sha256": "0cc3a3cb03850b18fdfc8a6b4943b36ba77a6cd1ae712dc9508d9ea411493c60",
-  "database_run_id": "fb9ba7ad-a5d3-42cc-9d75-a0a2c2dd201f",
-  "duration_seconds": 3.16
+  "database_run_id": "9dfd48ba-06ac-487e-8da6-1fc7b40b2029",
+  "duration_seconds": 3.18
 }

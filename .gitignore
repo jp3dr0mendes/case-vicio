@@ -5,3 +5,4 @@ __pycache__/
 *.py[cod]
 .DS_Store
 artifacts/*.tmp
+.ruff_cache/

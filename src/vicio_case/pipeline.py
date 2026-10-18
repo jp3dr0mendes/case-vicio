@@ -8,20 +8,34 @@ import shutil
 import sys
 import time
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from .annotations import load_local_votes, load_strong_annotations
-from .data import PUBLICATION_COLUMNS, load_questions, load_topics, validate_publication_rows
+from .data import (
+    PUBLICATION_COLUMNS,
+    load_questions,
+    load_topics,
+    validate_publication_rows,
+)
 from .db import persist_run
 from .decisions import (
-    FORA, REV_POSTERIOR, PUB_ALTA_CONF, PUB_EXATO, PUB_RAMO, REV_VETO, REV_BAIXA_CONF, REV_CLONE, REV_DIVERGENCIA, REV_FALHA,
-    REV_FORA_SEM_CONSENSO, REV_RISCO, PolicyConfig, decide, load_ambiguity_groups,
+    REV_CLONE,
+    REV_POSTERIOR,
+    REV_RISCO,
+    PolicyConfig,
+    decide,
+    load_ambiguity_groups,
 )
 from .estimation import (
-    bootstrap_accuracies, bucket_accuracies, bucket_of, correlated_error_rate, pairwise_agreement,
-    posterior_correct, triplet_accuracies,
+    bootstrap_accuracies,
+    bucket_accuracies,
+    bucket_of,
+    correlated_error_rate,
+    pairwise_agreement,
+    posterior_correct,
+    triplet_accuracies,
 )
 from .forecast import forecast_text
 from .llm import PROMPT_VERSION
@@ -146,7 +160,7 @@ def run_pipeline(
     annotations_dir: Path = Path("data/anotacoes"),
     deliver_dir: Path | None = None,
 ) -> dict[str, Any]:
-    started_at = datetime.now(timezone.utc)
+    started_at = datetime.now(UTC)
     clock = time.perf_counter()
     questions_path, topics_path = data_dir / "questoes.jsonl", data_dir / "temas.csv"
     questions = load_questions(questions_path)
@@ -273,7 +287,7 @@ def run_pipeline(
     metadata["publicacao_sha256"] = output_hash
     try:
         metadata["database_run_id"] = persist_run(metadata, rows)
-    except Exception as exc:  # banco é trilha de auditoria; falha não pode corromper artefatos
+    except Exception as exc:  # noqa: BLE001 - banco é trilha de auditoria; falha não pode corromper artefatos
         metadata["database_run_id"] = None
         metadata["database_error"] = f"{type(exc).__name__}: {exc}"
     metadata["duration_seconds"] = round(time.perf_counter() - clock, 2)

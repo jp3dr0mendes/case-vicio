@@ -37,11 +37,21 @@ QUESTÃO A CLASSIFICAR (não responda; só diga o assunto):
 
 - **v2 (descartada):** taxonomia inteira (371 linhas `id | caminho`) e resposta com `tema_central_id`.
   O qwen2.5:7b trocava dígitos dos IDs (ex.: Terrorismo 4706 -> Estatuto do Idoso 4696);
-  concordância de ramo com o classificador forte ~25%. Parcial guardado em `artifacts/experimentos/`.
+  concordância de ramo com o classificador principal 32% (29 de 90 respostas válidas), contra 38%
+  (qwen) e 52% (llama) na versão hierárquica final. Parcial guardado em `artifacts/experimentos/`.
 - **enum com os caminhos (descartada):** decodificação restrita enviesou para as primeiras opções
   em ordem alfabética ("Criminologia > ...").
 - **"escolha" sem instrução explícita (descartada):** o modelo respondia a questão ("B: ...").
 - **qwen2.5:14b (descartado):** não cabe na GPU da máquina (18% em CPU, swap esgotado).
 - Nomes de nós-clone vazios não são oferecidos ao modelo; inativos e raízes também não.
-- Resposta que não corresponde exatamente (ou por sufixo) a uma opção é **inválida**; não há
-  "palpite" por similaridade de texto.
+- Resposta que não corresponde a uma opção é **inválida**; não há "palpite" por similaridade de
+  texto. O casamento (`llm.match_option`) aceita: texto igual; mesmo último segmento do caminho
+  quando ele é único (nome repetido em ramos diferentes, como "Ação Penal", é rejeitado);
+  sufixo "(subtemas: …)" copiado da lista; no passo 2, repetir o nome do tema = "tema como um
+  todo"; e erro de digitação com similaridade ≥ 0,92 e vencedor isolado (a própria árvore tem
+  erros como "Caractéristas").
+- Essas tolerâncias foram adicionadas durante as rodadas (três versões, todas estritas). Os 630
+  votos válidos versionados foram reinterpretados com a versão final e dão exatamente o mesmo
+  tema (`tests/test_llm_outputs.py` garante isso). As falhas antigas guardam só a mensagem de erro;
+  a partir desta versão, cada falha registra passo, resultado parcial e a resposta bruta de cada
+  tentativa.

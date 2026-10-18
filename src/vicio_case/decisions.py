@@ -46,7 +46,7 @@ class PolicyConfig:
     limiar_confianca_fora: float = 0.9
 
     @classmethod
-    def load(cls, path: Path) -> "PolicyConfig":
+    def load(cls, path: Path) -> PolicyConfig:
         if not path.exists():
             return cls()
         data = json.loads(path.read_text(encoding="utf-8"))

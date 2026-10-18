@@ -4,8 +4,20 @@ import pytest
 
 from vicio_case.data import load_topics
 from vicio_case.decisions import (
-    PUB_ALTA_CONF, PUB_EXATO, PUB_RAMO, REV_BAIXA_CONF, REV_CLONE, REV_DIVERGENCIA, REV_FALHA,
-    REV_RISCO, REV_VETO, FORA, REV_FORA_SEM_CONSENSO, PolicyConfig, decide, load_ambiguity_groups,
+    FORA,
+    PUB_ALTA_CONF,
+    PUB_EXATO,
+    PUB_RAMO,
+    REV_BAIXA_CONF,
+    REV_CLONE,
+    REV_DIVERGENCIA,
+    REV_FALHA,
+    REV_FORA_SEM_CONSENSO,
+    REV_RISCO,
+    REV_VETO,
+    PolicyConfig,
+    decide,
+    load_ambiguity_groups,
 )
 from vicio_case.taxonomy import Taxonomy, load_clone_map
 

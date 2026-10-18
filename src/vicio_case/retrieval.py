@@ -33,7 +33,7 @@ class CandidateRetriever:
             taxonomy.by_id[i] for i in sorted(taxonomy.selectable_ids - set(taxonomy.clones))
         ]
         self.topic_docs = [
-            " ".join([topic.caminho, topic.titulo, topic.descricao, topic.disciplina])
+            f"{topic.caminho} {topic.titulo} {topic.descricao} {topic.disciplina}"
             for topic in self.topics
         ]
         self.word_vectorizer = TfidfVectorizer(

@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 import os
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 SCHEMA_SQL = [
@@ -62,7 +62,7 @@ def persist_run(metadata: dict[str, Any], rows: list[dict[str, Any]]) -> str | N
                 """INSERT INTO classification_runs (run_id, created_at, mode, classifiers, prompt_version,
                 policy_version, input_sha256, publicacao_sha256, total_questions, published_count,
                 review_count, outside_count, metadata) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
-                (run_id, datetime.now(timezone.utc), metadata["mode"], ",".join(metadata["classificadores"]),
+                (run_id, datetime.now(UTC), metadata["mode"], ",".join(metadata["classificadores"]),
                  metadata.get("prompt_version"), metadata.get("policy", {}).get("versao"),
                  Jsonb(metadata["input_sha256"]), metadata["publicacao_sha256"], len(rows),
                  counts["publicar"], counts["revisar"], counts["fora"],

@@ -102,8 +102,8 @@ recomenda criá-lo, porque reportes são a fonte mais barata de rótulos.
 | `confianca` = chance de o tema central estar certo | posterior × risco de critério; média nas publicadas 0,945 ≈ previsão | ✅ coerente com a previsão |
 | `motivo` curto, obrigatório em revisar/fora | máx. 154 caracteres, linguagem do professor | ✅ |
 | `previsao.txt` com 4 linhas + explicação | raiz | ✅ previsão declarada como previsão |
-| Relatório ≤ 5 páginas com a) b) c) d) | `relatorio_case.md` (~2.000 palavras, ~4,5 páginas) | ✅ |
-| Memo de 1 página, não técnico | `memo_professor.md` | ✅ |
+| Relatório ≤ 5 páginas com a) b) c) d) | `relatorio_case.md`: 3 páginas A4 + memo 1 página = 4 (medido renderizando em PDF A4, fonte 11) | ✅ |
+| Memo de 1 página, não técnico | `memo_professor.md` (1 página A4 medida) | ✅ |
 | Código: pipeline, prompts, chamadas, regras, estimativa | `src/`, `prompts/`, `config/` | ✅ |
 | README: como rodar, que passos geram o CSV, decisões manuais, modelos, custo, tempo | `README.md`, relatório | ✅ |
 | Repositório público no GitHub | jp3dr0mendes/case-vicio | ✅ público |

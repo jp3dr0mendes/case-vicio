@@ -34,7 +34,7 @@ todos). `r` = P(dois erros no mesmo ramo) é estimado como a taxa de concordânc
 verificadores nas questões em que ambos discordam do principal (proxy pessimista, porque parte
 dessas concordâncias são acertos dos verificadores), limitado a [0,05; 0,5].
 
-## 4. Posterior por questão = coluna `confianca`
+## 4. Posterior por questão (portão de publicação e coluna `confianca`)
 
 ```
 P(certo | padrão) ∝ p_F · Π_i [ p_i se concordou ; (1 − p_i) se discordou ]
@@ -43,6 +43,12 @@ P(errado | padrão) ∝ (1 − p_F) · Π_i [ (1 − p_i)·r se concordou ; 1 �
 
 com `p_F` e `p_i` da faixa de confiança da questão. Voto inválido não entra. A confiança
 declarada pelo LLM **só escolhe a faixa**; nunca é usada como probabilidade.
+
+- **Portão de publicação**: publica só se essa posterior for ≥ 0,95 (`config/politica.json`).
+- **Coluna `confianca` do CSV** = posterior × (1 − 4% de divergência de critério), e × 0,5 nos
+  ramos com nó equivalente em outro lugar da árvore (o especialista pode ter escolhido o outro nó).
+  Com isso, a média da coluna nas publicadas (0,945) é a própria precisão prevista (0,95). A
+  posterior sem desconto fica registrada em `decision_audit.json` (`trace.posterior_modelo`).
 
 ## 5. Precisão prevista
 

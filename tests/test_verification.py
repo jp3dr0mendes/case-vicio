@@ -2,7 +2,11 @@ import csv
 from pathlib import Path
 
 from vicio_case.verification import (
-    build_blind_sheet, clopper_pearson, max_errors_to_prove, one_sided_lower, score_publication,
+    build_blind_sheet,
+    clopper_pearson,
+    max_errors_to_prove,
+    one_sided_lower,
+    score_publication,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,7 +43,17 @@ def test_score_uses_official_branch_rule(tmp_path):
 
 
 def test_blind_sheet_hides_system_decisions(tmp_path):
-    info = build_blind_sheet(ROOT / "publicacao.csv", ROOT / "data/input", ROOT / "config", tmp_path, controls=10)
-    page = (tmp_path / "folha_auditoria.html").read_text(encoding="utf-8")
-    assert info["questoes"] == info["publicadas"] + 10
-    assert "publicar" not in page and "tema_central_id" not in page
+    # Publicação sintética (o teste não depende do publicacao.csv da raiz, ausente na imagem Docker).
+    pub = tmp_path / "pub.csv"
+    with pub.open("w", newline="") as h:
+        w = csv.writer(h)
+        w.writerow(["id", "decisao", "tema_central_id", "extras_ids", "confianca", "motivo"])
+        for i in range(1, 41):
+            decision = "publicar" if i <= 15 else "revisar"
+            w.writerow([f"Q{i:04d}", decision, "5092", "", "0.97", "" if decision == "publicar" else "x"])
+    info = build_blind_sheet(pub, ROOT / "data/input", ROOT / "config", tmp_path / "out", controls=10)
+    page = (tmp_path / "out" / "folha_auditoria.html").read_text(encoding="utf-8")
+    assert info == {**info, "questoes": 25, "publicadas": 15, "controles_revisar": 10}
+    assert "publicar" not in page and "revisar" not in page and "0.97" not in page and "5092]" in page
+    order = (tmp_path / "out" / "amostra_auditoria.csv").read_text().split()[1:]
+    assert len(order) == 25 and order != sorted(order)  # embaralhada: posição não revela a decisão

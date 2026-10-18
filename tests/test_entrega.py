@@ -4,7 +4,12 @@ from pathlib import Path
 
 import pytest
 
-from vicio_case.data import PUBLICATION_COLUMNS, load_questions, load_topics, validate_publication_rows
+from vicio_case.data import (
+    PUBLICATION_COLUMNS,
+    load_questions,
+    load_topics,
+    validate_publication_rows,
+)
 from vicio_case.taxonomy import Taxonomy, load_clone_map
 
 ROOT = Path(__file__).resolve().parents[1]
