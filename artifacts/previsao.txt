@@ -8,7 +8,7 @@ COMO CHEGUEI NESSES NÚMEROS
 
 1. Cobertura é conta direta: publiquei 100 de 359 questões. Por estrato: publicar:concordancia_de_ramo=27; publicar:concordancia_exata=73. A margem de ±0.02 só cobre a hipótese de a avaliação usar um subconjunto das questões.
 
-2. Três classificadores independentes votaram em todas as questões: claude-opus-5-5, qwen2.5:7b, llama3.1:8b. O primeiro (Claude Opus 5.5, rodando nesta sessão do Claude Code) é o classificador principal; os dois modelos locais (Ollama) são verificadores mais fracos e de outras famílias.
+2. Três classificadores independentes votaram em todas as questões: claude-opus-5-5, qwen2.5:7b, llama3.1:8b. O primeiro (Claude Opus 5.5, via Claude Code) é o classificador principal; os dois modelos locais (Ollama) são verificadores mais fracos e de outras famílias.
 
 3. Sem gabarito, estimei a acurácia de cada um pela concordância entre pares (modelo de acurácias latentes com três anotadores: concordância_ij ~ p_i * p_j; 'concordar' = mesmo nó, pai ou filho). Por faixa de confiança declarada pelo classificador principal: alta (n=132): claude-opus-5-5=0.83, qwen2.5:7b=0.60, llama3.1:8b=0.79 | media (n=94): claude-opus-5-5=0.74, qwen2.5:7b=0.51, llama3.1:8b=0.74 | baixa (n=133): claude-opus-5-5=0.80, qwen2.5:7b=0.37, llama3.1:8b=0.52.
 
@@ -16,7 +16,7 @@ COMO CHEGUEI NESSES NÚMEROS
 
 5. O modelo estatístico não enxerga a divergência de CRITÉRIO: o especialista pode ter escolhido outro nó defensável (a árvore tem 20 nós-clone vazios e assuntos repetidos em ramos diferentes, ex.: 'Ação Penal' em Penal e em Processo Penal; a política já manda esses casos para revisão, mas não todos). Descontei 4% (faixa 2%-7%) por isso.
 
-6. Auditoria: reli as 100 publicações (todas, não só uma amostra), priorizando as que não tiveram concordância exata. Não encontrei erro de assunto; em ~5 delas há um nó alternativo defensável (ex.: Q0139 coculpabilidade - Culpabilidade x Princípios; Q0359 rito da Lei 9.099 para crimes contra idoso - Estatuto do Idoso x Juizados; Q0011 lavagem + competência federal), o que sustenta o desconto central de 4%. Atenção: essa releitura foi feita pelo mesmo modelo que é o classificador principal, logo não é independente; serve para achar deslizes, não para medir precisão.
+6. Auditoria: as 100 publicadas foram relidas uma a uma pelo classificador principal, começando pelas que não tiveram concordância exata. Nenhum erro de assunto apareceu; em cerca de 5 delas outro nó também seria defensável (por exemplo Q0139, coculpabilidade, entre Culpabilidade e Princípios; Q0359, rito da Lei 9.099 para crimes contra idoso, entre Estatuto do Idoso e Juizados; Q0011, lavagem com competência federal), o que sustenta o desconto central de 4%. Como é o mesmo modelo que classificou, essa releitura não é independente: serve para achar deslizes, não para medir precisão.
 
 7. Risco correlacionado fora do intervalo: 23 publicações estão em nós originais de Legislação Especial (Maria da Penha, Lavagem, Organizações Criminosas, Meio Ambiente, Tráfico, Abuso de Autoridade, Idoso) que têm uma cópia vazia dentro de Penal. Publiquei no original (é o nó com descrição e histórico, e para o aluno o conteúdo é o mesmo). Se o gabarito da equipe usar as cópias, essas 23 viram erro e a precisão cairia para perto de 0.73. Considero esse cenário improvável (<20%) e ele NÃO está no intervalo acima.
 

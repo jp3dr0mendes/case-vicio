@@ -1,6 +1,6 @@
 # Como a precisão foi estimada sem gabarito
 
-O pacote do case **não traz rótulos**. Tudo o que segue é previsão; a precisão real só será
+O pacote do case não traz rótulos. Tudo o que segue é previsão; a precisão real só será
 conhecida quando a Vício comparar o `publicacao.csv` com os rótulos dos especialistas.
 
 ## 1. Três votos independentes
@@ -22,7 +22,7 @@ a taxa de concordância entre i e j é `a_ij ≈ p_i · p_j`. Com três classifi
 p_i = sqrt(a_ij · a_ik / a_jk)
 ```
 
-Calculado globalmente e **por faixa de confiança declarada pelo principal** (alta ≥ 0,90,
+Calculado globalmente e por faixa de confiança declarada pelo principal (alta ≥ 0,90,
 média 0,75–0,90, baixa < 0,75), com IC de 90% por bootstrap (`estimation.py`). O teste
 `tests/test_estimation_llm.py` verifica que o estimador recupera acurácias conhecidas em dados
 sintéticos (erro < 0,05 com 3.000 itens).
@@ -42,10 +42,10 @@ P(errado | padrão) ∝ (1 − p_F) · Π_i [ (1 − p_i)·r se concordou ; 1 �
 ```
 
 com `p_F` e `p_i` da faixa de confiança da questão. Voto inválido não entra. A confiança
-declarada pelo LLM **só escolhe a faixa**; nunca é usada como probabilidade.
+declarada pelo LLM só escolhe a faixa; nunca é usada como probabilidade.
 
-- **Portão de publicação**: publica só se essa posterior for ≥ 0,95 (`config/politica.json`).
-- **Coluna `confianca` do CSV** = posterior × (1 − 4% de divergência de critério), e × 0,5 nos
+- Portão de publicação: publica só se essa posterior for ≥ 0,95 (`config/politica.json`).
+- Coluna `confianca` do CSV = posterior × (1 − 4% de divergência de critério), e × 0,5 nos
   ramos com nó equivalente em outro lugar da árvore (o especialista pode ter escolhido o outro nó).
   Com isso, a média da coluna nas publicadas (0,945) é a própria precisão prevista (0,95). A
   posterior sem desconto fica registrada em `decision_audit.json` (`trace.posterior_modelo`).
@@ -54,7 +54,7 @@ declarada pelo LLM **só escolhe a faixa**; nunca é usada como probabilidade.
 
 - Teto do modelo: média das posteriores nas publicadas.
 - Intervalo do modelo: acurácias nos limites do IC90% e `r` entre metade e o dobro.
-- **Desconto por divergência de critério** (`config/previsao.json`): o especialista pode ter
+- Desconto por divergência de critério (`config/previsao.json`): o especialista pode ter
   escolhido outro nó defensável (clones, assuntos repetidos em ramos diferentes, questões
   "colcha de retalhos"). Esse risco é invisível para os três modelos, porque nenhum vê o critério
   da equipe. Valor declarado: 4% (faixa 2%–7%), justificado no relatório.

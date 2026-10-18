@@ -44,19 +44,19 @@ data/input/ (anexos oficiais, somente leitura)
 
 ## Política de decisão (v3)
 
-1. Voto do principal inválido/ausente → **revisar** (sugestão do primeiro voto válido).
-2. Principal diz "fora": **fora** só se confiança ≥ 0,90 e algum verificador também disser fora;
-   senão **revisar** ("possível fora"). Dúvida nunca vira fora.
-3. Tema escolhido é clone vazio → **revisar** com o nó original sugerido.
-4. **Veto**: os dois verificadores concordam entre si num ramo diferente → **revisar**.
-5. Confiança do principal < 0,75 → **revisar**.
+1. Voto do principal inválido/ausente → revisar (sugestão do primeiro voto válido).
+2. Principal diz "fora": fora só se confiança ≥ 0,90 e algum verificador também disser fora;
+   senão revisar ("possível fora"). Dúvida nunca vira fora.
+3. Tema escolhido é clone vazio → revisar com o nó original sugerido.
+4. Veto: os dois verificadores concordam entre si num ramo diferente → revisar.
+5. Confiança do principal < 0,75 → revisar.
 6. Algum verificador concorda no ramo (mesmo nó, pai ou filho) → candidato a publicar, no nó mais
    geral dos dois (correto pela régua se o gabarito estiver em qualquer um deles).
    Sem concordância: publica só se confiança ≥ 0,90 e pelo menos um verificador respondeu
-   validamente; senão **revisar**.
+   validamente; senão revisar.
 7. Ramo com nó concorrente (`grupos_ambiguos.json`) → exige confiança ≥ 0,90 e concordância de
-   **todos** os verificadores; senão **revisar**.
-8. **Portão final**: publicada só se a probabilidade estimada de acerto (posterior, coluna
+   todos os verificadores; senão revisar.
+8. Portão final: publicada só se a probabilidade estimada de acerto (posterior, coluna
    `confianca`) ≥ 0,95; abaixo disso → revisar. Na rodada final isso removeu todas as
    publicações "só por confiança alta", então toda publicada tem concordância de um verificador.
 9. `extras_ids` só com temas do principal que não sejam do mesmo ramo do central nem clones.

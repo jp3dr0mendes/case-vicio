@@ -1,9 +1,8 @@
-# Case Vício — classificação de questões por tópico
+# Case Vício: classificação de questões por tópico
 
 Classificação de 359 questões de concurso (Penal, Processo Penal, Legislação Penal Especial e
-Criminologia) na árvore de temas da plataforma, decidindo para cada uma entre **publicar**,
-**revisar** ou **fora**, com a meta de ≥ 95% de precisão nas publicadas e a maior cobertura
-possível. Enunciado original: [`docs/enunciado_case_vicio.pdf`](docs/enunciado_case_vicio.pdf).
+Criminologia) na árvore de temas da plataforma, decidindo para cada uma entre publicar, revisar ou
+fora, com a meta de pelo menos 95% de precisão nas publicadas e a maior cobertura possível. Enunciado original: [`docs/enunciado_case_vicio.pdf`](docs/enunciado_case_vicio.pdf).
 
 ## Entregáveis (raiz do repositório)
 
@@ -21,32 +20,55 @@ possível. Enunciado original: [`docs/enunciado_case_vicio.pdf`](docs/enunciado_
 
 | | |
 |---|---|
-| publicar | **100** (28%) |
+| publicar | 100 (28%) |
 | revisar | 258 (todas com tema sugerido e motivo) |
 | fora | 1 |
-| precisão prevista | **0,95** (intervalo 0,85–0,98) — prevista, não medida: não há gabarito |
+| precisão prevista | 0,95 (intervalo 0,85–0,98), prevista e não medida, porque não há gabarito |
 | cobertura prevista | 0,28 (0,26–0,30) |
 
-Modelos: Claude Opus 5.5 (classificador principal), qwen2.5:7b e llama3.1:8b (verificadores,
-Ollama 0.40.6 local). Custo marginal: zero além da assinatura do Claude Code; tempo: ~20 min de
-anotação + ~75 min de inferência local na 1ª passada dos dois modelos e ~1 h de retentativas (Apple M2 Pro, 16 GB) + segundos para a política.
+Modelos: Claude Opus 5.5 via Claude Code (classificador principal) e qwen2.5:7b e llama3.1:8b
+(verificadores, Ollama 0.40.6 local). Custo: nada além da assinatura do Claude Code. Tempo: cerca de
+20 minutos de classificação pelo modelo principal, 75 minutos de inferência local na primeira
+passada dos dois modelos e mais 1 hora de novas tentativas (Apple M2 Pro, 16 GB); a política roda em
+segundos.
 
 ## Como a classificação é feita
 
-1. **Classificador principal** — Claude Opus 5.5, rodando numa sessão do Claude Code, anotou as
-   359 questões com a árvore completa (protocolo em
+1. Classificador principal: o Claude Opus 5.5, via Claude Code, classificou as 359 questões com a
+   árvore completa (protocolo em
    [`prompts/anotador_forte.md`](prompts/anotador_forte.md); saída versionada em
    `data/anotacoes/claude_opus_5_5.psv`, sem edição manual).
-2. **Verificadores independentes** — qwen2.5:7b e llama3.1:8b via Ollama, em dois passos
-   (tema → subtema), prompts em [`prompts/classificacao.md`](prompts/classificacao.md)
+2. Verificadores independentes: qwen2.5:7b e llama3.1:8b via Ollama, em dois passos (tema e
+   depois subtema), com os prompts em [`prompts/classificacao.md`](prompts/classificacao.md)
    (inclui as versões descartadas e por quê).
-3. **Política** determinística ([`docs/arquitetura.md`](docs/arquitetura.md),
-   `config/politica.json`): concordância de ramo (mesmo nó, pai ou filho; irmão não conta),
-   veto, nós-clone nunca publicados, evidência reforçada em ramos com nó concorrente; falha ou
-   dúvida → revisar com sugestão.
-4. **Estimativa sem gabarito** ([`docs/estimativa_precisao.md`](docs/estimativa_precisao.md)):
-   acurácias latentes com três classificadores, posterior por questão (decide a publicação) e
-   desconto declarado por divergência de critério (coluna `confianca` = posterior descontada).
+3. Política determinística ([`docs/arquitetura.md`](docs/arquitetura.md),
+   `config/politica.json`): concordância de ramo (mesmo nó, pai ou filho; irmão não conta), veto,
+   temas vazios duplicados nunca publicados e mais evidência em assuntos que existem em outro ramo.
+   Falha ou dúvida vão para revisão com sugestão.
+4. Estimativa sem gabarito ([`docs/estimativa_precisao.md`](docs/estimativa_precisao.md)):
+   acurácias latentes com três classificadores, probabilidade de acerto por questão (que decide a
+   publicação) e desconto declarado para divergência de critério; a coluna `confianca` é essa
+   probabilidade já descontada.
+
+## Decisões tomadas à mão
+
+| Decisão | Onde | Motivo |
+|---|---|---|
+| 20 temas duplicados ligados ao original | `config/nos_duplicados.json` | não publicar em tema vazio |
+| 18 grupos de assuntos em mais de um ramo | `config/grupos_ambiguos.json` | mais evidência onde há duas respostas defensáveis |
+| Limiares de 0,75, 0,90 e 0,95 | `config/politica.json` | o de 0,95 veio da curva de cobertura × precisão estimada |
+| Desconto de 4% (2% a 7%) para divergência de critério | `config/previsao.json` | risco que nenhum modelo enxerga |
+| Anotação do classificador principal | `data/anotacoes/` | saída do modelo, sem edição posterior |
+
+## Uso de IA
+
+O enunciado libera o uso de IA e pede que os modelos sejam informados. Usei o Claude Opus 5.5 em
+dois papéis. No primeiro, ele é um dos classificadores do pipeline: classificou as 359 questões, e a
+saída está versionada sem edição em `data/anotacoes/`. No segundo, usei o Claude Code como
+assistente para implementar o código, os testes e a infraestrutura e para redigir a documentação,
+seguindo as minhas orientações (os commits registram essa coautoria). As decisões e os resultados
+são de minha responsabilidade, e tudo o que é afirmado aqui pode ser reproduzido com os comandos
+abaixo.
 
 Diagnóstico dos dados: [`docs/diagnostico_dados.md`](docs/diagnostico_dados.md).
 Como checar a precisão real e revalidação contra o enunciado:
@@ -144,7 +166,7 @@ Testes dentro do container:
 docker compose --profile run run --rm --entrypoint python app -m pytest -q -p no:cacheprovider
 ```
 
-Ollama em container (perfil `local-llm`; no macOS roda só em CPU — para usar a GPU, rode o
+Ollama em container (perfil `local-llm`; no macOS roda só em CPU; para usar a GPU, rode o
 Ollama nativo e defina `OLLAMA_BASE_URL=http://host.docker.internal:11434` no `.env`):
 
 ```bash
@@ -175,9 +197,9 @@ versões/hardware; por isso as respostas usadas estão versionadas em `artifacts
 
 ## Limitações
 
-- **Não há gabarito** no pacote: a precisão é prevista, não medida.
-- O classificador principal é um LLM numa sessão interativa: para refazer exatamente a anotação é
-  preciso o mesmo modelo; o arquivo versionado é a entrada oficial da política.
+- Não há gabarito no pacote: a precisão é prevista, não medida.
+- O classificador principal rodou de forma interativa no Claude Code; para refazer exatamente a
+  classificação é preciso o mesmo modelo, e por isso o arquivo versionado é a entrada da política.
 - Os verificadores locais são modelos pequenos (7–8B); com hardware maior, a cobertura subiria.
 - Os parâmetros manuais (clones, grupos ambíguos, desconto) estão declarados em `config/` e
   justificados no relatório.

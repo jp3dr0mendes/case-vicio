@@ -1,132 +1,135 @@
-# Relatório — Case de classificação de tópicos (Vício · Método VDE)
+# Relatório: case de classificação de tópicos
 
 João Pedro Mendes Albuquerque · 18/10/2026 · https://github.com/jp3dr0mendes/case-vicio
 
-**Resultado:** publiquei **100 das 359 questões (28%)**, com precisão **prevista** de **0,95**
-(intervalo 0,85–0,98); 258 vão para revisão com sugestão e motivo; 1 é "fora" (Direito
-Tributário). A precisão não foi medida: o pacote não tem gabarito (como medir: seção b).
+Das 359 questões, 100 (28%) foram publicadas, 258 foram para revisão com tema sugerido e motivo,
+e 1 ficou como "fora" (é de Direito Tributário). A precisão prevista para as publicadas é 0,95,
+com intervalo de 0,85 a 0,98. É uma previsão, porque o pacote não traz gabarito; na seção b
+explico como medir.
 
 ## a) Como pensei
 
-**A pergunta certa não é "qual tema?", é "quando posso confiar no tema?"** Um LLM acerta a maioria
-das questões, mas não sabemos *quais*. Desenhei o sistema em torno de: (1) um classificador forte;
-(2) sinais **independentes** para estimar quando ele erra; (3) uma política que só publica onde a
-evidência sustenta ≥ 95% e manda o resto ao professor **com a sugestão**.
+Um LLM classifica a maior parte dessas questões corretamente, mas não avisa em quais erra. Por isso
+o trabalho girou em torno de saber quando confiar: um classificador forte, sinais independentes
+para estimar quando ele erra e uma política que só publica onde essa estimativa sustenta 95%. O
+resto vai para o professor, já com uma sugestão.
 
-**Hipóteses** (todas confirmadas): (1) metadados de origem são ruidosos — das 43 questões
-marcadas "Concurso de Crimes", só 2 tratam disso; (2) o erro mais caro é **qual nó**, não o assunto
-— 20 nós-clone vazios e assuntos repetidos em ramos diferentes, e a régua pune o "irmão"; (3) sem
-gabarito, prever precisão exige **classificadores que erram de forma diferente**.
+Parti de três hipóteses, todas confirmadas: os metadados de origem são ruidosos (das 43 questões
+marcadas como "Concurso de Crimes", só 2 tratam do assunto); o erro mais caro está no nó da árvore,
+mais do que na matéria, porque há temas vazios duplicados e assuntos repetidos em ramos diferentes
+e a régua conta o "irmão" como erro; e, sem gabarito, prever a precisão exige comparar
+classificadores que erram de jeitos diferentes.
 
-**Becos sem saída** (registrados em `prompts/classificacao.md` e `artifacts/experimentos/`):
-TF-IDF da implementação anterior (similaridade não é probabilidade); LLM restrito ao top-12 lexical
-(o tema do principal só estava na lista em 78% das questões); qwen2.5:7b respondendo `tema_id` (**trocava dígitos**: 4706 → 4696);
-decodificação restrita às 371 opções (viés alfabético); pedir "escolha" (o modelo **respondia a
-questão**: "B: I e III"); qwen2.5:14b (não coube em 16 GB); verificador que vê a proposta
-(deferência); publicar por confiança alta sem concordância (só ~0,3–0,7 de acerto estimado).
+Várias tentativas ficaram pelo caminho (registradas em `prompts/classificacao.md` e
+`artifacts/experimentos/`). Similaridade de TF-IDF não é probabilidade de acerto, e restringir o
+LLM aos 12 candidatos do TF-IDF não serviu, porque o tema escolhido pelo classificador principal só
+estava nessa lista em 78% das questões. Respondendo por `tema_id`, o qwen2.5:7b trocava dígitos (a
+Lei Antiterrorismo, 4706, virava Estatuto do Idoso, 4696); com a decodificação restrita às 371
+opções, preferia as primeiras em ordem alfabética; e, quando eu pedia uma "escolha", respondia a
+própria questão ("B: I e III"). O qwen2.5:14b não coube na memória da máquina. Também descartei um
+verificador que lê a proposta do principal, porque ele tende a concordar, e publicar só com confiança
+alta, sem concordância de ninguém, porque esses casos ficaram com 0,3 a 0,7 de acerto estimado.
 
-**Pipeline final**
-1. *Classificador principal*: Claude Opus 5.5, rodando na sessão do Claude Code, anotou as 359
-   questões com a árvore completa e o mesmo regulamento do prompt local, antes de ver os
-   verificadores. Saída versionada, sem edição manual (`prompts/anotador_forte.md`).
-2. *Verificadores*: qwen2.5:7b e llama3.1:8b (Ollama), em dois passos (tema → subtema), com
-   casamento estrito da resposta: ambígua vira inválida, nunca palpite.
-3. *Política* (`decisions.py`, testada): nunca em nó-clone; ramo com nó equivalente em outro lugar
-   da árvore exige confiança ≥ 0,90 e concordância de todos; veto quando os dois verificadores
-   concordam entre si contra o principal; confiança < 0,75 ou falha → revisar; e o **portão**:
-   publica só se a probabilidade estimada de acerto da questão for ≥ 0,95. "Fora" só com consenso.
-4. *Estimativa* (`docs/estimativa_precisao.md`): acurácias latentes com três anotadores
-   (concordância_ij ≈ p_i·p_j), por faixa de confiança; erro coincidente `r` medido; posterior por
-   questão; desconto declarado por divergência de critério. A coluna `confianca` é a posterior
-   descontada: sua média nas publicadas é a precisão prevista.
+O pipeline que ficou:
 
-**Resultados**
+1. Classificador principal: o Claude Opus 5.5, via Claude Code, classificou as 359 questões com a
+   árvore completa e as mesmas regras do prompt local, antes de ver os verificadores. A saída está
+   versionada e não foi editada (protocolo em `prompts/anotador_forte.md`).
+2. Verificadores: qwen2.5:7b e llama3.1:8b, via Ollama, em dois passos (primeiro o tema, depois o
+   subtema). Resposta ambígua é descartada, nunca adivinhada.
+3. Política (`decisions.py`, com testes): nunca publica em tema vazio duplicado, exige mais
+   evidência em assunto que existe em outro ramo, manda para revisão quando os verificadores vetam,
+   quando a confiança do principal fica abaixo de 0,75 ou quando algo falha, e só publica com
+   probabilidade estimada de acerto de pelo menos 0,95. "Fora" exige consenso.
+4. Estimativa (`docs/estimativa_precisao.md`): a acurácia de cada classificador sai da concordância
+   entre pares (com três anotadores, concordância ≈ p_i·p_j); com ela e a taxa `r` de erro
+   coincidente, medida nos dados, sai a probabilidade de acerto de cada questão, com um desconto
+   para divergência de critério. A coluna `confianca` traz essa probabilidade, e a média dela nas
+   publicadas é a precisão prevista.
 
 | Decisão | Questões | Detalhe |
 |---|---|---|
-| publicar | 100 | 73 com concordância exata de um verificador; 27 pai/filho |
-| revisar | 258 | 123 principal inseguro; 42 nó equivalente em outro ramo; 32 probabilidade < 0,95; 28 divergência; 26 veto; 5 sem verificação válida; 2 possível "fora" |
+| publicar | 100 | 73 concordância exata com um verificador, 27 concordância pai/filho |
+| revisar | 258 | 123 confiança baixa, 42 assunto em outro ramo, 32 probabilidade abaixo de 0,95, 28 divergência, 26 veto, 5 sem verificação, 2 talvez "fora" |
 | fora | 1 | Q0142 (ITCD, Direito Tributário) |
 
-**Calibração.** A concordância com os verificadores cresce com a confiança declarada pelo
-principal (dois concordando: 10% das questões com confiança ≤ 0,35, 32% das ≥ 0,90), mas o modelo
-atribui parte disso aos verificadores (questão difícil é difícil para todos): acurácia estimada do
-principal ~0,78 (0,74–0,83 por faixa), qwen ~0,50, llama ~0,69, `r` = 0,25. Publicar "porque o LLM
-disse 0,95" daria ~0,8; o que separa as seguras é a **concordância independente**. Portão 0,95 →
-100 publicadas, posterior média 0,985 (sem portão: 132 com 0,884; portão 0,98: 65 com 0,997).
+A concordância com os verificadores aumenta com a confiança declarada pelo classificador principal
+(os dois concordam em 10% das questões abaixo de 0,35 e em 32% a partir de 0,90), mas o modelo
+atribui parte disso aos verificadores, já que questão difícil é difícil para todos. A acurácia
+estimada do principal fica perto de 0,78, a do qwen perto de 0,50 e a do llama perto de 0,69, com
+`r` = 0,25. Ou seja, confiar só na confiança declarada pelo LLM daria
+algo perto de 0,8 de precisão; o que separa as questões seguras é a concordância independente.
+Com o limiar de 0,95 ficam 100 publicadas, com probabilidade média de 0,985 (sem o limiar seriam
+132, com 0,884).
 
-**Previsão** (`previsao.txt`): 0,985 × (1 − 4% de divergência de critério) = **0,95**; intervalo
-0,85–0,98 (bootstrap das acurácias, `r` de metade ao dobro, desconto de 2–7%); cobertura 0,28. Reli
-as 100 publicadas: nenhum erro de assunto, ~5 com nó alternativo defensável. **Risco declarado
-fora do intervalo**: 23 publicadas estão em nós de Legislação Especial que têm cópia vazia em Penal;
-se o gabarito usar as cópias, a precisão cai para ~0,73. Verificadores: 295 (qwen) e 335 (llama)
-votos válidos de 359; os inválidos contam como "sem voto".
+A previsão (`previsao.txt`) é 0,985 × (1 − 0,04) = 0,95. Os 4% (faixa de 2% a 7%) cobrem o risco de
+o especialista ter escolhido outro nó defensável, algo que nenhum dos modelos enxerga. O intervalo
+de 0,85 a 0,98 vem do bootstrap das acurácias, de variar `r` e da faixa do desconto. As 100
+publicadas foram relidas uma a uma pelo classificador principal: nenhum erro de assunto apareceu, e
+em cerca de 5 delas outro nó também seria defensável; por ser o mesmo modelo, isso serve para achar
+deslizes, não para medir. Um risco ficou fora do intervalo e está declarado à parte: 23 publicadas
+estão em temas de Legislação Especial que têm uma cópia vazia dentro de Penal, e, se o gabarito usar
+as cópias, a precisão cai para cerca de 0,73.
 
-## b) Diagnóstico (detalhes em `docs/diagnostico_dados.md`)
+## b) Diagnóstico
 
-1. **A árvore se contradiz**: 20 nós ativos, sem descrição nem subtemas, duplicam nós com conteúdo
-   ("Teoria da Pena (Parte 2)", "Competência (Parte 1)", leis especiais copiadas em Penal).
-2. **O mesmo instituto mora em dois ramos**: ação penal (Penal × Processo Penal × Punibilidade),
-   Juizado Especial (Legislação Especial × Sumaríssimo), regime de pena (Penal × Sentença),
-   execução (LEP × livramento × indulto). Duas respostas defensáveis; a régua aceita uma.
-3. **Temas inativos deixam órfãos**: sem "Direito penal econômico", cartel, ordem tributária e
-   sistema financeiro não têm casa natural.
-4. **Questões "colcha de retalhos"** (~20): assertivas de capítulos diferentes; não existe tema
-   central. É a classe mais difícil, para humano e máquina, junto com o item 2 e a criminologia
-   crítica (labeling × criminalização × teorias da pena), onde os nomes dos temas se sobrepõem.
-5. **Texto defeituoso**: comandos gerados que não batem com a questão ("Explique…" em itens
-   Certo/Errado), enunciado que cita situação ausente (Q0219), OCR corrompido (Q0078).
-6. **Metadados de origem enganam** (as "lixeiras"): pista fraca de disciplina, nunca de tema.
+O que mais atrapalha (detalhes em `docs/diagnostico_dados.md`):
 
-**Como checar a precisão real** (`docs/verificacao_precisao.md`): `folha-auditoria` gera uma folha
-HTML offline com as 100 publicadas + 30 controles, **sem mostrar a decisão do sistema**;
-`medir-precisao` aplica a régua oficial com intervalo exato de Clopper-Pearson e aceita também o
-gabarito da Vício. Auditando as 100, até 1 erro ainda comprova ≥ 95%. Atenção: com ~100 publicadas
-a própria medição oscila ±4 pontos; com 95% reais, ela só dá ≥ 95% em ~62% das vezes (97% → ~92%).
+1. A árvore se contradiz. Há 20 temas ativos, sem descrição nem subtemas, que duplicam temas com
+   conteúdo: "Teoria da Pena (Parte 2)", "Competência (Parte 1)" e leis especiais copiadas em Penal.
+2. O mesmo instituto aparece em dois ramos, como ação penal (Penal e Processo Penal), Juizado
+   Especial e regime de pena. São duas respostas defensáveis, e a régua aceita só uma.
+3. Temas inativos deixam questões órfãs: sem "Direito penal econômico", cartel, ordem tributária e
+   sistema financeiro ficam sem lugar natural.
+4. Cerca de 20 questões juntam assertivas de capítulos diferentes e não têm tema central. Com as do
+   item 2 e as de criminologia crítica, de nomes de tema parecidos, são as mais difíceis.
+5. Há texto com defeito: comandos que não combinam com a questão ("Explique…" em itens de Certo ou
+   Errado), enunciado que cita uma situação ausente (Q0219) e OCR corrompido (Q0078).
+6. Os metadados de origem (as "lixeiras") ajudam a indicar a disciplina, mas não o tema.
 
-## c) Produção — 50 mil questões por semana
+Para medir a precisão de verdade (`docs/verificacao_precisao.md`), `folha-auditoria` gera uma página
+HTML, que funciona sem internet, com as 100 publicadas misturadas a 30 questões de revisão e sem
+mostrar a decisão do sistema; `medir-precisao` compara as respostas com a régua oficial, com
+intervalo exato de Clopper-Pearson, e aceita também o gabarito da Vício. Se houver no máximo um erro
+nas 100, fica comprovado que a precisão passa de 95%. Com cerca de 100 publicadas a própria medição
+oscila uns 4 pontos: com 95% reais, ela só mostra 95% ou mais em 62% das vezes.
 
-**Momento da empresa.** A Vício leva o Método VDE da OAB ao *VDE Carreiras Jurídicas*
-(Magistratura, MP, Defensoria, Procuradorias, Delegado), com "+50 mil questões" e a vic.IA. O case é
-o gargalo dessa expansão: importação em massa, "lixeiras" e árvore em reestruturação. Quem paga
-R$ 2,5–4,3 mil/ano estuda por tema; errar o tema custa confiança.
+## c) Produção, com 50 mil questões por semana
 
-**Camadas (o custo cresce só onde há dúvida)**: (1) normalização e deduplicação (hash + embeddings;
-repetidas herdam a classificação revisada); (2) embeddings de enunciados e descrições → top-20
-candidatos, com meta de recall > 98% medida no conjunto rotulado (o TF-IDF daqui chega a 81%; ~US$
-0,00002/questão); (3) classificador treinado
-(logística/LightGBM sobre embeddings) com as decisões revisadas pelo professor — barato e calibrável,
-resolve os fáceis; (4) LLM forte só no restante (~30–40%), com a árvore restrita aos candidatos (~US$
-0,003–0,01/questão), e dois LLMs de famílias diferentes nos casos de risco; (5) política calibrada
-como a deste repositório; (6) revisão humana priorizada por impacto (questões mais vistas e mais
-incertas primeiro; sugestão pré-preenchida, um clique). **Agentes** ficam fora do caminho crítico
-(caros e difíceis de auditar por questão); entram na curadoria da árvore — propor fusão de clones,
-detectar novas "lixeiras" pelos reportes —, sempre com aprovação humana. **Custo**: ~US$ 0,002–0,005/questão →
-US$ 100–250 por semana, mais o tempo do professor.
+A Vício está levando o Método VDE da OAB para as carreiras jurídicas, com mais de 50 mil questões.
+O problema do case vem dessa expansão: importação em massa, "lixeiras" e uma árvore em
+reestruturação. Como o aluno estuda por tema, errar o tema afeta direto a confiança na plataforma.
 
-**Qualidade contínua**: amostra-ouro semanal de 200 publicadas revisada às cegas (limite inferior
-do IC < 95% → limiares sobem); curva de confiabilidade da `confianca`; botão "tema errado" por
-questão (não existe na página pública) que tira a questão do ar e vira rótulo; drift de temas por
-lote importado e de "fora" por banca/ano.
+Eu montaria camadas, de forma que o custo cresça só onde há dúvida:
 
-**Fluxo**: importação → classificação em minutos → publicadas no ar; revisar vai à fila do professor;
-fora, a um backlog de "temas a criar"; toda decisão é registrada (hash de entrada, modelo, prompt,
-política), como no `db.py` deste case.
+1. Deduplicação (hash e embeddings), para que questões repetidas herdem a classificação revisada.
+2. Embeddings para chegar a 20 candidatos, com meta de recall acima de 98% (o TF-IDF daqui chega a
+   81%), a cerca de US$ 0,00002 por questão.
+3. Um classificador treinado com as decisões já revisadas pelo professor (regressão logística ou
+   LightGBM sobre os embeddings), barato e fácil de calibrar, para os casos fáceis.
+4. Um LLM forte só no restante (30% a 40%), de US$ 0,003 a US$ 0,01 por questão, com dois LLMs de
+   famílias diferentes nos casos de risco, e a política calibrada como a deste repositório.
+5. Revisão humana priorizada pelas questões mais vistas e mais incertas, com sugestão pronta.
 
-**Com mais tempo**: auditoria cega das 100 publicadas pelo professor; verificadores de 30B+ ou via
-API (mais cobertura com a mesma precisão); consolidar os clones antes de reclassificar em massa.
+Agentes ficariam fora da classificação, por serem caros e difíceis de auditar, e ajudariam na
+curadoria da árvore, com aprovação humana. O custo médio ficaria entre US$ 0,002 e US$ 0,005 por
+questão, de US$ 100 a US$ 250 por semana, além do tempo do professor.
 
-## d) Memo para o professor: `memo_professor.md` (1 página)
+No fluxo, cada lote importado é classificado em minutos: as publicadas entram no ar, as dúvidas vão
+para a fila do professor com sugestão e as "fora" para uma lista de temas a criar, com cada decisão
+registrada como no `db.py`. A qualidade é acompanhada por uma amostra semanal de 200 publicadas
+revisada às cegas (se o limite inferior do intervalo cair abaixo de 95%, os limiares sobem) e por um
+botão de "tema errado" em cada questão, que tira a questão do ar e vira rótulo. Com mais tempo, eu
+pediria a conferência das 100 publicadas ao professor e testaria verificadores maiores.
 
-## Decisões tomadas à mão, modelos, custo e tempo
+## d) Memo para o professor
 
-| Decisão | Onde | Por quê |
-|---|---|---|
-| Mapa dos 20 nós-clone → original | `config/nos_duplicados.json` | nunca publicar em nó vazio duplicado |
-| 18 grupos de nós equivalentes em ramos diferentes | `config/grupos_ambiguos.json` | evidência reforçada onde há duas respostas defensáveis |
-| Limiares 0,75 / 0,90; portão 0,95 | `config/politica.json` | portão pela curva cobertura × precisão |
-| Desconto de critério 4% (2–7%) | `config/previsao.json` | risco que nenhum modelo enxerga |
-| Anotação do principal | `data/anotacoes/` | saída de LLM, sem edição posterior |
+Está em `memo_professor.md` (uma página).
 
-**Modelos, custo e tempo**: Claude Opus 5.5 (assinatura do Claude Code; ~20 min); qwen2.5:7b e
-llama3.1:8b via Ollama num M2 Pro de 16 GB (custo marginal zero; ~35–40 min cada, mais retentativas).
+## Uso de IA, decisões manuais e custo
+
+Além de usar o Claude Opus 5.5 como um dos classificadores, usei o Claude Code como assistente para
+implementar o código, os testes e a infraestrutura e para redigir a documentação, seguindo as minhas
+orientações. As decisões e os resultados são de minha responsabilidade e podem ser conferidos no
+repositório. As decisões tomadas à mão, os modelos, o custo (nada além da assinatura do Claude Code)
+e o tempo (cerca de 2,5 horas) estão no README.

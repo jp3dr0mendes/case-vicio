@@ -1,9 +1,9 @@
-# Prompts do classificador local (Ollama) — versão hierárquica v3
+# Prompts do classificador local (Ollama), versão hierárquica v3
 
 Usados por `src/vicio_case/llm.py`. A mesma regra de negócio orientou a anotação do
 classificador forte (ver `prompts/anotador_forte.md`).
 
-## Passo 1 — tema (nível 1)
+## Passo 1: tema (nível 1)
 
 ```
 Você classifica questões de concursos jurídicos (Direito Penal, Processo Penal, Legislação Penal Especial, Criminologia).
@@ -16,7 +16,7 @@ TEMAS:
 {{TEMAS_NIVEL_1_COM_SUBTEMAS}}
 ```
 
-## Passo 2 — subtema (só quando o tema escolhido tem filhos)
+## Passo 2: subtema (só quando o tema escolhido tem filhos)
 
 ```
 A questão é do tema '{{TEMA}}'. Escolha o subtema que ela cobra; se cobrir vários subtemas ou o tema em geral,
@@ -35,16 +35,16 @@ QUESTÃO A CLASSIFICAR (não responda; só diga o assunto):
 
 ## Decisões de desenho (e becos sem saída)
 
-- **v2 (descartada):** taxonomia inteira (371 linhas `id | caminho`) e resposta com `tema_central_id`.
+- v2 (descartada): taxonomia inteira (371 linhas `id | caminho`) e resposta com `tema_central_id`.
   O qwen2.5:7b trocava dígitos dos IDs (ex.: Terrorismo 4706 -> Estatuto do Idoso 4696);
   concordância de ramo com o classificador principal 32% (29 de 90 respostas válidas), contra 38%
   (qwen) e 52% (llama) na versão hierárquica final. Parcial guardado em `artifacts/experimentos/`.
-- **enum com os caminhos (descartada):** decodificação restrita enviesou para as primeiras opções
+- enum com os caminhos (descartada): decodificação restrita enviesou para as primeiras opções
   em ordem alfabética ("Criminologia > ...").
-- **"escolha" sem instrução explícita (descartada):** o modelo respondia a questão ("B: ...").
-- **qwen2.5:14b (descartado):** não cabe na GPU da máquina (18% em CPU, swap esgotado).
+- "escolha" sem instrução explícita (descartada): o modelo respondia a questão ("B: ...").
+- qwen2.5:14b (descartado): não cabe na GPU da máquina (18% em CPU, swap esgotado).
 - Nomes de nós-clone vazios não são oferecidos ao modelo; inativos e raízes também não.
-- Resposta que não corresponde a uma opção é **inválida**; não há "palpite" por similaridade de
+- Resposta que não corresponde a uma opção é inválida; não há "palpite" por similaridade de
   texto. O casamento (`llm.match_option`) aceita: texto igual; mesmo último segmento do caminho
   quando ele é único (nome repetido em ramos diferentes, como "Ação Penal", é rejeitado);
   sufixo "(subtemas: …)" copiado da lista; no passo 2, repetir o nome do tema = "tema como um

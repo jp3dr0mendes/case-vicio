@@ -59,8 +59,8 @@ def forecast_text(rows: list[dict[str, Any]], est: dict[str, Any], names: list[s
         "",
         (
             "2. Três classificadores independentes votaram em todas as questões: " + ", ".join(names)
-            + ". O primeiro (Claude Opus 5.5, rodando nesta sessão do Claude Code) é o classificador principal; os "
-            "dois modelos locais (Ollama) são verificadores mais fracos e de outras famílias."
+            + ". O primeiro (Claude Opus 5.5, via Claude Code) é o classificador principal; os dois modelos "
+            "locais (Ollama) são verificadores mais fracos e de outras famílias."
         ),
         "",
         (
