@@ -119,8 +119,8 @@ No fluxo, cada lote importado é classificado em minutos: as publicadas entram n
 para a fila do professor com sugestão e as "fora" para uma lista de temas a criar, com cada decisão
 registrada como no `db.py`. A qualidade é acompanhada por uma amostra semanal de 200 publicadas
 revisada às cegas (se o limite inferior do intervalo cair abaixo de 95%, os limiares sobem) e por um
-botão de "tema errado" em cada questão, que tira a questão do ar e vira rótulo. Com mais tempo, eu
-pediria a conferência das 100 publicadas ao professor e testaria verificadores maiores.
+botão de "tema errado" em cada questão, que tira a questão do ar e vira rótulo. Os próximos passos com
+mais tempo (deploy, revisão humana, outros modelos e prompts) estão no README.
 
 ## d) Memo para o professor
 

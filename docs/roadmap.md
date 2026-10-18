@@ -1,5 +1,8 @@
 # Roadmap
 
+O plano para depois da entrega (arquitetura de deploy, revisão humana, testes de outros modelos e
+engenharia de prompt) está na seção "Próximos passos" do README. Aqui fica o estado de cada parte.
+
 ## Implementado e testado (neste repositório)
 - Leitura/validação dos anexos, limpeza de HTML, auditoria (`audit`), com testes automáticos.
 - Árvore com regra oficial (mesmo nó/pai/filho; irmão = erro), inativos, raízes e clones, com testes.

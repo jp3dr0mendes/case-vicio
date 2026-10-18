@@ -202,4 +202,112 @@ versões/hardware; por isso as respostas usadas estão versionadas em `artifacts
   classificação é preciso o mesmo modelo, e por isso o arquivo versionado é a entrada da política.
 - Os verificadores locais são modelos pequenos (7–8B); com hardware maior, a cobertura subiria.
 - Os parâmetros manuais (clones, grupos ambíguos, desconto) estão declarados em `config/` e
-  justificados no relatório.
+  justificados na seção de decisões tomadas à mão.
+
+## Próximos passos (com mais tempo)
+
+A ordem que eu seguiria é: medir a precisão com a conferência cega das 100 publicadas, consertar a
+árvore de temas com o professor, montar um conjunto de avaliação para testar modelos e prompts,
+colocar o pipeline em produção em modo sombra numa disciplina e só depois liberar com revisão humana
+e monitoramento. O detalhe de cada parte está abaixo.
+
+### Arquitetura para deploy
+
+O volume do problema (cerca de 50 mil questões por semana) cabe numa arquitetura simples, sem
+Kafka ou orquestrador dedicado. A imagem Docker deste repositório vira a base de um worker, e o
+PostgreSQL, que já guarda execuções e decisões, também serve de fila.
+
+```
+importação de questões (lote semanal ou cadastro avulso)
+        |
+        v
+fila de jobs no PostgreSQL (SELECT ... FOR UPDATE SKIP LOCKED)
+        |
+        v
+worker de classificação (container)
+   1. normalização e deduplicação (hash do enunciado + embeddings)
+   2. candidatos por embeddings (top-20)
+   3. classificador treinado com as revisões do professor
+   4. LLM só nas questões incertas (API, com cache por hash da questão)
+   5. política e probabilidade de acerto (decisions.py / estimation.py)
+        |
+        +--> publicar: entra no ar
+        +--> revisar:  fila do professor, com sugestão e motivo
+        +--> fora:     lista de temas a criar
+        |
+        v
+registro de cada decisão (classification_runs / classification_decisions)
+```
+
+Os componentes seriam:
+
+- Uma API pequena (por exemplo FastAPI) para classificar uma questão nova na hora do cadastro, e o
+  mesmo worker em lote para as importações grandes, ambos a partir da imagem atual.
+- PostgreSQL gerenciado, com as tabelas que já existem mais uma tabela de revisões humanas.
+- LLM por API com chaves num gerenciador de segredos, limite de requisições e cache; um servidor
+  próprio em GPU (vLLM ou Ollama) só se custo ou privacidade justificarem.
+- Containers num serviço gerenciado (Cloud Run, ECS Fargate ou equivalente), com agendamento
+  semanal para os lotes e disparo na importação.
+- CI rodando os testes atuais e a avaliação no conjunto rotulado antes de promover qualquer versão
+  nova de prompt, modelo ou política.
+
+Para colocar no ar com segurança, eu começaria em modo sombra: o pipeline classifica, mas não
+publica, e as decisões são comparadas com a classificação atual da plataforma e com as revisões do
+professor. Depois liberaria por disciplina, com a versão da política como chave de ativação, de
+forma que voltar atrás seja só trocar a versão. O painel de acompanhamento mostraria cobertura,
+tamanho da fila de revisão, precisão medida na amostra semanal (com intervalo de confiança), custo
+por questão, latência, taxa de respostas inválidas do LLM e mudança na distribuição de temas por
+lote importado.
+
+### Revisão humana no circuito
+
+- Uma tela de revisão com a questão, o tema sugerido, as duas alternativas mais prováveis e o
+  motivo da dúvida, com atalhos para confirmar, corrigir, marcar como fora ou propor um tema novo.
+- A fila ordenada por impacto e incerteza: primeiro os temas e bancas mais estudados e as questões
+  com menor probabilidade de acerto.
+- Cada correção vira rótulo. Toda semana, as acurácias e os limiares são recalibrados, o
+  classificador é retreinado e os exemplos usados nos prompts são atualizados.
+- O botão de "tema errado" para o aluno tira a questão do ar e a coloca na fila com prioridade.
+- Dupla revisão em cerca de 10% das questões, para medir a concordância entre especialistas. Esse
+  número é o teto realista de precisão e substitui o desconto de critério que hoje é declarado (4%).
+- Conferência cega mensal de uma amostra das publicadas, com a folha e o comando que já existem
+  (`folha-auditoria` e `medir-precisao`).
+- Curadoria da árvore com o professor: fundir os temas duplicados, criar temas a partir das
+  questões "fora" e escrever descrições úteis (hoje 20 temas não têm descrição e muitos só têm um
+  texto genérico do tipo "Subtema de X").
+- Acompanhar o tempo médio de revisão e a taxa de sugestões confirmadas; se a confirmação passar de
+  90% numa faixa, é sinal de que dá para publicar mais nela.
+
+### Testar outros modelos
+
+- Montar um conjunto de avaliação congelado e versionado a partir da conferência cega e das
+  revisões do professor (500 a 1.000 questões rotuladas).
+- Criar um comando de avaliação que, para cada combinação de modelo e prompt, informe a precisão
+  pela régua oficial, a cobertura possível mantendo 95%, o custo, a latência e a taxa de respostas
+  inválidas. O `run-llm` já aceita `--model` para qualquer modelo do Ollama; um modelo por API
+  entraria como outro cliente com a mesma interface.
+- Candidatos a comparar: verificadores locais maiores em GPU (qwen2.5:32b, Llama de 70B), modelos
+  por API de custo menor (Claude Haiku 5.5 e Sonnet 5.5) contra o Claude Opus 5.5, ao menos um
+  modelo de outra família para manter os votos independentes, embeddings multilíngues para a etapa
+  de candidatos e o classificador treinado como linha de base barata.
+- Regra para trocar de modelo: só promover se aumentar a cobertura mantendo o limite inferior do
+  intervalo de confiança da precisão em 95% ou mais.
+
+### Engenharia de prompt
+
+- Continuar versionando cada prompt (o código já registra versão e hash) e guardar o resultado de
+  cada experimento no conjunto de avaliação.
+- Incluir no prompt as descrições dos temas, depois de reescritas com o professor.
+- Usar exemplos para os pares que mais confundem (ação penal em Penal ou Processo Penal, Juizado
+  Especial, regime de pena), com o motivo de cada escolha, tirados das revisões reais.
+- Escrever regras de desempate explícitas para os assuntos que existem em dois ramos, assim que o
+  professor definir onde cada um fica.
+- Pedir a justificativa, com o dispositivo legal cobrado, antes do tema.
+- Testar autoconsistência (várias respostas por questão, usando a concordância entre elas como
+  sinal de confiança).
+- Criar um passo inicial que identifique questões que misturam capítulos e as mande direto para
+  revisão.
+- Nos modelos locais, trocar nomes longos de opção por códigos curtos, para reduzir respostas que
+  não batem com a lista.
+- Tratar mudança de prompt como mudança de código: toda versão passa pelo conjunto de avaliação, e
+  testes como `tests/test_llm_outputs.py` acusam quando uma mudança altera votos já registrados.
