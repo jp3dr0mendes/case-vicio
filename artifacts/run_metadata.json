@@ -1,5 +1,5 @@
 {
-  "started_at_utc": "2026-10-18T20:54:58.747218+00:00",
+  "started_at_utc": "2026-10-18T21:25:18.160016+00:00",
   "mode": "ensemble",
   "classificadores": [
     "claude-opus-5-5",
@@ -25,7 +25,7 @@
     "questoes.jsonl": "6815aad02f1577fb7f3c68bb76cd56b3b23df5a0bf951d3422a5ce7d5e492573",
     "temas.csv": "9c6e98a6cd568816671c0fa14e2449b152cee10e20cb1327b3b097c1c5ce4cbc",
     "config/nos_duplicados.json": "646dff45ad1a4ef0c283899d7c034dccb0dfa5c391399f93e1644caade4c1387",
-    "config/grupos_ambiguos.json": "82efa85cc508c0a3b81e6b4d3ea4e571d2eba3def878072147797753aab1b947",
+    "config/grupos_ambiguos.json": "d30124366a3e13d5747daa941773f23d608fea08994eb83d69fd15c7b90e3c4e",
     "config/politica.json": "c112e85db850bdb3c075eb7da0d080120c475c6fccffb19237b6a8914f956a32",
     "anotacoes/claude_opus_5_5.psv": "7b8b97be3eb2686cc6dd1e574d1c4e410486667525fbc264bdad67fca9912062",
     "llm/qwen2.5_7b.jsonl": "4fd959d3bf1d222564b072fba3e976afeff2a8407a3ea8e242897bf67f7c8f21",
@@ -65,7 +65,7 @@
   "observacao_precisao": "Não há gabarito no pacote do case; a precisão é estimada, não medida.",
   "python_version": "3.12.15",
   "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.41",
-  "publicacao_sha256": "ed9e4fef629fabb098e4383adf206a2cb7357f2aa4a8c6f45c9eeca6424c0026",
-  "database_run_id": "197ace6b-a7ce-49c7-9890-b579fa849271",
-  "duration_seconds": 3.12
+  "publicacao_sha256": "0cc3a3cb03850b18fdfc8a6b4943b36ba77a6cd1ae712dc9508d9ea411493c60",
+  "database_run_id": "fb9ba7ad-a5d3-42cc-9d75-a0a2c2dd201f",
+  "duration_seconds": 3.16
 }

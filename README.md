@@ -49,6 +49,8 @@ anotação + ~75 min de inferência local (Apple M2 Pro, 16 GB) + segundos para 
    desconto declarado por divergência de critério.
 
 Diagnóstico dos dados: [`docs/diagnostico_dados.md`](docs/diagnostico_dados.md).
+Como checar a precisão real e revalidação contra o enunciado:
+[`docs/verificacao_precisao.md`](docs/verificacao_precisao.md).
 Validação executada: [`docs/validacao.md`](docs/validacao.md). Próximos passos:
 [`docs/roadmap.md`](docs/roadmap.md).
 
@@ -56,12 +58,13 @@ Validação executada: [`docs/validacao.md`](docs/validacao.md). Próximos passo
 
 ```
 src/vicio_case/   data, taxonomy, retrieval, llm, runner, annotations, decisions,
-                  estimation, forecast, pipeline, db, cli
-tests/            contratos de dados, regra da árvore, política, estimador, entrega
+                  estimation, forecast, pipeline, verification, db, cli
+tests/            contratos de dados, regra da árvore, política, estimador, entrega, medição
 config/           politica.json, nos_duplicados.json, grupos_ambiguos.json, previsao.json
 prompts/          prompts dos classificadores
 data/input/       anexos oficiais (idênticos ao ZIP do case)
 data/anotacoes/   votos do classificador principal
+auditoria/        folha de auditoria cega (HTML offline) e amostra
 artifacts/        saídas: llm/*.jsonl, publicacao.csv, previsao.txt, decision_audit.json,
                   estimativa.json, run_metadata.json, data_audit.json, experimentos/
 ```
@@ -105,6 +108,17 @@ PYTHONPATH=src .venv/bin/python -m vicio_case.cli classify --mode ensemble --del
 ```
 
 `--mode baseline` gera uma versão só lexical (tudo em revisar) para testar o contrato.
+
+Medir a precisão real com rótulos humanos (auditoria cega) ou com o gabarito da Vício
+(detalhes em [`docs/verificacao_precisao.md`](docs/verificacao_precisao.md)):
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli folha-auditoria
+```
+
+```bash
+PYTHONPATH=src .venv/bin/python -m vicio_case.cli medir-precisao --rotulos rotulos_auditoria.csv
+```
 
 ### Docker
 

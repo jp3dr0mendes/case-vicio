@@ -8,12 +8,15 @@ container; Docker 28.4 / Compose 2.39; Ollama 0.40.6 nativo (Metal) e em contain
 | Comando | Resultado |
 |---|---|
 | `python -m compileall -q src tests` | OK |
-| `PYTHONPATH=src pytest -q` (local) | OK — 29 passed (inclui `test_entrega.py` sobre o CSV final) |
+| `PYTHONPATH=src pytest -q` (local) | OK — 33 passed (inclui `test_entrega.py` sobre o CSV final e `test_verification.py`) |
 | `python -m vicio_case.cli audit` | OK — 359 questões, 377 nós, 375 ativos, 371 selecionáveis, 20 clones |
 | `python -m vicio_case.cli classify --mode baseline` | OK — 359 revisar (teste de contrato) |
 | `python -m vicio_case.cli run-llm --model qwen2.5:7b` | OK — 295/359 válidas após 1ª passada + retentativas (64 inválidas registradas: nome ambíguo ou fora das opções) |
 | `python -m vicio_case.cli run-llm --model llama3.1:8b` | OK — 335/359 válidas após 1ª passada + retentativa com casamento corrigido |
 | `python -m vicio_case.cli classify --mode ensemble --deliver-dir .` | OK — 100 publicar / 258 revisar / 1 fora; CSV validado pelo contrato |
+| `python -m vicio_case.cli folha-auditoria` | OK — 130 questões (100 publicadas + 30 controles), aberta e testada no navegador (busca, progresso, exportação) |
+| `medir-precisao` | testado com rótulos sintéticos (`test_verification.py`); **sem rótulos reais ainda** |
+| Determinismo | mesma saída (sha `0cc3a3cb…`) local e no container; run gravado no PostgreSQL |
 | `docker compose config --quiet` | OK |
 | `docker compose build app` | OK |
 | `docker compose up -d db` / `docker compose ps` | OK — `db` healthy, porta só em 127.0.0.1:5433 |

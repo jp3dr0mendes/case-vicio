@@ -212,6 +212,17 @@ def run_pipeline(
                                  f"de publicação ({gate:.2f}); confirmar a sugestão.")
         est["precisao_modelo_publicadas"] = _precision_interval(est, names, rows, strong)
         est["curva_limiar_posterior"] = _threshold_curve(rows_before_gate, gate)
+        # Coluna `confianca` coerente com a previsão: posterior do modelo x (1 - risco de critério).
+        # Nos ramos com nó equivalente em outro lugar da árvore, o especialista pode ter escolhido
+        # o outro nó: sem conhecer a regra da equipe, a chance do nosso nó cai pela metade.
+        fcfg = json.loads((config_dir / "previsao.json").read_text(encoding="utf-8")) \
+            if (config_dir / "previsao.json").exists() else {}
+        amb = float(fcfg.get("risco_divergencia_de_criterio", [0, 0.04, 0])[1])
+        for row in rows:
+            row["trace"]["posterior_modelo"] = row["confianca"]
+            factor = (1 - amb) * (0.5 if row["estrato"] == REV_RISCO else 1.0)
+            if row["decisao"] != "fora":
+                row["confianca"] = round(row["confianca"] * factor, 2)
         for row in rows:
             row.pop("_tax", None)
     else:

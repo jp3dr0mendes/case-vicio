@@ -54,10 +54,14 @@ class PolicyConfig:
         return cls(**fields)
 
 
+GROUP_LABELS: dict[str, str] = {}
+
+
 def load_ambiguity_groups(path: Path) -> dict[str, list[int]]:
     if not path.exists():
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
+    GROUP_LABELS.update(data.get("rotulos", {}))
     return {name: [int(i) for i in ids] for name, ids in data.get("grupos", {}).items()}
 
 
@@ -142,14 +146,13 @@ def decide(
             taxonomy.branch_related(others_ids[0], t) for t in others_ids[1:]
         ):
             return _row(qid, "revisar", central, [],
-                        f"Os verificadores independentes concordam entre si em outro ramo ({others_ids[0]}) "
-                        f"e divergem do classificador principal ({central}).",
+                        f"Verificadores apontam outro ramo ({others_ids[0]}); confirmar entre {central} e {others_ids[0]}.",
                         REV_VETO, **trace)
 
     conf = strong["confianca"]
     if conf < config.limiar_confianca_anotador_forte:
         return _row(qid, "revisar", central, [],
-                    f"Confiança do classificador principal baixa ({conf:.2f}); revisão humana.",
+                    f"Classificador principal inseguro ({conf:.2f}); confirmar a sugestão.",
                     REV_BAIXA_CONF, **trace)
 
     if agreeing:
@@ -167,7 +170,7 @@ def decide(
     else:
         detail = ", ".join(f"{n}={tid if tid is not None else 'fora'}" for n, tid in local_ids) or "sem resposta válida"
         return _row(qid, "revisar", central, [],
-                    f"Sem concordância de ramo dos verificadores ({central} x {detail}); especialista decide.",
+                    f"Sem concordância dos verificadores ({central} x {detail}).",
                     REV_DIVERGENCIA, **trace)
 
     risks = risk_groups_for(central_pub, taxonomy, groups)
@@ -177,7 +180,8 @@ def decide(
             config.exigir_concordancia_de_todos_os_locais_na_zona_de_risco and not all_agree
         ):
             return _row(qid, "revisar", central, [],
-                        f"Tema com nó concorrente em outro ramo da árvore ({', '.join(risks)}); evidência insuficiente para publicar.",
+                        "Assunto com nó equivalente em outro ramo ("
+                        + "; ".join(GROUP_LABELS.get(r, r) for r in risks[:2]) + "); confirmar o nó.",
                         REV_RISCO, **trace)
 
     extras = [e for e in strong["extras_ids"]

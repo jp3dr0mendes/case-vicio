@@ -84,5 +84,25 @@
       5505,
       5180
     ]
+  },
+  "rotulos": {
+    "acao_penal_penal_x_processo": "Ação penal: Penal x Processo Penal x Punibilidade",
+    "juizados_especiais": "Juizado Especial: Leg. Especial x Sumaríssimo",
+    "interceptacao_telefonica": "Interceptação: Leg. Especial x Provas",
+    "regime_e_fixacao_da_pena": "Regime de pena: Teoria da Pena x Sentença",
+    "efeitos_da_condenacao": "Efeitos da condenação: Penal x Processo Penal",
+    "sentenca_procedimento_x_sentenca_penal": "Sentença: Procedimento x Sentença Penal",
+    "absolvicao_sumaria_ordinario_x_juri": "Absolvição sumária: rito comum x Júri",
+    "execucao_penal_x_teoria_da_pena": "Execução: LEP x Teoria da Pena/Punibilidade",
+    "colaboracao_e_meios_especiais_x_organizacoes": "Colaboração/infiltração: Provas x Org. Criminosas",
+    "finalidade_da_pena_criminologia_x_penal": "Finalidade da pena: Criminologia x Penal",
+    "labelling_teorias_x_criminalizacao": "Labeling: teorias x criminalização",
+    "prisoes_teoria_geral_x_especies": "Prisões: teoria geral x espécies",
+    "prova_testemunhal_x_audiencia": "Testemunha: Provas x Audiência",
+    "violencia_contra_mulher": "Violência contra a mulher: Maria da Penha x Penal",
+    "drogas_x_saude_publica": "Drogas: Leg. Especial x Saúde Pública",
+    "transito_x_crimes_contra_a_vida": "Trânsito x Homicídio",
+    "abuso_de_autoridade_x_administracao": "Abuso de autoridade x crimes funcionais",
+    "lei_processual_x_lei_penal_no_tempo": "Lei no tempo: processual x penal"
   }
 }

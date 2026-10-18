@@ -66,14 +66,16 @@ mandando o resto para o professor **com a sugestão**.
 | revisar | 258 | 123 confiança baixa do principal; 42 ramo com nó concorrente; 32 probabilidade estimada < 0,95; 28 divergência; 26 veto dos verificadores; 5 sem verificação válida; 2 possível "fora" |
 | fora | 1 | Q0142 (ITCD, Direito Tributário) |
 
-**Calibração (o que mais me surpreendeu).** Pelas concordâncias, a acurácia estimada do principal
-é ~0,78 no geral e **quase igual em todas as faixas de confiança que ele mesmo declarou**
-(0,83 alta · 0,74 média · 0,80 baixa). Ou seja: a confiança autodeclarada do LLM discrimina
-pouco, e publicar "só porque o LLM disse 0,95" teria dado ~0,80 de precisão. O que separa as
-questões seguras é a **concordância de modelos independentes**: com o portão de probabilidade
-estimada ≥ 0,95, as 100 publicadas têm média estimada de 0,985 antes do desconto de critério.
-Verificadores: qwen2.5:7b ~0,50 e llama3.1:8b ~0,69 de acurácia estimada; r (erro coincidente)
-medido = 0,25.
+**Calibração (o que mais me surpreendeu).** A concordância bruta com os verificadores cresce
+com a confiança declarada pelo principal (dois verificadores concordando: 10% das questões com
+confiança ≤ 0,35 contra 32% das com ≥ 0,90), então essa confiança discrimina. Mas o modelo de
+acurácias latentes atribui boa parte dessa diferença aos *verificadores* (questão difícil é
+difícil para todos): a acurácia estimada do principal fica ~0,78 no geral (0,83 alta · 0,74
+média · 0,80 baixa, com intervalos largos). Consequência prática: publicar "porque o LLM disse
+0,95" daria ~0,80; o que separa as questões seguras é a **concordância de modelos
+independentes**. Com o portão de probabilidade estimada ≥ 0,95, as 100 publicadas têm média
+estimada de 0,985 antes do desconto de critério. Verificadores: qwen2.5:7b ~0,50 e llama3.1:8b
+~0,69; r (erro coincidente) medido = 0,25.
 
 | Portão (probabilidade estimada) | Publicadas | Precisão média estimada |
 |---|---|---|
@@ -117,7 +119,23 @@ Detalhes e contagens em `docs/diagnostico_dados.md`. Em resumo:
 **Questões difíceis**: as dos itens 2 e 4, e as de criminologia crítica (labeling × processos de
 criminalização × teorias da pena), em que os nomes dos temas se sobrepõem.
 
+**Como checar a precisão real.** Sem gabarito ela não pode ser comprovada, só prevista. Deixei
+pronta uma auditoria cega (`folha-auditoria` → HTML offline com as 100 publicadas + 30 controles,
+sem mostrar a decisão do sistema) e a medição (`medir-precisao`, régua oficial + intervalo exato
+de Clopper-Pearson), que também aceita o gabarito da Vício. Auditando as 100, até 1 erro ainda
+comprova ≥ 95%. Atenção ao ruído da própria régua: com ~100 publicadas, mesmo um sistema com
+95% reais só "mede" ≥ 95% em ~62% das vezes (97% reais → ~92%). Detalhes, sensibilidade e a
+alternativa conservadora (58 publicadas, previsão ~0,96) em `docs/verificacao_precisao.md`.
+
 ## c) Produção — 50 mil questões por semana
+
+**Momento da empresa.** A Vício está expandindo do Método VDE para a OAB para o *VDE Carreiras
+Jurídicas* (Magistratura, MP, Defensoria, Procuradorias, Delegado), com "+50 mil questões
+comentadas" organizadas por banca, tema e nível e um assistente de IA (vic.IA). Esse é o
+contexto do problema: importação em massa de questões de outras fontes, classificação
+automática que gerou "lixeiras" e uma árvore em reestruturação (os nós "(Parte 1/2)" e as cópias
+vazias). O desenho abaixo aproveita o que já existe (a vic.IA já usa LLM e o acervo comentado
+da casa) e prioriza o que protege a confiança de quem paga R$ 2,5–4,3 mil por ano.
 
 **Arquitetura em camadas (custo cresce só onde há dúvida):**
 1. *Normalização + deduplicação* (hash do enunciado; embeddings para quase-duplicatas): questões
@@ -144,7 +162,8 @@ baratas) → US$ 100–250 por semana para 50 mil questões, mais o tempo do pro
   limiares sobem automaticamente.
 - *Calibração*: curva de confiabilidade por faixa; a coluna `confianca` precisa "valer" o que
   diz.
-- *Reportes de alunos* viram rótulos: questão reportada sai do ar (revisar) até decisão do
+- *Reportes de alunos* viram rótulos (a página pública do produto não mostra um botão de
+  "tema errado" por questão; criá-lo é a fonte mais barata de rótulos): questão reportada sai do ar (revisar) até decisão do
   professor; reportes por tema detectam novas "lixeiras".
 - *Drift*: distribuição de temas por lote importado e taxa de "fora" por banca/ano.
 
@@ -152,7 +171,8 @@ baratas) → US$ 100–250 por semana para 50 mil questões, mais o tempo do pro
 do professor com sugestão e motivo; fora vai para um backlog de "temas a criar". Toda decisão é
 registrada (banco com hash de entrada, modelo, prompt e política), como no `db.py` deste case.
 
-**O que faria com mais tempo**: rodar os verificadores com um modelo de 30B+ (ou API) para elevar
+**O que faria com mais tempo**: pedir ao professor a auditoria cega das 100 publicadas (a
+ferramenta está pronta) para transformar a previsão em medição; rodar os verificadores com um modelo de 30B+ (ou API) para elevar
 a cobertura; pedir ao professor 100 questões rotuladas para medir (e não só prever) a precisão e
 recalibrar os limiares; consolidar os clones da árvore antes de qualquer reclassificação em massa.
 

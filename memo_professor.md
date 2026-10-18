@@ -46,6 +46,8 @@ sugestão provavelmente está certa, mas não havia segurança para publicar soz
    porque evita o mesmo erro nas próximas importações).
 3. **Dizer o que fazer com as "colchas de retalhos"**: aceitar o tema mais geral (ex.: "Teoria da
    Pena") ou criar um tema "Revisão geral".
-4. **Rotular 100 questões às cegas** (sem ver a sugestão do sistema). É assim que passamos a
-   **medir** a precisão em vez de apenas prevê-la — e a ajustar o sistema para publicar mais
-   com segurança.
+4. **Conferir às cegas as questões publicadas.** Preparei uma folha (`auditoria/folha_auditoria.html`,
+   abre no navegador, sem internet) com as 100 publicadas misturadas a 30 outras, sem mostrar o
+   tema que o sistema escolheu; o senhor indica o tema de cada uma (cerca de 2 horas). Se houver
+   no máximo 1 discordância, fica **comprovado** que a precisão passa de 95% — hoje ela é apenas
+   uma previsão.

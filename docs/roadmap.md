@@ -17,6 +17,8 @@
   entre versões do Ollama; as respostas usadas estão versionadas.
 
 ## Depende do especialista / da Vício
+- **Auditoria cega das 100 publicadas** (`auditoria/folha_auditoria.html` → `medir-precisao`):
+  até 1 erro comprova ≥ 95%; é o passo que transforma previsão em medição.
 - **Gabarito**: só com rótulos da equipe a precisão passa de prevista a medida. Pedido: 100
   questões rotuladas às cegas para recalibrar as faixas de confiança e o desconto de critério.
 - Regras da árvore: consolidar os 20 clones, escolher o ramo "oficial" dos assuntos repetidos,

@@ -3,8 +3,8 @@
   "decisao": "revisar",
   "tema_central_id": 5524,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Absolvição sumária: rito comum x Júri); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -46,15 +46,16 @@
     5528,
     5526,
     5529
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0002": {
   "decisao": "revisar",
   "tema_central_id": 4378,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -95,15 +96,16 @@
     4386,
     4385,
     4383
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0003": {
   "decisao": "revisar",
   "tema_central_id": 5562,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -145,15 +147,16 @@
     5561,
     5560,
     5512
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0004": {
   "decisao": "revisar",
   "tema_central_id": 5484,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5484 x qwen2.5:7b=5485, llama3.1:8b=5482); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5484 x qwen2.5:7b=5485, llama3.1:8b=5482).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -194,15 +197,16 @@
     5571,
     5466,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0005": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5199 x qwen2.5:7b=5195, llama3.1:8b=5091); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5199 x qwen2.5:7b=5195, llama3.1:8b=5091).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -241,14 +245,15 @@
     5208,
     5198,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0006": {
   "decisao": "publicar",
   "tema_central_id": 5157,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -291,15 +296,16 @@
     5198,
     5571,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0007": {
   "decisao": "revisar",
   "tema_central_id": 5063,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -338,15 +344,16 @@
     5466,
     5063,
     5064
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0008": {
   "decisao": "revisar",
   "tema_central_id": 5201,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -385,15 +392,16 @@
     5199,
     5095,
     5207
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0009": {
   "decisao": "revisar",
   "tema_central_id": 5158,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5158 x qwen2.5:7b=5159, llama3.1:8b=4709); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5158 x qwen2.5:7b=5159, llama3.1:8b=4709).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -432,14 +440,15 @@
     5070,
     5069,
     5159
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0010": {
   "decisao": "publicar",
   "tema_central_id": 4688,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -483,14 +492,15 @@
     5066,
     5087,
     5198
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0011": {
   "decisao": "publicar",
   "tema_central_id": 4702,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -533,15 +543,16 @@
     4691,
     5480,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0012": {
   "decisao": "revisar",
   "tema_central_id": 5569,
   "extras_ids": "",
-  "confianca": 0.44,
-  "motivo": "Sem concordância de ramo dos verificadores (5569 x llama3.1:8b=5512); especialista decide.",
+  "confianca": 0.42,
+  "motivo": "Sem concordância dos verificadores (5569 x llama3.1:8b=5512).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -580,15 +591,16 @@
     5560,
     5568,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.44
   }
  },
  "Q0013": {
   "decisao": "revisar",
   "tema_central_id": 5503,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5485) e divergem do classificador principal (5503).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (5485); confirmar entre 5503 e 5485.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -627,15 +639,16 @@
     5535,
     5477,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0014": {
   "decisao": "revisar",
   "tema_central_id": 5477,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -676,14 +689,15 @@
     5198,
     5479,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0015": {
   "decisao": "publicar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -727,15 +741,16 @@
     5501,
     5499,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0016": {
   "decisao": "revisar",
   "tema_central_id": 5584,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5518) e divergem do classificador principal (5584).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5518); confirmar entre 5584 e 5518.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -774,15 +789,16 @@
     5479,
     5518,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0017": {
   "decisao": "revisar",
   "tema_central_id": 5533,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5531) e divergem do classificador principal (5533).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5531); confirmar entre 5533 e 5531.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -821,15 +837,16 @@
     5473,
     5466,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0018": {
   "decisao": "revisar",
   "tema_central_id": 5540,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -870,15 +887,16 @@
     5481,
     5530,
     5485
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0019": {
   "decisao": "revisar",
   "tema_central_id": 5475,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Ação penal: Penal x Processo Penal x Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -919,15 +937,16 @@
     5504,
     5063,
     5570
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0020": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.20); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.20); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -968,14 +987,15 @@
     5063,
     5537,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0021": {
   "decisao": "publicar",
   "tema_central_id": 5503,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1018,15 +1038,16 @@
     5587,
     5480,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0022": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (abuso_de_autoridade_x_administracao); evidência insuficiente para publicar.",
+  "confianca": 0.46,
+  "motivo": "Assunto com nó equivalente em outro ramo (Abuso de autoridade x crimes funcionais); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -1067,14 +1088,15 @@
     5070,
     5089,
     5067
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0023": {
   "decisao": "publicar",
   "tema_central_id": 5524,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -1120,15 +1142,16 @@
     5527,
     5526,
     5535
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0024": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.92,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.",
+  "confianca": 0.44,
+  "motivo": "Assunto com nó equivalente em outro ramo (Labeling: teorias x criminalização); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -1169,15 +1192,16 @@
     4377,
     5185,
     4379
-   ]
+   ],
+   "posterior_modelo": 0.92
   }
  },
  "Q0025": {
   "decisao": "revisar",
   "tema_central_id": 5101,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -1218,14 +1242,15 @@
     5064,
     5065,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0026": {
   "decisao": "publicar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1271,14 +1296,15 @@
     5063,
     5530,
     5477
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0027": {
   "decisao": "publicar",
   "tema_central_id": 5487,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -1322,15 +1348,16 @@
     5530,
     5479,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0028": {
   "decisao": "revisar",
   "tema_central_id": 5524,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5524 x qwen2.5:7b=5531, llama3.1:8b=5500); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5524 x qwen2.5:7b=5531, llama3.1:8b=5500).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -1369,14 +1396,15 @@
     5488,
     5466,
     5535
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0029": {
   "decisao": "publicar",
   "tema_central_id": 4684,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1422,14 +1450,15 @@
     5479,
     5477,
     4703
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0030": {
   "decisao": "revisar",
   "tema_central_id": 5135,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -1470,15 +1499,16 @@
     5131,
     5477,
     5135
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0031": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.77,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.",
+  "confianca": 0.37,
+  "motivo": "Assunto com nó equivalente em outro ramo (Labeling: teorias x criminalização); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -1519,15 +1549,16 @@
     4386,
     4387,
     4380
-   ]
+   ],
+   "posterior_modelo": 0.77
   }
  },
  "Q0032": {
   "decisao": "revisar",
   "tema_central_id": 5497,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5497 x qwen2.5:7b=5545, llama3.1:8b=5500); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5497 x qwen2.5:7b=5545, llama3.1:8b=5500).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -1566,14 +1597,15 @@
     5501,
     5499,
     5550
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0033": {
   "decisao": "publicar",
   "tema_central_id": 5519,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1619,14 +1651,15 @@
     5519,
     5537,
     5538
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0034": {
   "decisao": "publicar",
   "tema_central_id": 5477,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1670,14 +1703,15 @@
     5501,
     5504,
     5499
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0035": {
   "decisao": "publicar",
   "tema_central_id": 4706,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -1721,15 +1755,16 @@
     5571,
     5562,
     5477
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0036": {
   "decisao": "revisar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (4704 x qwen2.5:7b=5535, llama3.1:8b=5524); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (4704 x qwen2.5:7b=5535, llama3.1:8b=5524).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -1768,15 +1803,16 @@
     5535,
     5063,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0037": {
   "decisao": "revisar",
   "tema_central_id": 5118,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -1818,15 +1854,16 @@
     5087,
     5079,
     5086
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0038": {
   "decisao": "revisar",
   "tema_central_id": 5583,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -1867,15 +1904,16 @@
     5530,
     5063,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0039": {
   "decisao": "revisar",
   "tema_central_id": 4687,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -1916,15 +1954,16 @@
     4689,
     4691,
     4690
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0040": {
   "decisao": "revisar",
   "tema_central_id": 5562,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -1967,14 +2006,15 @@
     5575,
     5571,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0041": {
   "decisao": "publicar",
   "tema_central_id": 5184,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -2020,14 +2060,15 @@
     5479,
     5548,
     5185
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0042": {
   "decisao": "publicar",
   "tema_central_id": 5222,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -2070,15 +2111,16 @@
     5565,
     5063,
     5192
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0043": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Regime de pena: Teoria da Pena x Sentença; Efeitos da condenação: Penal x Processo Penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2120,15 +2162,16 @@
     5576,
     5199,
     5203
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0044": {
   "decisao": "revisar",
   "tema_central_id": 5487,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -2167,14 +2210,15 @@
     5548,
     5487,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0045": {
   "decisao": "publicar",
   "tema_central_id": 5091,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -2217,14 +2261,15 @@
     5088,
     5089,
     5101
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0046": {
   "decisao": "publicar",
   "tema_central_id": 5509,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -2268,14 +2313,15 @@
     5582,
     5530,
     5510
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0047": {
   "decisao": "revisar",
   "tema_central_id": 5164,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -2316,15 +2362,16 @@
     5466,
     5063,
     5164
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0048": {
   "decisao": "revisar",
   "tema_central_id": 5193,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.46,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2365,14 +2412,15 @@
     5185,
     5537,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0049": {
   "decisao": "publicar",
   "tema_central_id": 5152,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -2415,15 +2463,16 @@
     5138,
     5140,
     5153
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0050": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -2467,15 +2516,16 @@
     4703,
     4704,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0051": {
   "decisao": "revisar",
   "tema_central_id": 5182,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2516,15 +2566,16 @@
     5063,
     5185,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0052": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2563,15 +2614,16 @@
     5206,
     4704,
     4691
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0053": {
   "decisao": "revisar",
   "tema_central_id": 5541,
   "extras_ids": "",
-  "confianca": 0.86,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.",
+  "confianca": 0.41,
+  "motivo": "Assunto com nó equivalente em outro ramo (Juizado Especial: Leg. Especial x Sumaríssimo); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2612,14 +2664,15 @@
     5542,
     5541,
     5539
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0054": {
   "decisao": "revisar",
   "tema_central_id": 5174,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -2660,15 +2713,16 @@
     5174,
     5106,
     5160
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0055": {
   "decisao": "revisar",
   "tema_central_id": 5550,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -2711,14 +2765,15 @@
     5550,
     5489,
     5488
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0056": {
   "decisao": "publicar",
   "tema_central_id": 5066,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -2762,14 +2817,15 @@
     5066,
     5067,
     4689
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0057": {
   "decisao": "publicar",
   "tema_central_id": 5176,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -2813,15 +2869,16 @@
     5179,
     5177,
     5178
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0058": {
   "decisao": "revisar",
   "tema_central_id": 4377,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -2860,15 +2917,16 @@
     4390,
     4377,
     4388
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0059": {
   "decisao": "revisar",
   "tema_central_id": 4384,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -2907,15 +2965,16 @@
     5565,
     5537,
     4388
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0060": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (abuso_de_autoridade_x_administracao); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Abuso de autoridade x crimes funcionais); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -2956,15 +3015,16 @@
     5101,
     5097,
     5096
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0061": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5188) e divergem do classificador principal (4703).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (5188); confirmar entre 4703 e 5188.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -3003,15 +3063,16 @@
     5565,
     4701,
     4704
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0062": {
   "decisao": "revisar",
   "tema_central_id": 5182,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -3050,14 +3111,15 @@
     5066,
     4689,
     4688
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0063": {
   "decisao": "publicar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3103,15 +3165,16 @@
     5500,
     5501,
     5499
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0064": {
   "decisao": "revisar",
   "tema_central_id": 5165,
   "extras_ids": "",
-  "confianca": 0.8,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.77,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3152,14 +3215,15 @@
     5063,
     5537,
     5477
-   ]
+   ],
+   "posterior_modelo": 0.8
   }
  },
  "Q0065": {
   "decisao": "revisar",
   "tema_central_id": 5161,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -3200,15 +3264,16 @@
     5192,
     5157,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0066": {
   "decisao": "revisar",
   "tema_central_id": 4373,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (4373 x qwen2.5:7b=4387, llama3.1:8b=4382); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (4373 x qwen2.5:7b=4387, llama3.1:8b=4382).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -3247,14 +3312,15 @@
     4372,
     4388,
     4382
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0067": {
   "decisao": "publicar",
   "tema_central_id": 5091,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3297,15 +3363,16 @@
     5087,
     5095,
     5092
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0068": {
   "decisao": "revisar",
   "tema_central_id": 5116,
   "extras_ids": "",
-  "confianca": 0.75,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.72,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3344,14 +3411,15 @@
     5096,
     5118,
     5119
-   ]
+   ],
+   "posterior_modelo": 0.75
   }
  },
  "Q0069": {
   "decisao": "revisar",
   "tema_central_id": 5173,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -3394,15 +3462,16 @@
     5571,
     5585,
     5477
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0070": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3443,14 +3512,15 @@
     5537,
     5571,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0071": {
   "decisao": "publicar",
   "tema_central_id": 4688,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3494,15 +3564,16 @@
     5229,
     5230,
     5218
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0072": {
   "decisao": "revisar",
   "tema_central_id": 5590,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3545,15 +3616,16 @@
     5501,
     5503,
     5502
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0073": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3595,15 +3667,16 @@
     5147,
     5093,
     5088
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0074": {
   "decisao": "revisar",
   "tema_central_id": 5181,
   "extras_ids": "",
-  "confianca": 0.9,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.86,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3644,15 +3717,16 @@
     5210,
     4704,
     4701
-   ]
+   ],
+   "posterior_modelo": 0.9
   }
  },
  "Q0075": {
   "decisao": "revisar",
   "tema_central_id": 5191,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo, execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Ação penal: Penal x Processo Penal x Punibilidade; Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -3694,14 +3768,15 @@
     5204,
     5198,
     5217
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0076": {
   "decisao": "publicar",
   "tema_central_id": 4373,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3744,15 +3819,16 @@
     4389,
     4381,
     4370
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0077": {
   "decisao": "revisar",
   "tema_central_id": 5170,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -3791,14 +3867,15 @@
     5185,
     5571,
     5071
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0078": {
   "decisao": "revisar",
   "tema_central_id": 4697,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -3839,14 +3916,15 @@
     5198,
     5063,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0079": {
   "decisao": "publicar",
   "tema_central_id": 5581,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3889,14 +3967,15 @@
     5582,
     5537,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0080": {
   "decisao": "publicar",
   "tema_central_id": 4370,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3939,14 +4018,15 @@
     4369,
     5155,
     4380
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0081": {
   "decisao": "publicar",
   "tema_central_id": 4373,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -3989,14 +4069,15 @@
     4373,
     4381,
     4380
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0082": {
   "decisao": "publicar",
   "tema_central_id": 5100,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -4039,15 +4120,16 @@
     5480,
     5131,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0083": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4088,14 +4170,15 @@
     5070,
     5069,
     5067
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0084": {
   "decisao": "publicar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -4141,14 +4224,15 @@
     5582,
     5114,
     5131
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0085": {
   "decisao": "revisar",
   "tema_central_id": 5076,
   "extras_ids": "",
-  "confianca": 0.92,
+  "confianca": 0.88,
   "motivo": "Probabilidade estimada de acerto 0.92 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -4193,14 +4277,15 @@
     5070,
     5069,
     5091
-   ]
+   ],
+   "posterior_modelo": 0.92
   }
  },
  "Q0086": {
   "decisao": "revisar",
   "tema_central_id": 5092,
   "extras_ids": "",
-  "confianca": 0.68,
+  "confianca": 0.65,
   "motivo": "Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -4241,15 +4326,16 @@
     5135,
     5070,
     5069
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0087": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4290,14 +4376,15 @@
     5571,
     4697,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0088": {
   "decisao": "publicar",
   "tema_central_id": 4389,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -4341,15 +4428,16 @@
     4381,
     4385,
     4380
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0089": {
   "decisao": "revisar",
   "tema_central_id": 5172,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4390,15 +4478,16 @@
     5198,
     5228,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0090": {
   "decisao": "revisar",
   "tema_central_id": 5530,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4437,15 +4526,16 @@
     5571,
     5063,
     5480
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0091": {
   "decisao": "revisar",
   "tema_central_id": 5201,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4488,14 +4578,15 @@
     5207,
     5199,
     5205
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0092": {
   "decisao": "revisar",
   "tema_central_id": 5509,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -4536,15 +4627,16 @@
     5565,
     5512,
     5488
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0093": {
   "decisao": "revisar",
   "tema_central_id": 5223,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5223 x qwen2.5:7b=5130, llama3.1:8b=5125); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5223 x qwen2.5:7b=5130, llama3.1:8b=5125).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -4583,15 +4675,16 @@
     5066,
     5070,
     5071
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0094": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4630,14 +4723,15 @@
     4387,
     4386,
     5528
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0095": {
   "decisao": "publicar",
   "tema_central_id": 5197,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -4681,15 +4775,16 @@
     5070,
     5477,
     5537
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0096": {
   "decisao": "revisar",
   "tema_central_id": 5486,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5482) e divergem do classificador principal (5486).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5482); confirmar entre 5486 e 5482.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -4728,15 +4823,16 @@
     5485,
     5482,
     5484
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0097": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4780,14 +4876,15 @@
     5537,
     4702,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0098": {
   "decisao": "revisar",
   "tema_central_id": 5548,
   "extras_ids": "",
-  "confianca": 0.68,
+  "confianca": 0.65,
   "motivo": "Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -4828,15 +4925,16 @@
     5530,
     5466,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0099": {
   "decisao": "revisar",
   "tema_central_id": 5100,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5100 x qwen2.5:7b=5132, llama3.1:8b=4684); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5100 x qwen2.5:7b=5132, llama3.1:8b=4684).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -4875,15 +4973,16 @@
     5063,
     5548,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0100": {
   "decisao": "revisar",
   "tema_central_id": 5103,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -4924,14 +5023,15 @@
     5548,
     5530,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0101": {
   "decisao": "publicar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -4977,15 +5077,16 @@
     4704,
     5114,
     5482
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0102": {
   "decisao": "revisar",
   "tema_central_id": 5572,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5209) e divergem do classificador principal (5572).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5209); confirmar entre 5572 e 5209.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -5024,14 +5125,15 @@
     5577,
     5466,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0103": {
   "decisao": "publicar",
   "tema_central_id": 5478,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -5074,15 +5176,16 @@
     5562,
     5512,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0104": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5126,15 +5229,16 @@
     5501,
     5504,
     5499
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0105": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5176,15 +5280,16 @@
     4386,
     4387,
     4380
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0106": {
   "decisao": "revisar",
   "tema_central_id": 5166,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Sem concordância de ramo dos verificadores (5166 x qwen2.5:7b=4686); especialista decide.",
+  "confianca": 0.6,
+  "motivo": "Sem concordância dos verificadores (5166 x qwen2.5:7b=4686).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -5223,15 +5328,16 @@
     5164,
     5158,
     5155
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0107": {
   "decisao": "revisar",
   "tema_central_id": 5119,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4699) e divergem do classificador principal (5119).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (4699); confirmar entre 5119 e 4699.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -5270,14 +5376,15 @@
     5116,
     5118,
     5144
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0108": {
   "decisao": "publicar",
   "tema_central_id": 5561,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -5320,14 +5427,15 @@
     5530,
     5560,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0109": {
   "decisao": "publicar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -5373,14 +5481,15 @@
     4699,
     4703,
     4707
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0110": {
   "decisao": "publicar",
   "tema_central_id": 5480,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -5424,14 +5533,15 @@
     5571,
     5482,
     5570
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0111": {
   "decisao": "publicar",
   "tema_central_id": 4373,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -5474,14 +5584,15 @@
     4382,
     4381,
     4385
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0112": {
   "decisao": "publicar",
   "tema_central_id": 4705,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -5527,15 +5638,16 @@
     5535,
     5512,
     5480
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0113": {
   "decisao": "revisar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5574,15 +5686,16 @@
     5466,
     5502,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0114": {
   "decisao": "revisar",
   "tema_central_id": 5507,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5623,15 +5736,16 @@
     5565,
     5198,
     5500
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0115": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Labeling: teorias x criminalização); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -5673,15 +5787,16 @@
     4387,
     4386,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0116": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Drogas: Leg. Especial x Saúde Pública); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -5720,15 +5835,16 @@
     5571,
     4703,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0117": {
   "decisao": "revisar",
   "tema_central_id": 4384,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5771,15 +5887,16 @@
     4385,
     5207,
     4388
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0118": {
   "decisao": "revisar",
   "tema_central_id": 5507,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -5821,15 +5938,16 @@
     5519,
     5582,
     5518
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0119": {
   "decisao": "revisar",
   "tema_central_id": 5194,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5181) e divergem do classificador principal (5194).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5181); confirmar entre 5194 e 5181.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -5870,15 +5988,16 @@
     5506,
     5508,
     5180
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0120": {
   "decisao": "revisar",
   "tema_central_id": 5530,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5919,15 +6038,16 @@
     5582,
     5595,
     5592
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0121": {
   "decisao": "revisar",
   "tema_central_id": 5472,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -5968,15 +6088,16 @@
     5063,
     5469,
     5065
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0122": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -6015,15 +6136,16 @@
     5198,
     4688,
     4707
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0123": {
   "decisao": "revisar",
   "tema_central_id": 4377,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6064,15 +6186,16 @@
     4369,
     4370,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0124": {
   "decisao": "revisar",
   "tema_central_id": 4384,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6115,15 +6238,16 @@
     5537,
     4385,
     5207
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0125": {
   "decisao": "revisar",
   "tema_central_id": 5181,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6164,15 +6288,16 @@
     5512,
     5565,
     4705
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0126": {
   "decisao": "revisar",
   "tema_central_id": 5170,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5217) e divergem do classificador principal (5170).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5217); confirmar entre 5170 e 5217.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -6211,15 +6336,16 @@
     5198,
     5185,
     5571
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0127": {
   "decisao": "revisar",
   "tema_central_id": 5581,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6260,15 +6386,16 @@
     5535,
     5466,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0128": {
   "decisao": "revisar",
   "tema_central_id": 5468,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (5468).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5184); confirmar entre 5468 e 5184.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -6307,15 +6434,16 @@
     5468,
     5466,
     5467
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0129": {
   "decisao": "revisar",
   "tema_central_id": 5550,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5550 x qwen2.5:7b=5549, llama3.1:8b=5530); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5550 x qwen2.5:7b=5549, llama3.1:8b=5530).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -6354,15 +6482,16 @@
     5550,
     5530,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0130": {
   "decisao": "revisar",
   "tema_central_id": 5160,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5160 x qwen2.5:7b=5130, llama3.1:8b=5212); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5160 x qwen2.5:7b=5130, llama3.1:8b=5212).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -6403,15 +6532,16 @@
     5537,
     5198,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0131": {
   "decisao": "revisar",
   "tema_central_id": 5072,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6450,15 +6580,16 @@
     5071,
     5072,
     5075
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0132": {
   "decisao": "revisar",
   "tema_central_id": 5550,
   "extras_ids": "",
-  "confianca": 0.75,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.72,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6499,15 +6630,16 @@
     5466,
     5550,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.75
   }
  },
  "Q0133": {
   "decisao": "revisar",
   "tema_central_id": 5524,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Absolvição sumária: rito comum x Júri); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -6549,14 +6681,15 @@
     5526,
     5525,
     5528
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0134": {
   "decisao": "revisar",
   "tema_central_id": 5092,
   "extras_ids": "",
-  "confianca": 0.83,
+  "confianca": 0.8,
   "motivo": "Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.",
   "estrato": "revisar:falha_ou_invalido",
   "trace": {
@@ -6596,14 +6729,15 @@
     5101,
     5089,
     5079
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0135": {
   "decisao": "revisar",
   "tema_central_id": 5169,
   "extras_ids": "",
-  "confianca": 0.68,
+  "confianca": 0.65,
   "motivo": "Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -6644,15 +6778,16 @@
     5158,
     5164,
     5161
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0136": {
   "decisao": "revisar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (violencia_contra_mulher); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Violência contra a mulher: Maria da Penha x Penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -6694,15 +6829,16 @@
     5198,
     5548,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0137": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -6744,15 +6880,16 @@
     5501,
     5498,
     5499
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0138": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Regime de pena: Teoria da Pena x Sentença; Efeitos da condenação: Penal x Processo Penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -6794,14 +6931,15 @@
     5207,
     5537,
     5200
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0139": {
   "decisao": "publicar",
   "tema_central_id": 5211,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -6844,14 +6982,15 @@
     5211,
     5213,
     5214
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0140": {
   "decisao": "revisar",
   "tema_central_id": 5157,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -6892,15 +7031,16 @@
     5185,
     5550,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0141": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (labelling_teorias_x_criminalizacao); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Labeling: teorias x criminalização); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -6942,7 +7082,8 @@
     4387,
     4386,
     4380
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0142": {
@@ -6988,15 +7129,16 @@
     5530,
     5548,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.9
   }
  },
  "Q0143": {
   "decisao": "revisar",
   "tema_central_id": 5507,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -7037,15 +7179,16 @@
     5505,
     5508,
     5180
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0144": {
   "decisao": "revisar",
   "tema_central_id": 5562,
   "extras_ids": "",
-  "confianca": 0.44,
-  "motivo": "Sem concordância de ramo dos verificadores (5562 x llama3.1:8b=5561); especialista decide.",
+  "confianca": 0.42,
+  "motivo": "Sem concordância dos verificadores (5562 x llama3.1:8b=5561).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -7086,14 +7229,15 @@
     5524,
     5512,
     5560
-   ]
+   ],
+   "posterior_modelo": 0.44
   }
  },
  "Q0145": {
   "decisao": "publicar",
   "tema_central_id": 4702,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7137,14 +7281,15 @@
     4690,
     5084,
     4695
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0146": {
   "decisao": "publicar",
   "tema_central_id": 5594,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7187,15 +7332,16 @@
     5479,
     5537,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0147": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7236,14 +7382,15 @@
     5498,
     5501,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0148": {
   "decisao": "publicar",
   "tema_central_id": 5203,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7286,15 +7433,16 @@
     5204,
     5199,
     5207
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0149": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7336,14 +7484,15 @@
     5501,
     5499,
     5504
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0150": {
   "decisao": "publicar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7389,15 +7538,16 @@
     5198,
     5185,
     5466
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0151": {
   "decisao": "revisar",
   "tema_central_id": 5517,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7441,15 +7591,16 @@
     5537,
     5518,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0152": {
   "decisao": "revisar",
   "tema_central_id": 5472,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7490,15 +7641,16 @@
     5063,
     5472,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0153": {
   "decisao": "revisar",
   "tema_central_id": 5222,
   "extras_ids": "",
-  "confianca": 0.44,
-  "motivo": "Sem concordância de ramo dos verificadores (5222 x llama3.1:8b=5212); especialista decide.",
+  "confianca": 0.42,
+  "motivo": "Sem concordância dos verificadores (5222 x llama3.1:8b=5212).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -7537,14 +7689,15 @@
     5179,
     5177,
     5221
-   ]
+   ],
+   "posterior_modelo": 0.44
   }
  },
  "Q0154": {
   "decisao": "revisar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 0.19,
+  "confianca": 0.18,
   "motivo": "Possivelmente fora da árvore, sem consenso entre classificadores; confirmar ou criar tema.",
   "estrato": "revisar:possivel_fora",
   "trace": {
@@ -7583,15 +7736,16 @@
     5136,
     5137,
     4704
-   ]
+   ],
+   "posterior_modelo": 0.19
   }
  },
  "Q0155": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4705) e divergem do classificador principal (4703).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (4705); confirmar entre 4703 e 4705.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -7630,14 +7784,15 @@
     5565,
     5537,
     5576
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0156": {
   "decisao": "publicar",
   "tema_central_id": 4688,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7680,14 +7835,15 @@
     5185,
     5537,
     5205
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0157": {
   "decisao": "publicar",
   "tema_central_id": 5520,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7733,14 +7889,15 @@
     5501,
     5520,
     5504
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0158": {
   "decisao": "publicar",
   "tema_central_id": 4707,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -7783,15 +7940,16 @@
     5199,
     4707,
     5576
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0159": {
   "decisao": "revisar",
   "tema_central_id": 5160,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7832,14 +7990,15 @@
     5066,
     5070,
     5160
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0160": {
   "decisao": "revisar",
   "tema_central_id": 5205,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -7880,15 +8039,16 @@
     5199,
     5207,
     5206
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0161": {
   "decisao": "revisar",
   "tema_central_id": 5588,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7929,15 +8089,16 @@
     5588,
     5535,
     5477
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0162": {
   "decisao": "revisar",
   "tema_central_id": 4380,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -7976,15 +8137,16 @@
     5112,
     5088,
     5087
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0163": {
   "decisao": "revisar",
   "tema_central_id": 5133,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4700) e divergem do classificador principal (5133).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (4700); confirmar entre 5133 e 4700.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -8025,15 +8187,16 @@
     5068,
     5066,
     4691
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0164": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -8074,14 +8237,15 @@
     5198,
     5114,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0165": {
   "decisao": "publicar",
   "tema_central_id": 4705,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -8127,15 +8291,16 @@
     5571,
     5466,
     5198
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0166": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8176,15 +8341,16 @@
     5198,
     5207,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0167": {
   "decisao": "revisar",
   "tema_central_id": 5524,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.",
+  "confianca": 0.46,
+  "motivo": "Assunto com nó equivalente em outro ramo (Absolvição sumária: rito comum x Júri); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -8225,14 +8391,15 @@
     5480,
     5489,
     5488
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0168": {
   "decisao": "revisar",
   "tema_central_id": 5075,
   "extras_ids": "",
-  "confianca": 0.19,
+  "confianca": 0.18,
   "motivo": "Possivelmente fora da árvore, sem consenso entre classificadores; confirmar ou criar tema.",
   "estrato": "revisar:possivel_fora",
   "trace": {
@@ -8271,14 +8438,15 @@
     5093,
     5063,
     5092
-   ]
+   ],
+   "posterior_modelo": 0.19
   }
  },
  "Q0169": {
   "decisao": "revisar",
   "tema_central_id": 5492,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -8319,15 +8487,16 @@
     5495,
     5491,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0170": {
   "decisao": "revisar",
   "tema_central_id": 5203,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5203 x qwen2.5:7b=5072, llama3.1:8b=5196); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5203 x qwen2.5:7b=5072, llama3.1:8b=5196).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -8366,15 +8535,16 @@
     5205,
     5198,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0171": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.20); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.20); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8413,15 +8583,16 @@
     5201,
     5537,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0172": {
   "decisao": "revisar",
   "tema_central_id": 5466,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8462,15 +8633,16 @@
     5530,
     5198,
     5535
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0173": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (4703).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (5184); confirmar entre 4703 e 5184.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -8509,15 +8681,16 @@
     5185,
     5576,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0174": {
   "decisao": "revisar",
   "tema_central_id": 5133,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8558,14 +8731,15 @@
     5565,
     5066,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0175": {
   "decisao": "revisar",
   "tema_central_id": 5092,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -8606,14 +8780,15 @@
     5093,
     5081,
     5087
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0176": {
   "decisao": "revisar",
   "tema_central_id": 5081,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -8654,15 +8829,16 @@
     5198,
     5070,
     5069
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0177": {
   "decisao": "revisar",
   "tema_central_id": 5547,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5547 x qwen2.5:7b=5533, llama3.1:8b=5500); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5547 x qwen2.5:7b=5533, llama3.1:8b=5500).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -8701,14 +8877,15 @@
     5547,
     5489,
     5488
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0178": {
   "decisao": "publicar",
   "tema_central_id": 4697,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -8752,15 +8929,16 @@
     4703,
     5535,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0179": {
   "decisao": "revisar",
   "tema_central_id": 4369,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4378) e divergem do classificador principal (4369).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (4378); confirmar entre 4369 e 4378.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -8799,14 +8977,15 @@
     4370,
     5155,
     4378
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0180": {
   "decisao": "publicar",
   "tema_central_id": 5554,
   "extras_ids": "5594",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -8851,15 +9030,16 @@
     5548,
     5133,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0181": {
   "decisao": "revisar",
   "tema_central_id": 4695,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8900,15 +9080,16 @@
     4690,
     4696,
     4688
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0182": {
   "decisao": "revisar",
   "tema_central_id": 5149,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8949,15 +9130,16 @@
     5066,
     5185,
     5070
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0183": {
   "decisao": "revisar",
   "tema_central_id": 5561,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -8996,15 +9178,16 @@
     5185,
     5561,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0184": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5488) e divergem do classificador principal (4708).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5488); confirmar entre 4708 e 5488.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -9043,15 +9226,16 @@
     4690,
     5518,
     4703
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0185": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -9090,14 +9274,15 @@
     5198,
     5570,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0186": {
   "decisao": "revisar",
   "tema_central_id": 5202,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -9140,15 +9325,16 @@
     5204,
     5198,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0187": {
   "decisao": "revisar",
   "tema_central_id": 5209,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5209 x qwen2.5:7b=5074, llama3.1:8b=4684); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5209 x qwen2.5:7b=5074, llama3.1:8b=4684).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -9187,14 +9373,15 @@
     5198,
     5565,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0188": {
   "decisao": "publicar",
   "tema_central_id": 5228,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -9237,15 +9424,16 @@
     5217,
     5211,
     5230
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0189": {
   "decisao": "revisar",
   "tema_central_id": 5472,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9288,15 +9476,16 @@
     5468,
     5472,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0190": {
   "decisao": "revisar",
   "tema_central_id": 5539,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9339,15 +9528,16 @@
     5480,
     5530,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0191": {
   "decisao": "revisar",
   "tema_central_id": 5560,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5516) e divergem do classificador principal (5560).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5516); confirmar entre 5560 e 5516.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -9386,15 +9576,16 @@
     5568,
     5512,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0192": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9436,15 +9627,16 @@
     5081,
     5099,
     5080
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0193": {
   "decisao": "revisar",
   "tema_central_id": 5557,
   "extras_ids": "",
-  "confianca": 0.75,
-  "motivo": "Confiança do classificador principal baixa (0.70); revisão humana.",
+  "confianca": 0.72,
+  "motivo": "Classificador principal inseguro (0.70); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9485,15 +9677,16 @@
     5548,
     5466,
     5477
-   ]
+   ],
+   "posterior_modelo": 0.75
   }
  },
  "Q0194": {
   "decisao": "revisar",
   "tema_central_id": 5089,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Sem concordância de ramo dos verificadores (5089 x qwen2.5:7b=5074); especialista decide.",
+  "confianca": 0.6,
+  "motivo": "Sem concordância dos verificadores (5089 x qwen2.5:7b=5074).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -9534,15 +9727,16 @@
     5220,
     5225,
     5227
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0195": {
   "decisao": "revisar",
   "tema_central_id": 4371,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4381) e divergem do classificador principal (4371).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (4381); confirmar entre 4371 e 4381.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -9581,15 +9775,16 @@
     4373,
     4388,
     4370
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0196": {
   "decisao": "revisar",
   "tema_central_id": 4385,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9630,15 +9825,16 @@
     4387,
     4386,
     5173
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0197": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9681,14 +9877,15 @@
     5501,
     5499,
     5504
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0198": {
   "decisao": "publicar",
   "tema_central_id": 5073,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -9731,15 +9928,16 @@
     5479,
     5072,
     5074
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0199": {
   "decisao": "revisar",
   "tema_central_id": 5218,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -9780,14 +9978,15 @@
     5220,
     5227,
     5225
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0200": {
   "decisao": "publicar",
   "tema_central_id": 4705,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -9833,14 +10032,15 @@
     5535,
     4705,
     5063
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0201": {
   "decisao": "revisar",
   "tema_central_id": 5103,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -9881,15 +10081,16 @@
     5063,
     5066,
     5070
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0202": {
   "decisao": "revisar",
   "tema_central_id": 5102,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5102 x qwen2.5:7b=4383, llama3.1:8b=4366); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5102 x qwen2.5:7b=4383, llama3.1:8b=4366).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -9928,14 +10129,15 @@
     5535,
     5479,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0203": {
   "decisao": "publicar",
   "tema_central_id": 4702,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -9979,14 +10181,15 @@
     4688,
     4703,
     4707
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0204": {
   "decisao": "publicar",
   "tema_central_id": 5507,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -10032,15 +10235,16 @@
     5505,
     5506,
     5181
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0205": {
   "decisao": "revisar",
   "tema_central_id": 5512,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10081,15 +10285,16 @@
     5574,
     5512,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0206": {
   "decisao": "revisar",
   "tema_central_id": 5583,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5583 x qwen2.5:7b=5561, llama3.1:8b=5467); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5583 x qwen2.5:7b=5561, llama3.1:8b=5467).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -10128,15 +10333,16 @@
     5488,
     5489,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0207": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.33,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -10175,15 +10381,16 @@
     5198,
     4688,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0208": {
   "decisao": "revisar",
   "tema_central_id": 5071,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10226,15 +10433,16 @@
     5185,
     5150,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0209": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5582) e divergem do classificador principal (5498).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5582); confirmar entre 5498 e 5582.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -10273,14 +10481,15 @@
     5501,
     5499,
     5504
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0210": {
   "decisao": "revisar",
   "tema_central_id": 4697,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -10323,15 +10532,16 @@
     5067,
     5070,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0211": {
   "decisao": "revisar",
   "tema_central_id": 5583,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10372,14 +10582,15 @@
     5466,
     5565,
     5480
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0212": {
   "decisao": "revisar",
   "tema_central_id": 5488,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -10422,15 +10633,16 @@
     5530,
     5548,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0213": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5531) e divergem do classificador principal (4708).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5531); confirmar entre 4708 e 5531.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -10469,14 +10681,15 @@
     5535,
     4694,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0214": {
   "decisao": "revisar",
   "tema_central_id": 5494,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -10519,15 +10732,16 @@
     5492,
     5493,
     5495
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0215": {
   "decisao": "revisar",
   "tema_central_id": 5201,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10571,15 +10785,16 @@
     5481,
     5537,
     5205
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0216": {
   "decisao": "revisar",
   "tema_central_id": 5539,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10623,15 +10838,16 @@
     5063,
     5065,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0217": {
   "decisao": "revisar",
   "tema_central_id": 4384,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10674,15 +10890,16 @@
     4388,
     5199,
     4387
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0218": {
   "decisao": "revisar",
   "tema_central_id": 5518,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (prisoes_teoria_geral_x_especies); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Prisões: teoria geral x espécies); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -10723,15 +10940,16 @@
     5479,
     5553,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0219": {
   "decisao": "revisar",
   "tema_central_id": 5071,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10773,14 +10991,15 @@
     5072,
     5075,
     5073
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0220": {
   "decisao": "publicar",
   "tema_central_id": 5501,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -10823,15 +11042,16 @@
     5499,
     5498,
     5504
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0221": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -10873,14 +11093,15 @@
     5184,
     5203,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0222": {
   "decisao": "publicar",
   "tema_central_id": 4374,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -10926,15 +11147,16 @@
     5171,
     5170,
     4376
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0223": {
   "decisao": "revisar",
   "tema_central_id": 5086,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5086 x qwen2.5:7b=4689, llama3.1:8b=4699); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5086 x qwen2.5:7b=4689, llama3.1:8b=4699).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -10973,15 +11195,16 @@
     5170,
     5172,
     5221
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0224": {
   "decisao": "revisar",
   "tema_central_id": 5203,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11022,14 +11245,15 @@
     5202,
     5201,
     5542
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0225": {
   "decisao": "publicar",
   "tema_central_id": 5478,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -11072,14 +11296,15 @@
     5570,
     5562,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0226": {
   "decisao": "revisar",
   "tema_central_id": 5544,
   "extras_ids": "",
-  "confianca": 0.68,
+  "confianca": 0.65,
   "motivo": "Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -11120,15 +11345,16 @@
     5553,
     5535,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0227": {
   "decisao": "revisar",
   "tema_central_id": 5102,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5102 x qwen2.5:7b=5072, llama3.1:8b=4384); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5102 x qwen2.5:7b=5072, llama3.1:8b=4384).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -11167,15 +11393,16 @@
     5067,
     5063,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0228": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11216,15 +11443,16 @@
     5512,
     5477,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0229": {
   "decisao": "revisar",
   "tema_central_id": 5584,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11265,15 +11493,16 @@
     5506,
     5508,
     5180
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0230": {
   "decisao": "revisar",
   "tema_central_id": 5211,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11315,14 +11544,15 @@
     5185,
     5184,
     5217
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0231": {
   "decisao": "publicar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -11366,14 +11596,15 @@
     4708,
     5214,
     5227
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0232": {
   "decisao": "publicar",
   "tema_central_id": 5079,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -11419,14 +11650,15 @@
     5087,
     5088,
     5084
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0233": {
   "decisao": "publicar",
   "tema_central_id": 5175,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -11469,14 +11701,15 @@
     5175,
     5176,
     5225
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0234": {
   "decisao": "publicar",
   "tema_central_id": 4380,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -11519,14 +11752,15 @@
     4382,
     4368,
     4389
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0235": {
   "decisao": "publicar",
   "tema_central_id": 5561,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -11569,15 +11803,16 @@
     5515,
     5512,
     5562
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0236": {
   "decisao": "revisar",
   "tema_central_id": 5490,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11618,14 +11853,15 @@
     5570,
     5535,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0237": {
   "decisao": "publicar",
   "tema_central_id": 5178,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -11668,15 +11904,16 @@
     5168,
     5548,
     5175
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0238": {
   "decisao": "revisar",
   "tema_central_id": 5523,
   "extras_ids": "",
-  "confianca": 0.77,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (prisoes_teoria_geral_x_especies); evidência insuficiente para publicar.",
+  "confianca": 0.37,
+  "motivo": "Assunto com nó equivalente em outro ramo (Prisões: teoria geral x espécies); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -11717,15 +11954,16 @@
     5469,
     5477,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.77
   }
  },
  "Q0239": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -11766,15 +12004,16 @@
     5207,
     5063,
     5550
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0240": {
   "decisao": "revisar",
   "tema_central_id": 5500,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5519) e divergem do classificador principal (5500).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5519); confirmar entre 5500 e 5519.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -11813,14 +12052,15 @@
     5473,
     5198,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0241": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.77,
+  "confianca": 0.74,
   "motivo": "Probabilidade estimada de acerto 0.77 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -11863,15 +12103,16 @@
     5218,
     5221,
     5219
-   ]
+   ],
+   "posterior_modelo": 0.77
   }
  },
  "Q0242": {
   "decisao": "revisar",
   "tema_central_id": 5512,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5560) e divergem do classificador principal (5512).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5560); confirmar entre 5512 e 5560.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -11910,14 +12151,15 @@
     5571,
     5570,
     5582
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0243": {
   "decisao": "publicar",
   "tema_central_id": 5178,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -11960,14 +12202,15 @@
     5198,
     5176,
     5179
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0244": {
   "decisao": "revisar",
   "tema_central_id": 5091,
   "extras_ids": "",
-  "confianca": 0.83,
+  "confianca": 0.8,
   "motivo": "Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.",
   "estrato": "revisar:falha_ou_invalido",
   "trace": {
@@ -12007,14 +12250,15 @@
     5093,
     5087,
     5089
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0245": {
   "decisao": "publicar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -12058,15 +12302,16 @@
     5188,
     5198,
     5187
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0246": {
   "decisao": "revisar",
   "tema_central_id": 5527,
   "extras_ids": "",
-  "confianca": 0.51,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (absolvicao_sumaria_ordinario_x_juri); evidência insuficiente para publicar.",
+  "confianca": 0.24,
+  "motivo": "Assunto com nó equivalente em outro ramo (Absolvição sumária: rito comum x Júri); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -12105,14 +12350,15 @@
     5529,
     5526,
     5525
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0247": {
   "decisao": "revisar",
   "tema_central_id": 5502,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -12153,14 +12399,15 @@
     5506,
     5507,
     5508
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0248": {
   "decisao": "publicar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -12206,14 +12453,15 @@
     5088,
     5087,
     5100
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0249": {
   "decisao": "revisar",
   "tema_central_id": 5492,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -12254,15 +12502,16 @@
     5479,
     5548,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0250": {
   "decisao": "revisar",
   "tema_central_id": 5201,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12305,14 +12554,15 @@
     5199,
     5207,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0251": {
   "decisao": "publicar",
   "tema_central_id": 5191,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -12359,15 +12609,16 @@
     5193,
     5191,
     5195
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0252": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12408,14 +12659,15 @@
     5548,
     5530,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0253": {
   "decisao": "publicar",
   "tema_central_id": 4373,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -12458,15 +12710,16 @@
     5537,
     4373,
     4371
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0254": {
   "decisao": "revisar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (violencia_contra_mulher); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Violência contra a mulher: Maria da Penha x Penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -12507,14 +12760,15 @@
     5489,
     5477,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0255": {
   "decisao": "revisar",
   "tema_central_id": 5213,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -12557,15 +12811,16 @@
     5548,
     5063,
     5213
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0256": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5212) e divergem do classificador principal (5224).",
+  "confianca": 0.6,
+  "motivo": "Verificadores apontam outro ramo (5212); confirmar entre 5224 e 5212.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -12606,15 +12861,16 @@
     5224,
     5220,
     5225
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0257": {
   "decisao": "revisar",
   "tema_central_id": 5218,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12657,14 +12913,15 @@
     5224,
     5537,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0258": {
   "decisao": "publicar",
   "tema_central_id": 5545,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -12708,15 +12965,16 @@
     5526,
     5529,
     5525
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0259": {
   "decisao": "revisar",
   "tema_central_id": 5183,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -12755,15 +13013,16 @@
     5230,
     5231,
     5233
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0260": {
   "decisao": "revisar",
   "tema_central_id": 4374,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.35); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.35); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12806,15 +13065,16 @@
     4376,
     4369,
     4370
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0261": {
   "decisao": "revisar",
   "tema_central_id": 5136,
   "extras_ids": "",
-  "confianca": 0.75,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.72,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12853,15 +13113,16 @@
     5198,
     5470,
     5471
-   ]
+   ],
+   "posterior_modelo": 0.75
   }
  },
  "Q0262": {
   "decisao": "revisar",
   "tema_central_id": 5184,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -12904,14 +13165,15 @@
     5479,
     5565,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0263": {
   "decisao": "publicar",
   "tema_central_id": 5492,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -12954,15 +13216,16 @@
     5548,
     5526,
     5529
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0264": {
   "decisao": "revisar",
   "tema_central_id": 5102,
   "extras_ids": "",
-  "confianca": 0.44,
-  "motivo": "Sem concordância de ramo dos verificadores (5102 x llama3.1:8b=4693); especialista decide.",
+  "confianca": 0.42,
+  "motivo": "Sem concordância dos verificadores (5102 x llama3.1:8b=4693).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -13001,15 +13264,16 @@
     5110,
     5109,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.44
   }
  },
  "Q0265": {
   "decisao": "revisar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5185 x qwen2.5:7b=5068, llama3.1:8b=5067); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5185 x qwen2.5:7b=5068, llama3.1:8b=5067).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -13048,14 +13312,15 @@
     5185,
     5067,
     5068
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0266": {
   "decisao": "publicar",
   "tema_central_id": 5480,
   "extras_ids": "",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -13098,15 +13363,16 @@
     5529,
     5528,
     5525
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0267": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Drogas: Leg. Especial x Saúde Pública); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -13147,15 +13413,16 @@
     5479,
     5537,
     5550
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0268": {
   "decisao": "revisar",
   "tema_central_id": 5120,
   "extras_ids": "",
-  "confianca": 0.8,
-  "motivo": "Confiança do classificador principal baixa (0.20); revisão humana.",
+  "confianca": 0.77,
+  "motivo": "Classificador principal inseguro (0.20); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13196,15 +13463,16 @@
     5225,
     5230,
     5218
-   ]
+   ],
+   "posterior_modelo": 0.8
   }
  },
  "Q0269": {
   "decisao": "revisar",
   "tema_central_id": 5172,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13245,14 +13513,15 @@
     5174,
     5172,
     5171
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0270": {
   "decisao": "revisar",
   "tema_central_id": 5091,
   "extras_ids": "",
-  "confianca": 0.83,
+  "confianca": 0.8,
   "motivo": "Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.",
   "estrato": "revisar:falha_ou_invalido",
   "trace": {
@@ -13292,15 +13561,16 @@
     5091,
     5081,
     5089
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0271": {
   "decisao": "revisar",
   "tema_central_id": 5562,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13341,15 +13611,16 @@
     5560,
     5565,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0272": {
   "decisao": "revisar",
   "tema_central_id": 4703,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (execucao_penal_x_teoria_da_pena); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Execução: LEP x Teoria da Pena/Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -13390,15 +13661,16 @@
     5198,
     5185,
     5168
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0273": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13439,14 +13711,15 @@
     5089,
     5104,
     5224
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0274": {
   "decisao": "revisar",
   "tema_central_id": 5160,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -13487,15 +13760,16 @@
     5158,
     5164,
     5159
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0275": {
   "decisao": "revisar",
   "tema_central_id": 5539,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13536,15 +13810,16 @@
     5488,
     4701,
     5489
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0276": {
   "decisao": "revisar",
   "tema_central_id": 5543,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13586,14 +13861,15 @@
     5548,
     5498,
     5500
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0277": {
   "decisao": "publicar",
   "tema_central_id": 4696,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -13636,15 +13912,16 @@
     4685,
     4706,
     4687
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0278": {
   "decisao": "revisar",
   "tema_central_id": 5542,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Juizado Especial: Leg. Especial x Sumaríssimo); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -13683,15 +13960,16 @@
     5207,
     5537,
     5538
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0279": {
   "decisao": "revisar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13732,15 +14010,16 @@
     5198,
     5157,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0280": {
   "decisao": "revisar",
   "tema_central_id": 5120,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13781,15 +14060,16 @@
     5120,
     5063,
     5488
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0281": {
   "decisao": "revisar",
   "tema_central_id": 5555,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13830,15 +14110,16 @@
     5582,
     5555,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0282": {
   "decisao": "revisar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13883,15 +14164,16 @@
     5198,
     5571,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0283": {
   "decisao": "revisar",
   "tema_central_id": 5496,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5184) e divergem do classificador principal (5496).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (5184); confirmar entre 5496 e 5184.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -13930,15 +14212,16 @@
     5575,
     5537,
     5496
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0284": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -13979,14 +14262,15 @@
     5198,
     5537,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0285": {
   "decisao": "publicar",
   "tema_central_id": 4376,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -14029,15 +14313,16 @@
     5170,
     5171,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0286": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (regime_e_fixacao_da_pena, efeitos_da_condenacao, execucao_penal_x_teoria_da_pena, finalidade_da_pena_criminologia_x_penal); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Regime de pena: Teoria da Pena x Sentença; Efeitos da condenação: Penal x Processo Penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -14079,14 +14364,15 @@
     5066,
     5070,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0287": {
   "decisao": "publicar",
   "tema_central_id": 5228,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -14130,15 +14416,16 @@
     5214,
     5231,
     5229
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0288": {
   "decisao": "revisar",
   "tema_central_id": 5066,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.10); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.10); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14177,14 +14464,15 @@
     5198,
     5070,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0289": {
   "decisao": "publicar",
   "tema_central_id": 4704,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -14230,15 +14518,16 @@
     5571,
     5530,
     5477
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0290": {
   "decisao": "revisar",
   "tema_central_id": 5539,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14282,15 +14571,16 @@
     5063,
     5487,
     5470
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0291": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.",
+  "confianca": 0.46,
+  "motivo": "Assunto com nó equivalente em outro ramo (Drogas: Leg. Especial x Saúde Pública); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -14331,14 +14621,15 @@
     5500,
     5498,
     5499
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0292": {
   "decisao": "publicar",
   "tema_central_id": 4374,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -14382,14 +14673,15 @@
     4376,
     5537,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0293": {
   "decisao": "publicar",
   "tema_central_id": 5189,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -14432,14 +14724,15 @@
     5185,
     5206,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0294": {
   "decisao": "publicar",
   "tema_central_id": 5211,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -14483,14 +14776,15 @@
     5212,
     5198,
     5211
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0295": {
   "decisao": "publicar",
   "tema_central_id": 5487,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -14534,15 +14828,16 @@
     5488,
     5565,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0296": {
   "decisao": "revisar",
   "tema_central_id": 5472,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.65); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.65); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14583,15 +14878,16 @@
     5468,
     5472,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0297": {
   "decisao": "revisar",
   "tema_central_id": 4695,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14634,15 +14930,16 @@
     5571,
     5198,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0298": {
   "decisao": "revisar",
   "tema_central_id": 4694,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14685,15 +14982,16 @@
     4703,
     4688,
     5231
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0299": {
   "decisao": "revisar",
   "tema_central_id": 4371,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14734,14 +15032,15 @@
     4388,
     4386,
     4370
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0300": {
   "decisao": "revisar",
   "tema_central_id": 5084,
   "extras_ids": "",
-  "confianca": 0.68,
+  "confianca": 0.65,
   "motivo": "Probabilidade estimada de acerto 0.68 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -14782,14 +15081,15 @@
     5088,
     5128,
     5160
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0301": {
   "decisao": "publicar",
   "tema_central_id": 5197,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -14833,14 +15133,15 @@
     5198,
     5548,
     5079
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0302": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -14881,15 +15182,16 @@
     5217,
     5198,
     5221
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0303": {
   "decisao": "revisar",
   "tema_central_id": 5180,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (lei_processual_x_lei_penal_no_tempo); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Lei no tempo: processual x penal); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -14930,15 +15232,16 @@
     5201,
     5205,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0304": {
   "decisao": "revisar",
   "tema_central_id": 5540,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -14981,15 +15284,16 @@
     5198,
     5571,
     5063
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0305": {
   "decisao": "revisar",
   "tema_central_id": 5466,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (acao_penal_penal_x_processo); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Ação penal: Penal x Processo Penal x Punibilidade); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -15030,15 +15334,16 @@
     5064,
     5471,
     5470
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0306": {
   "decisao": "revisar",
   "tema_central_id": 5146,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4705) e divergem do classificador principal (5146).",
+  "confianca": 0.31,
+  "motivo": "Verificadores apontam outro ramo (4705); confirmar entre 5146 e 4705.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -15077,14 +15382,15 @@
     5145,
     5087,
     5088
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0307": {
   "decisao": "publicar",
   "tema_central_id": 4707,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15127,14 +15433,15 @@
     4688,
     4707,
     4690
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0308": {
   "decisao": "publicar",
   "tema_central_id": 5501,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15178,14 +15485,15 @@
     5498,
     5499,
     5504
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0309": {
   "decisao": "publicar",
   "tema_central_id": 4688,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15229,14 +15537,15 @@
     5205,
     5530,
     5565
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0310": {
   "decisao": "publicar",
   "tema_central_id": 5505,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -15282,14 +15591,15 @@
     5506,
     5507,
     5182
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0311": {
   "decisao": "publicar",
   "tema_central_id": 5488,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15333,15 +15643,16 @@
     5530,
     5488,
     5471
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0312": {
   "decisao": "revisar",
   "tema_central_id": 4384,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15382,15 +15693,16 @@
     4385,
     5207,
     4388
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0313": {
   "decisao": "revisar",
   "tema_central_id": 5209,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15433,14 +15745,15 @@
     5199,
     5575,
     5207
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0314": {
   "decisao": "publicar",
   "tema_central_id": 5477,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15484,14 +15797,15 @@
     5466,
     5570,
     5571
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0315": {
   "decisao": "publicar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -15535,15 +15849,16 @@
     5066,
     5535,
     5209
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0316": {
   "decisao": "revisar",
   "tema_central_id": 5224,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.55); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.55); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15584,15 +15899,16 @@
     5185,
     5070,
     5155
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0317": {
   "decisao": "revisar",
   "tema_central_id": 5198,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5198 x qwen2.5:7b=5188, llama3.1:8b=4704); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5198 x qwen2.5:7b=5188, llama3.1:8b=4704).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -15631,14 +15947,15 @@
     5066,
     5063,
     5069
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0318": {
   "decisao": "publicar",
   "tema_central_id": 5178,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -15681,14 +15998,15 @@
     5548,
     5185,
     5565
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0319": {
   "decisao": "publicar",
   "tema_central_id": 5071,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -15732,15 +16050,16 @@
     5074,
     5223,
     5072
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0320": {
   "decisao": "revisar",
   "tema_central_id": 5550,
   "extras_ids": "",
-  "confianca": 0.99,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (prova_testemunhal_x_audiencia); evidência insuficiente para publicar.",
+  "confianca": 0.48,
+  "motivo": "Assunto com nó equivalente em outro ramo (Testemunha: Provas x Audiência); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -15781,14 +16100,15 @@
     5501,
     5550,
     5499
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0321": {
   "decisao": "publicar",
   "tema_central_id": 5071,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -15832,15 +16152,16 @@
     5074,
     5073,
     5075
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0322": {
   "decisao": "revisar",
   "tema_central_id": 5561,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15881,15 +16202,16 @@
     5560,
     5562,
     5512
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0323": {
   "decisao": "revisar",
   "tema_central_id": 5590,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15928,15 +16250,16 @@
     5580,
     5550,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0324": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -15977,15 +16300,16 @@
     5548,
     5487,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0325": {
   "decisao": "revisar",
   "tema_central_id": 5466,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.20); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.20); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16026,15 +16350,16 @@
     5198,
     5530,
     5535
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0326": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Drogas: Leg. Especial x Saúde Pública); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -16075,14 +16400,15 @@
     4691,
     4690,
     5479
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0327": {
   "decisao": "publicar",
   "tema_central_id": 5203,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -16126,14 +16452,15 @@
     5537,
     5198,
     5202
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0328": {
   "decisao": "publicar",
   "tema_central_id": 4380,
   "extras_ids": "",
-  "confianca": 0.99,
+  "confianca": 0.95,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -16177,15 +16504,16 @@
     4381,
     4376,
     4375
-   ]
+   ],
+   "posterior_modelo": 0.99
   }
  },
  "Q0329": {
   "decisao": "revisar",
   "tema_central_id": 5557,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16228,15 +16556,16 @@
     5530,
     5063,
     5550
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0330": {
   "decisao": "revisar",
   "tema_central_id": 5498,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16279,14 +16608,15 @@
     5498,
     5499,
     5503
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0331": {
   "decisao": "publicar",
   "tema_central_id": 5477,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -16330,15 +16660,16 @@
     5489,
     5488,
     5479
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0332": {
   "decisao": "revisar",
   "tema_central_id": 5541,
   "extras_ids": "",
-  "confianca": 0.97,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (juizados_especiais); evidência insuficiente para publicar.",
+  "confianca": 0.47,
+  "motivo": "Assunto com nó equivalente em outro ramo (Juizado Especial: Leg. Especial x Sumaríssimo); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -16379,15 +16710,16 @@
     5548,
     5063,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0333": {
   "decisao": "revisar",
   "tema_central_id": 5170,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.10); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.10); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16426,14 +16758,15 @@
     5175,
     5176,
     5179
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0334": {
   "decisao": "revisar",
   "tema_central_id": 4381,
   "extras_ids": "",
-  "confianca": 0.86,
+  "confianca": 0.83,
   "motivo": "Probabilidade estimada de acerto 0.86 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -16476,15 +16809,16 @@
     4389,
     4368,
     4374
-   ]
+   ],
+   "posterior_modelo": 0.86
   }
  },
  "Q0335": {
   "decisao": "revisar",
   "tema_central_id": 5218,
   "extras_ids": "",
-  "confianca": 0.95,
-  "motivo": "Confiança do classificador principal baixa (0.30); revisão humana.",
+  "confianca": 0.91,
+  "motivo": "Classificador principal inseguro (0.30); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16525,14 +16859,15 @@
     5063,
     5185,
     5225
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  },
  "Q0336": {
   "decisao": "publicar",
   "tema_central_id": 5159,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -16576,14 +16911,15 @@
     5160,
     5157,
     5158
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0337": {
   "decisao": "publicar",
   "tema_central_id": 4684,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -16629,15 +16965,16 @@
     5470,
     4694,
     4690
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0338": {
   "decisao": "revisar",
   "tema_central_id": 5543,
   "extras_ids": "",
-  "confianca": 0.83,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.8,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16680,15 +17017,16 @@
     5582,
     5550,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0339": {
   "decisao": "revisar",
   "tema_central_id": 5572,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.45); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.45); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16729,14 +17067,15 @@
     5565,
     5468,
     5530
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0340": {
   "decisao": "publicar",
   "tema_central_id": 5071,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -16780,14 +17119,15 @@
     5071,
     5072,
     5073
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0341": {
   "decisao": "publicar",
   "tema_central_id": 5157,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -16830,15 +17170,16 @@
     5164,
     5159,
     5157
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0342": {
   "decisao": "revisar",
   "tema_central_id": 5546,
   "extras_ids": "",
-  "confianca": 0.44,
-  "motivo": "Sem concordância de ramo dos verificadores (5546 x llama3.1:8b=5550); especialista decide.",
+  "confianca": 0.42,
+  "motivo": "Sem concordância dos verificadores (5546 x llama3.1:8b=5550).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -16879,15 +17220,16 @@
     5487,
     5571,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.44
   }
  },
  "Q0343": {
   "decisao": "revisar",
   "tema_central_id": 5196,
   "extras_ids": "",
-  "confianca": 0.68,
-  "motivo": "Confiança do classificador principal baixa (0.50); revisão humana.",
+  "confianca": 0.65,
+  "motivo": "Classificador principal inseguro (0.50); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -16928,14 +17270,15 @@
     5065,
     5198,
     5469
-   ]
+   ],
+   "posterior_modelo": 0.68
   }
  },
  "Q0344": {
   "decisao": "publicar",
   "tema_central_id": 4688,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -16978,14 +17321,15 @@
     5466,
     4688,
     5198
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0345": {
   "decisao": "revisar",
   "tema_central_id": 5103,
   "extras_ids": "",
-  "confianca": 0.74,
+  "confianca": 0.71,
   "motivo": "Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.",
   "estrato": "revisar:falha_ou_invalido",
   "trace": {
@@ -17025,15 +17369,16 @@
     5571,
     5105,
     5185
-   ]
+   ],
+   "posterior_modelo": 0.74
   }
  },
  "Q0346": {
   "decisao": "revisar",
   "tema_central_id": 5583,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Sem concordância de ramo dos verificadores (5583 x qwen2.5:7b=5477, llama3.1:8b=5468); especialista decide.",
+  "confianca": 0.3,
+  "motivo": "Sem concordância dos verificadores (5583 x qwen2.5:7b=5477, llama3.1:8b=5468).",
   "estrato": "revisar:divergencia",
   "trace": {
    "forte": {
@@ -17072,15 +17417,16 @@
     5581,
     5535,
     5487
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0347": {
   "decisao": "revisar",
   "tema_central_id": 5199,
   "extras_ids": "",
-  "confianca": 0.62,
-  "motivo": "Confiança do classificador principal baixa (0.15); revisão humana.",
+  "confianca": 0.6,
+  "motivo": "Classificador principal inseguro (0.15); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -17119,15 +17465,16 @@
     5571,
     5208,
     5207
-   ]
+   ],
+   "posterior_modelo": 0.62
   }
  },
  "Q0348": {
   "decisao": "revisar",
   "tema_central_id": 5087,
   "extras_ids": "",
-  "confianca": 0.8,
-  "motivo": "Confiança do classificador principal baixa (0.60); revisão humana.",
+  "confianca": 0.77,
+  "motivo": "Classificador principal inseguro (0.60); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -17166,14 +17513,15 @@
     5198,
     5188,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.8
   }
  },
  "Q0349": {
   "decisao": "revisar",
   "tema_central_id": 5178,
   "extras_ids": "",
-  "confianca": 0.51,
+  "confianca": 0.49,
   "motivo": "Probabilidade estimada de acerto 0.51 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -17214,14 +17562,15 @@
     5070,
     4703,
     5067
-   ]
+   ],
+   "posterior_modelo": 0.51
   }
  },
  "Q0350": {
   "decisao": "publicar",
   "tema_central_id": 4702,
   "extras_ids": "",
-  "confianca": 0.97,
+  "confianca": 0.93,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -17264,14 +17613,15 @@
     5548,
     5185,
     5550
-   ]
+   ],
+   "posterior_modelo": 0.97
   }
  },
  "Q0351": {
   "decisao": "revisar",
   "tema_central_id": 5118,
   "extras_ids": "",
-  "confianca": 0.32,
+  "confianca": 0.31,
   "motivo": "Probabilidade estimada de acerto 0.32 abaixo do limiar de publicação (0.95); confirmar a sugestão.",
   "estrato": "revisar:probabilidade_estimada_baixa",
   "trace": {
@@ -17312,15 +17662,16 @@
     5230,
     5231,
     5229
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0352": {
   "decisao": "revisar",
   "tema_central_id": 5512,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (5561) e divergem do classificador principal (5512).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (5561); confirmar entre 5512 e 5561.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -17359,15 +17710,16 @@
     5570,
     5512,
     5562
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0353": {
   "decisao": "revisar",
   "tema_central_id": 5185,
   "extras_ids": "",
-  "confianca": 0.98,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.94,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -17409,15 +17761,16 @@
     5467,
     5530,
     5466
-   ]
+   ],
+   "posterior_modelo": 0.98
   }
  },
  "Q0354": {
   "decisao": "revisar",
   "tema_central_id": 5218,
   "extras_ids": "",
-  "confianca": 0.93,
-  "motivo": "Confiança do classificador principal baixa (0.40); revisão humana.",
+  "confianca": 0.89,
+  "motivo": "Classificador principal inseguro (0.40); confirmar a sugestão.",
   "estrato": "revisar:baixa_confianca",
   "trace": {
    "forte": {
@@ -17460,15 +17813,16 @@
     5226,
     5227,
     5224
-   ]
+   ],
+   "posterior_modelo": 0.93
   }
  },
  "Q0355": {
   "decisao": "revisar",
   "tema_central_id": 4708,
   "extras_ids": "",
-  "confianca": 0.32,
-  "motivo": "Tema com nó concorrente em outro ramo da árvore (drogas_x_saude_publica); evidência insuficiente para publicar.",
+  "confianca": 0.15,
+  "motivo": "Assunto com nó equivalente em outro ramo (Drogas: Leg. Especial x Saúde Pública); confirmar o nó.",
   "estrato": "revisar:zona_de_risco",
   "trace": {
    "forte": {
@@ -17507,14 +17861,15 @@
     5066,
     5565,
     5548
-   ]
+   ],
+   "posterior_modelo": 0.32
   }
  },
  "Q0356": {
   "decisao": "publicar",
   "tema_central_id": 5066,
   "extras_ids": "",
-  "confianca": 1.0,
+  "confianca": 0.96,
   "motivo": "",
   "estrato": "publicar:concordancia_de_ramo",
   "trace": {
@@ -17558,14 +17913,15 @@
     5066,
     5068,
     5069
-   ]
+   ],
+   "posterior_modelo": 1.0
   }
  },
  "Q0357": {
   "decisao": "revisar",
   "tema_central_id": 5135,
   "extras_ids": "",
-  "confianca": 0.83,
+  "confianca": 0.8,
   "motivo": "Nenhum verificador independente respondeu de forma válida; sem verificação não se publica.",
   "estrato": "revisar:falha_ou_invalido",
   "trace": {
@@ -17605,15 +17961,16 @@
     5176,
     5141,
     5140
-   ]
+   ],
+   "posterior_modelo": 0.83
   }
  },
  "Q0358": {
   "decisao": "revisar",
   "tema_central_id": 5133,
   "extras_ids": "",
-  "confianca": 0.31,
-  "motivo": "Os verificadores independentes concordam entre si em outro ramo (4689) e divergem do classificador principal (5133).",
+  "confianca": 0.3,
+  "motivo": "Verificadores apontam outro ramo (4689); confirmar entre 5133 e 4689.",
   "estrato": "revisar:veto_dos_verificadores",
   "trace": {
    "forte": {
@@ -17652,14 +18009,15 @@
     5104,
     5116,
     5184
-   ]
+   ],
+   "posterior_modelo": 0.31
   }
  },
  "Q0359": {
   "decisao": "publicar",
   "tema_central_id": 4696,
   "extras_ids": "5539",
-  "confianca": 0.95,
+  "confianca": 0.91,
   "motivo": "",
   "estrato": "publicar:concordancia_exata",
   "trace": {
@@ -17704,7 +18062,8 @@
     5466,
     5477,
     5537
-   ]
+   ],
+   "posterior_modelo": 0.95
   }
  }
 }
